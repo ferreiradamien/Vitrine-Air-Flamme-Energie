@@ -1,0 +1,66 @@
+/* TABLET */
+
+@media (min-width:768px){
+
+.container{
+width:90%;
+}
+
+.nav-menu{
+display:flex;
+gap:25px;
+}
+
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.testimonial-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.zone-content{
+flex-direction:row;
+}
+
+.contact-wrapper{
+flex-direction:row;
+}
+
+.btn{
+width: auto;
+}
+
+}
+
+/* DESKTOP */
+
+@media (min-width:1024px){
+
+.container{
+max-width:1800px;
+}
+
+.hero{
+padding:120px 0;
+}
+
+h1{
+font-size:42px;
+}
+
+.services-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.testimonial-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.features{
+flex-direction:row;
+justify-content:space-between;
+margin-top:-40px;
+}
+
+}

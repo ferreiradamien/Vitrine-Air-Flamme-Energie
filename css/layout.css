@@ -1,0 +1,121 @@
+/* HEADER */
+
+header{
+background:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.nav-menu{
+display:none;
+margin: 20px;
+}
+
+/* HERO */
+
+.hero{
+
+background:url("../img/fire-bg.jpg") center/cover no-repeat;
+color:white;
+padding:70px 0;
+
+}
+
+.hero-content{
+max-width:500px;
+}
+
+/* FEATURES */
+
+.features{
+
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+}
+
+.feature{
+text-align:center;
+}
+
+/* SERVICES */
+
+.services{
+padding:50px 0;
+}
+
+.services-grid{
+
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+
+}
+
+/* ZONE */
+
+.zone{
+padding:50px 0;
+}
+
+.zone-content{
+
+display:flex;
+flex-direction:column;
+gap:25px;
+
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+padding:50px 0;
+}
+
+.testimonial-grid{
+
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+
+}
+
+/* CONTACT */
+
+.contact{
+padding:60px 0;
+background:#222;
+color:white;
+}
+
+.contact-wrapper{
+
+display:flex;
+flex-direction:column;
+gap:30px;
+
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
