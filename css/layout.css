@@ -14,6 +14,7 @@ padding:15px 0;
 
 .nav-menu{
 display:none;
+white-space: nowrap;
 margin: 20px;
 }
 
@@ -21,7 +22,15 @@ margin: 20px;
 
 .hero{
 
-background:url("../img/fire-bg.jpg") center/cover no-repeat;
+background: 
+    linear-gradient(100deg, #222222 calc(100% - 650px), rgba(17,17,17,0) 85%),
+    url("../assets/images/image ramoneur.png");
+
+background-position: left, right;
+background-repeat: no-repeat;
+background-size: 100%, 650px;
+background-color: #222222;
+
 color:white;
 padding:70px 0;
 
@@ -37,7 +46,8 @@ max-width:500px;
 
 margin-top:20px;
 display:flex;
-flex-direction:column;
+flex-direction:row;
+justify-content:space-between;
 gap:15px;
 
 background:white;
@@ -48,7 +58,13 @@ box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
 .feature{
+display: flex;
+flex-direction: column;
 text-align:center;
+}
+
+.feature img{
+height: 60px;
 }
 
 /* SERVICES */
