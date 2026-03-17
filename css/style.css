@@ -8,7 +8,7 @@ box-sizing:border-box;
 
 body{
 font-family: "Segoe UI", Arial, sans-serif;
-background-image: url(../assets/images/textureclaire.png);
+background-image: url(../assets/images/backgroundlight.png);
 color:#333;
 line-height:1.6;
 }
@@ -27,7 +27,7 @@ line-height:1.6;
 /* CONTAINER */
 
 .container{
-width:92%;
+width: 92%;
 margin:auto;
 }
 

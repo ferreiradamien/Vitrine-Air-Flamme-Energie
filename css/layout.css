@@ -40,8 +40,8 @@ box-shadow:0 2px 8px rgba(9, 9, 9, 0.1);
 
 }
 
-.hero-content{ /*a modif ici*/
-max-width:600px;
+.hero-content{ 
+max-width: 1000px;
 }
 
 /* FEATURES */
@@ -117,8 +117,7 @@ gap:20px;
 
 .contact{
 padding:60px 0;
-background-image: url(../assets/images/texturesombre.png);
-background-position: top;
+background-image: url(../assets/images/backgroundgrey.png);
 color:white;
 }
 
