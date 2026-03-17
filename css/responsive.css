@@ -77,6 +77,10 @@ display:flex;
 gap: 80px;
 }
 
+.nav-menu a{
+font-size: 18px;
+}
+
 .services-grid{
 grid-template-columns:repeat(3,1fr);
 }
