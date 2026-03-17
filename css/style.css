@@ -8,7 +8,7 @@ box-sizing:border-box;
 
 body{
 font-family: "Segoe UI", Arial, sans-serif;
-background-image: url(/assets/images/backgroundlight.png);
+background-image: url(../assets/images/backgroundlight.png);
 color:#333;
 line-height:1.6;
 }
