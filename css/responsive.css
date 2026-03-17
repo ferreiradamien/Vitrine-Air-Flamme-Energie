@@ -19,6 +19,17 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:repeat(2,1fr);
 }
 
+.hero{
+height: 600px;
+padding:120px 0;
+}
+
+.features{
+flex-direction:row;
+justify-content:space-around;
+margin-top:-40px;
+}
+
 .feature{
 display: flex;
 flex-direction: row;
@@ -67,10 +78,6 @@ grid-template-columns:repeat(3,1fr);
 grid-template-columns:repeat(3,1fr);
 }
 
-.features{
-flex-direction:row;
-justify-content:space-around;
-margin-top:-40px;
-}
+
 
 }
