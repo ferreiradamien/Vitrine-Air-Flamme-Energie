@@ -24,8 +24,7 @@ margin: 0px 20px 0px 20px;
 
 .hero{
 
-background: url("../assets/images/phototech.png");
-
+background-image: url("../assets/images/phototech.png");
 background-position: top right;
 background-repeat: no-repeat;
 height: 400px;
