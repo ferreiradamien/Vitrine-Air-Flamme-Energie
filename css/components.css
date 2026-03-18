@@ -7,6 +7,7 @@ padding:14px 20px;
 background:var(--primary);
 color:white;
 border-radius:6px;
+text-transform: uppercase;
 font-weight:600;
 text-align:center;
 width:100%;
@@ -87,10 +88,8 @@ border-radius:50%;
 
 .contact-form{
 
-background:#333;
 padding:25px;
 border-radius:8px;
-
 }
 
 .contact-form input,
@@ -106,19 +105,25 @@ border-radius:4px;
 }
 
 textarea{
-
 resize: none;
-
 }
 
 
 .contact-form button{
+border: 2px solid #c94b10;
+background-color: transparent;
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
 width:100%;
 }
 
 /* PHONE CTA */
 
 .phone-cta{
+
+display: inline-block;
+width: 100%;
 
 background:var(--primary);
 color:white;
@@ -130,6 +135,11 @@ text-align:center;
 font-size:20px;
 font-weight:600;
 
+}
+
+.phone-cta:hover{
+
+background:#c94b10;
 }
 
 .logo img{

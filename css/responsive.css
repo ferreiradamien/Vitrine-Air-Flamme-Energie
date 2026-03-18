@@ -33,13 +33,18 @@ padding:120px 0;
 .features{
 flex-direction:row;
 justify-content:space-around;
-margin-top:-40px;
+align-items: center;
 }
 
 .feature{
 display: flex;
 flex-direction: row;
-text-align: center;
+text-align:start;
+white-space: nowrap;
+}
+
+.feature img{
+height: 60px;
 }
 
 .txt-feature{

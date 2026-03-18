@@ -7,6 +7,7 @@ display: flex;
 background: transparent;
 }
 
+
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -15,8 +16,11 @@ color: white;
 padding:15px 0;
 }
 
+.navbar .btn{
+display: none;
+}
+
 .nav-menu{
-display:none;
 white-space: nowrap;
 margin: 0px 20px 0px 20px;
 }
@@ -48,7 +52,7 @@ max-width: 1000px;
 
 .features{
 
-margin-top:20px;
+margin-top:-40px;
 display:flex;
 flex-direction:row;
 justify-content:space-between;
@@ -68,13 +72,24 @@ text-align:center;
 }
 
 .feature img{
-height: 60px;
+height: 40px;
 }
 
 /* SERVICES */
 
 .services{
 padding:50px 0;
+}
+
+.services-title {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.services-title img{
+    height: 60px;
 }
 
 .services-grid{
@@ -95,8 +110,14 @@ padding:50px 0;
 
 display:flex;
 flex-direction:column;
+justify-content: center;
+text-align: center;
 gap:25px;
 
+}
+
+.zone-content img{
+height: 60px;
 }
 
 /* TESTIMONIALS */
@@ -110,7 +131,6 @@ padding:50px 0;
 display:grid;
 grid-template-columns:1fr;
 gap:20px;
-
 }
 
 /* CONTACT */
@@ -125,8 +145,24 @@ color:white;
 
 display:flex;
 flex-direction:column;
+align-items: start;
 gap:30px;
 
+}
+
+.contact-wrapper-icons{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.contact-wrapper-icons img{
+    width: 20px;
+    height: 20px;
+}
+
+.contact-wrapper h2{
+    text-align: left;
 }
 
 /* FOOTER */
