@@ -39,13 +39,8 @@ color:white;
 padding:70px 0;
 
 display: flex;
-padding-top: 200px;
 box-shadow:0 2px 8px rgba(9, 9, 9, 0.1);
 
-}
-
-.hero-content{ 
-max-width: 1000px;
 }
 
 /* FEATURES */
