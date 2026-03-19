@@ -21,6 +21,7 @@ display: none;
 }
 
 .nav-menu{
+display: none;
 white-space: nowrap;
 margin: 0px 20px 0px 20px;
 }
@@ -28,7 +29,6 @@ margin: 0px 20px 0px 20px;
 /* HERO */
 
 .hero{
-
 background-image: url("../assets/images/phototech.png");
 background-position: top right;
 background-repeat: no-repeat;
@@ -40,7 +40,6 @@ padding:70px 0;
 
 display: flex;
 box-shadow:0 2px 8px rgba(9, 9, 9, 0.1);
-
 }
 
 /* FEATURES */
@@ -131,34 +130,95 @@ gap:20px;
 /* CONTACT */
 
 .contact{
-padding:60px 0;
+padding:64px 32px;
 background-image: url(../assets/images/backgroundgrey.png);
 color:white;
 }
 
 .contact-wrapper{
-
 display:flex;
-flex-direction:column;
-align-items: start;
-gap:30px;
-
+flex-direction: column;
+gap: 48px;
 }
 
-.contact-wrapper-icons{
+.contact-title h2{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 32px;
+    white-space: nowrap;
+    margin-bottom: 32px;
+}
+
+.contact-content{
 display: flex;
-align-items: center;
-gap: 10px;
+flex-direction: column;
 }
 
-.contact-wrapper-icons img{
-    width: 20px;
+.contact-lign{
+display: flex;
+flex-direction: row;
+align-items: baseline ;
+flex-wrap: nowrap;
+min-height: 60px;
+gap: 15px;
+margin-bottom: 20px;
+width: 100%;
+}
+
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 30px;
+    margin-top: 0px;
+}
+
+
+.contact-item img{
     height: 20px;
+    width: 20px;
 }
 
-.contact-wrapper h2{
-    text-align: left;
+.contact-item a:hover{
+color: #e65c1c;
 }
+
+.contact-text{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 15px;
+column-gap: 12px;
+row-gap: 5px;
+flex-wrap: wrap;
+}
+
+.contact-text span{
+font-size: 18px;
+font-weight: bold;
+white-space: nowrap;
+flex-shrink: 0;
+}
+
+.contact-text a,
+.contact-text p {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0;
+}
+
+.contact-text p,
+.contact-text a,
+.contact-text span {
+    white-space: nowrap;
+}
+
+.contact-text a:hover {
+color: #e65c1c;
+}
+
+
 
 /* FOOTER */
 

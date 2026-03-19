@@ -55,12 +55,49 @@ padding-left: 20px;
 flex-direction:row;
 }
 
-.contact-wrapper{
-flex-direction:row;
-}
-
 .btn{
 width: auto;
+}
+
+.contact-wrapper{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+gap: 30px;
+}
+
+.contact-wrapper > div:last-child {
+flex: 1;
+min-width: 300px;
+max-width: 50%;
+}
+
+.contact-content{
+    flex: 1;
+    min-width: 350px;
+    max-width: 45%;
+}
+
+.contact-lign{
+margin-bottom: 40px;
+}
+
+.contact-text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 15px;
+}
+.contact-title h2 {
+font-size: 40px;
+}
+
+.contact-text p,
+.contact-text a {
+white-space: normal;
+word-break: break-word;
+max-width: 100%;
 }
 
 }
@@ -92,6 +129,28 @@ grid-template-columns:repeat(3,1fr);
 
 .testimonial-grid{
 grid-template-columns:repeat(3,1fr);
+}
+
+.contact {
+    padding: 80px 0;
+}
+
+.contact-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 80px;
+}
+
+.contact-content {
+    max-width: 40%;
+}
+
+.contact-wrapper > div:last-child {
+    max-width: 50%;
+}
+
+.contact-lign{
+margin-bottom: 50px;
 }
 
 }
