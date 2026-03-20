@@ -19,6 +19,11 @@ height: 120px;
 grid-template-columns:repeat(2,1fr);
 }
 
+.service-card:hover{
+transform: scale(1.1);
+box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
 .testimonial-grid{
 grid-template-columns:repeat(2,1fr);
 }
