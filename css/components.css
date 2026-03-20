@@ -18,6 +18,8 @@ width:100%;
 .btn:hover{
 
 background:#c94b10;
+transform: scale(1.02);
+box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 /* SERVICE CARD */
@@ -126,8 +128,10 @@ box-sizing: border-box;
 resize: none;
 }
 
-.contact-form button.btn {
+.contact-form button.btn-form {
 border: 2px solid #c94b10;
+border-radius: 6px;
+color: white;
 background-color: transparent;
 font-size: 15px;
 font-weight: bold;
@@ -136,7 +140,7 @@ width:100%;
 padding: 12px;
 }
 
-.contact-form button.btn:hover{
+.contact-form button.btn-form:hover{
     background:#c94b10;
 }
 

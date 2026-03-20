@@ -198,6 +198,7 @@ width: 100%;
 color: #e65c1c;
 }
 
+
 .contact-text{
 display: flex;
 flex-direction: row;
@@ -231,8 +232,6 @@ flex-shrink: 0;
 .contact-text a:hover {
 color: #e65c1c;
 }
-
-
 
 /* FOOTER */
 
