@@ -11,6 +11,9 @@ display:flex;
 gap: 30px;
 }
 
+.logo img{
+height: 120px;
+}
 
 .services-grid{
 grid-template-columns:repeat(2,1fr);
@@ -22,12 +25,20 @@ grid-template-columns:repeat(2,1fr);
 
 h1{
 font-size:42px;
-white-space: nowrap;
 }
 
 .hero{
 height: 600px;
 padding:120px 0;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+text-align: left;
+}
+
+.hero-content{
+    margin-left: 45%;
+    width: 50%;
 }
 
 .features{
@@ -110,7 +121,12 @@ max-width: 100%;
 max-width:1800px;
 }
 
+.logo img{
+height: 160px;
+}
+
 .hero{
+height: 800px;
 padding:120px 0;
 }
 

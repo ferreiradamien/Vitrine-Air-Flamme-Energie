@@ -28,17 +28,27 @@ margin: 0px 20px 0px 20px;
 
 /* HERO */
 
+.hero-content{
+width: 100%;
+}
+
 .hero{
-background-image: url("../assets/images/phototech.png");
-background-position: top right;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/salon-hiver-hero.webp");
 background-repeat: no-repeat;
-height: 400px;
 background-size: cover;
+background-position: center;
+width: 100%;
+height: 400px;
+
 
 color:white;
-padding:70px 0;
+padding:20px;
 
 display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+text-align: center;
 box-shadow:0 2px 8px rgba(9, 9, 9, 0.1);
 }
 
@@ -52,7 +62,7 @@ flex-direction:row;
 justify-content:space-between;
 gap:15px;
 
-background:white;
+background-color:white;
 padding:20px;
 border-radius:8px;
 box-shadow:0 8px 25px rgba(0,0,0,0.08);
@@ -73,6 +83,7 @@ height: 40px;
 
 .services{
 padding:50px 0;
+
 }
 
 .services-title {
@@ -131,7 +142,10 @@ gap:20px;
 
 .contact{
 padding:64px 32px;
-background-image: url(../assets/images/backgroundgrey.png);
+background-image: url(../assets/images/backgroundgrey.avif);
+background-repeat: repeat;
+background-size: 1260px auto;
+background-color: #121212;
 color:white;
 }
 

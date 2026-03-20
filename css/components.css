@@ -4,6 +4,7 @@
 
 display:inline-block;
 padding:14px 20px;
+margin: 20px 0px 20px 0px;
 background:var(--primary);
 color:white;
 border-radius:6px;
@@ -156,8 +157,15 @@ white-space: nowrap;
 background-color:#c94b10;
 }
 
+.logo {
+display: flex;
+align-items: center;
+}
+
 .logo img{
     height: 80px;
     width: auto;
+    display: block;
     margin-right: 20px;
 }
+
