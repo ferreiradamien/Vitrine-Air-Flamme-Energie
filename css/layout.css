@@ -30,43 +30,79 @@ margin: 0px 20px 0px 20px;
 
 .hero-content{
 width: 100%;
+max-width: 400px;
+padding: 5px;
+margin-top: 80px;
 }
 
 .hero{
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/salon-hiver-hero.webp");
+background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/images/salon-hiver-hero.webp");
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 width: 100%;
-height: 400px;
+
 
 
 color:white;
-padding:20px;
-
 display: flex;
 align-items: center;
 flex-direction: column;
 justify-content: center;
 text-align: center;
-box-shadow:0 2px 8px rgba(9, 9, 9, 0.1);
+padding: 60px 24px;
+min-height: 550px;
+box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
+box-sizing: border-box; z-index: 1;
+}
+
+.hero-title{
+    line-height: 1.2;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 44px;
+}
+
+.hero-title span {
+    display: block;
+margin-bottom: 16px;
+font-size: 14px;
+color: #c15422;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 3px;
+} 
+
+
+.hero-subtitle {
+display: block;
+font-size: 16px;
+font-weight: 300;
+line-height: 24px;
+opacity: 0.8;
+margin-top: 0px;
+margin-bottom: 40px;
+
+}
+
+.hero-trust {
+    padding-top: 16px;
+    border-top: 1px solid rgba(193, 84, 34, 0.4);
+    margin: 0px;
+    line-height: 24px;
+    font-weight: 300;
+    font-size: 12px;
+    opacity: 0.7;
 }
 
 /* FEATURES */
 
 .features{
-
-margin-top:-40px;
 display:flex;
 flex-direction:row;
-justify-content:space-between;
-gap:15px;
-
-background-color:white;
-padding:20px;
+justify-content:space-around;
+padding: 10px;
 border-radius:8px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-
 }
 
 .feature{
@@ -76,7 +112,7 @@ text-align:center;
 }
 
 .feature img{
-height: 40px;
+height: 30px;
 }
 
 /* SERVICES */
@@ -91,6 +127,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-bottom: 20px;
+}
+
+.services-title p{
+    text-align: center;
 }
 
 .services-title img{

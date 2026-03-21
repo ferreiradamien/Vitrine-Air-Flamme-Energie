@@ -3,23 +3,31 @@
 .btn{
 
 display:inline-block;
-padding:14px 20px;
-margin: 20px 0px 20px 0px;
-background:var(--primary);
-color:white;
+padding:16px 32px;
+margin: 20px 0px 40px 0px;
+background: linear-gradient(145deg, #e89152 0%, #c15422 50%, #8c3c1a 100%);
+color:#fff;
 border-radius:6px;
 text-transform: uppercase;
-font-weight:600;
+letter-spacing: 1.2 px;
+font-weight:700;
+font-size: 14px;
 text-align:center;
-width:100%;
-
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 10px 20px rgba(140, 60, 26, 0.3);
+-webkit-tap-highlight-color: transparent;
 }
 
 .btn:hover{
+transform: translateY(-2px);
+box-shadow: 0 15px 25px rgba(140, 60, 26, 0.4);
+filter: brightness(1.1);
+}
 
-background:#c94b10;
-transform: scale(1.02);
-box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+.btn:active{
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(140, 60, 26, 0.2);
 }
 
 /* SERVICE CARD */
@@ -59,7 +67,7 @@ padding:18px;
 
 .price{
 
-background:var(--primary);
+background: linear-gradient(145deg, #e89152 0%, #c15422 50%, #8c3c1a 100%);
 color:white;
 padding:10px;
 text-align:center;

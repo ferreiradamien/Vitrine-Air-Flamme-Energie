@@ -34,33 +34,30 @@ font-size:42px;
 
 .hero{
 height: 600px;
-padding:120px 0;
 display: flex;
 align-items: center;
-justify-content: flex-start;
+justify-content: space-between;
 text-align: left;
 }
 
 .hero-content{
     margin-left: 45%;
+    margin-top: 100px;
     width: 50%;
 }
 
 .features{
-flex-direction:row;
-justify-content:space-around;
-align-items: center;
+    margin-bottom: 10px;
 }
 
 .feature{
-display: flex;
 flex-direction: row;
 text-align:start;
 white-space: nowrap;
 }
 
 .feature img{
-height: 60px;
+height: 40px;
 }
 
 .txt-feature{
@@ -132,7 +129,17 @@ height: 160px;
 
 .hero{
 height: 800px;
-padding:120px 0;
+}
+
+.hero-content{
+    margin-top: 200px;
+}
+
+.txt-feature{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .nav-menu{
