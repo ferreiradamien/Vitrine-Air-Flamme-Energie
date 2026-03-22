@@ -77,6 +77,18 @@ flex-direction:row;
 width: auto;
 }
 
+.title-services {
+    flex-direction: column; /* Aligne les éléments horizontalement */
+    justify-content: center; /* Centre le groupe image + texte */
+    text-align: center; /* Aligne le texte à gauche pour plus de lisibilité */
+    gap: 20px; /* Ajoute de l'espace entre l'image et le texte */
+}
+
+.title-services p {
+    text-align: left; /* Le texte n'est plus centré sur desktop */
+    max-width: 1200px; /* Évite que les lignes de texte soient trop longues */
+    padding-bottom: 20px;
+}
 
 .contact-grid {
     display: grid;
@@ -189,6 +201,10 @@ gap: 80px;
 
 .nav-menu a{
 font-size: 18px;
+}
+
+.title-services p {
+padding-bottom: 40px;
 }
 
 .cards-wrapper {
