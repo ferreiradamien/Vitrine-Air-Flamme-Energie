@@ -247,7 +247,7 @@ margin: 0px;
 .section-header .inline-title-wrapper {
     display: flex !important;   /* Force le mode Flex */
     flex-direction: row !important; /* Force l'alignement côte à côte */
-    align-items: center !important; /* Aligne l'icône verticalement au milieu du texte */
+    align-items: flex-start !important; /* Aligne l'icône verticalement au milieu du texte */
     justify-content: center;    /* Centre le groupe (Icône + Titre) */
     width: auto;                /* Empêche la boîte de prendre toute la largeur */
     margin: 0 auto 30px auto;   /* Centre la boîte et met de l'espace en dessous */
