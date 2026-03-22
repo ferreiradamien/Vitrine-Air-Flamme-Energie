@@ -90,14 +90,6 @@ width: auto;
     padding-bottom: 20px;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
-    gap: 40px;          /* Espace entre la colonne gauche et droite */
-    width: 100%;        /* Prend toute la place dans le .contact-wrapper */
-    align-items: start; /* Aligne le contenu vers le haut */
-}
-
 .contact-wrapper{
 display: flex;
 flex-direction: column;

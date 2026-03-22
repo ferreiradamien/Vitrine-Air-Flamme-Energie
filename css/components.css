@@ -39,8 +39,7 @@ filter: brightness(1.1);
 }
 
 .btn-action, 
-.btn-premium-outline, 
-.btn-form {
+.btn-premium-outline {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,33 +236,12 @@ box-shadow: 0 10px 20px rgba(140, 60, 26, 0.3);
     color: #E89152;
 }
 
-/* Bouton Mail (Contour / Elegant) */
-.btn-mail {
-    background: transparent;
-    color: #FFFFFF;             /* Texte en blanc */
-    border: 1px solid #FFFFFF;  /* Bordure en blanc */
-}
-
 /* Icônes à l'intérieur des boutons */
 .icon-inside {
     width: 18px;
     height: auto;
     /* Pour le bouton plein (blanc) */
     filter: brightness(0) invert(1); 
-}
-
-/* Pour l'icône dans le bouton mail (noir) */
-.btn-mail .icon-inside {
-    filter: brightness(0) invert(1); /* Force l'icône mail en blanc */
-}
-
-.btn-mail:hover {
-    background: #FFFFFF;
-    color: #1A1A1A;
-}
-
-.btn-mail:hover .icon-inside{
-    filter: brightness(0) saturate(100%) !important;
 }
 
 /* Description sous les boutons */
@@ -283,54 +261,6 @@ box-shadow: 0 10px 20px rgba(140, 60, 26, 0.3);
 .action-desc strong {
     color: #FFFFFF;
     font-weight: 600;
-}
-
-/* --- FORMULAIRE & BOUTON SEND --- */
-.form-container {
-    background: #FFFFFF;
-    padding: 30px 24px;
-    border-radius: var(--radius);
-    border: 1px solid #EDEDED;
-}
-
-.btn-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: #1A1A1A; /* Noir pour contraster avec le bouton appel */
-    color: #FFFFFF;
-    padding: 18px;
-    border: none;
-    border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-
-.icon-send {
-    width: 16px;
-    filter: brightness(0) invert(1); /* Blanc */
-}
-
-.btn-form:hover{
-    transform: translateY(-2px);
-}
-
-/* Inputs du formulaire */
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 16px;
-    margin-bottom: 16px;
-    border: 1px solid #E0E0E0;
-    border-radius: 4px;
-    background: #FAFAFA;
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
 }
 
 .logo {
