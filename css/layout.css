@@ -241,7 +241,7 @@ margin: 0px;
 
 .section-header .inline-title-wrapper .premium-icon {
     margin: 0 !important; /* Supprime les marges qui décalent l'icône */
-    width: 26px !important; /* Force une taille visible sur smartphone */
+    width: 28px !important; /* Force une taille visible sur smartphone */
     height: auto;
     display: inline-block !important;
 }
