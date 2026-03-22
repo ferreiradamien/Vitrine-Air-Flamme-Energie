@@ -239,6 +239,13 @@ margin: 0px;
     filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
 }
 
+.section-header .inline-title-wrapper .premium-icon {
+    margin: 0 !important; /* Supprime les marges qui décalent l'icône */
+    width: 26px !important; /* Force une taille visible sur smartphone */
+    height: auto;
+    display: inline-block !important;
+}
+
 .section-header .premium-icon {
     margin-bottom: 0 !important; /* Annule l'ancienne marge du bas si elle existe */
     margin-right: 12px !important; /* Espace précis avec le texte */
@@ -247,17 +254,19 @@ margin: 0px;
 .section-header .inline-title-wrapper {
     display: flex !important;   /* Force le mode Flex */
     flex-direction: row !important; /* Force l'alignement côte à côte */
-    align-items: flex-start !important; /* Aligne l'icône verticalement au milieu du texte */
+    align-items: center !important; /* Aligne l'icône verticalement au milieu du texte */
     justify-content: center;    /* Centre le groupe (Icône + Titre) */
     width: auto;                /* Empêche la boîte de prendre toute la largeur */
+    gap: 12px;
     margin: 0 auto 30px auto;   /* Centre la boîte et met de l'espace en dessous */
 }
 
-.section-header h2 {
+.section-header .inline-title-wrapper h2 {
     font-size: 32px;
     color: #1A1A1A;
     margin: 0px;
     padding: 0px;
+    white-space: nowrap; /* Empêche le titre de revenir à la ligne sur petit écran */
 }
 
 /* La grille d'avis (1 colonne sur mobile) */
