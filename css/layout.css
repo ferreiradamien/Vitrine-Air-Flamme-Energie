@@ -239,10 +239,26 @@ margin: 0px;
     filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
 }
 
+.section-header .premium-icon {
+    margin-bottom: 0 !important; /* Annule l'ancienne marge du bas si elle existe */
+    margin-right: 12px !important; /* Espace précis avec le texte */
+}
+
+.section-header .inline-title-wrapper {
+    display: flex !important;   /* Force le mode Flex */
+    flex-direction: row !important; /* Force l'alignement côte à côte */
+    align-items: center !important; /* Aligne l'icône verticalement au milieu du texte */
+    justify-content: center;    /* Centre le groupe (Icône + Titre) */
+    width: auto;                /* Empêche la boîte de prendre toute la largeur */
+    margin: 0 auto 30px auto;   /* Centre la boîte et met de l'espace en dessous */
+}
+
 .section-header h2 {
     font-size: 32px;
     color: #1A1A1A;
     margin: 0px;
+    padding: 0px;
+    white-space: nowrap; /* Empêche le titre de revenir à la ligne sur petit écran */
 }
 
 /* La grille d'avis (1 colonne sur mobile) */
