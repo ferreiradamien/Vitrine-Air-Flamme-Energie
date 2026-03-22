@@ -208,6 +208,10 @@ margin-bottom: 40px;
 margin: 0px;
 }
 
+.zone-card p{
+    text-align: center;
+}
+
 .highlight-cities {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
