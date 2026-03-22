@@ -24,6 +24,15 @@ line-height:1.6;
 --dark:#1c1c1c;
 --light:#ffffff;
 --grey:#f1f1f1;
+--primary-orange: #e06c3a;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --bg-color: #fcfcfc;
+    --card-bg: #ffffff;
+    --radius: 4px; /* On garde les arrondis en px pour la précision */
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
+    --google-yellow: #FBBC05;
 
 }
 

@@ -15,15 +15,20 @@ gap: 30px;
 height: 120px;
 }
 
-.services-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
 .service-card:hover{
-transform: scale(1.08);
-box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+transform: scale(1.02);
+box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
+.cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; 
+}
+
+.service-card {
+    margin-bottom: 0px;
+    max-width: 100%;
+}
 .testimonial-grid{
 grid-template-columns:repeat(2,1fr);
 }
@@ -85,6 +90,31 @@ flex: 1;
 min-width: 300px;
 max-width: 50%;
 }
+
+.premium-section {
+padding-top: 80px;
+padding-bottom: 80px;
+}
+
+.zone-card h2, .section-header h2 {
+font-size: 32px;
+}
+
+/* Passage en ligne sur PC */
+.testimonial-grid {
+flex-direction: row;
+justify-content: center;
+}
+
+.testimonial-card {
+    width: 32%; /* Environ un tiers de la largeur pour 3 avis */
+    max-width: 350px;
+}
+
+.testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+    }
 
 .contact-content{
     flex: 1;
@@ -151,17 +181,58 @@ gap: 80px;
 font-size: 18px;
 }
 
-.services-grid{
-grid-template-columns:repeat(3,1fr);
-}
-.service-card:hover{
-transform: scale(1.1);
-box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+.cards-wrapper {
+        grid-template-columns: repeat(3, 1fr); /* Passe à 3 colonnes */
+        gap: 40px;
+    }
+
+    /* On garde l'effet de survol uniquement pour les ordinateurs (pas de tactile) */
+    .service-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-.testimonial-grid{
-grid-template-columns:repeat(3,1fr);
+.desktop-split-layout {
+    display: flex; /* Active le côte à côte */
+    align-items: stretch; /* Les deux sections feront la même hauteur */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 0px; /* On gère l'espace via les paddings internes */
 }
+
+.zone, .testimonials {
+        width: 50%; /* Chaque section prend la moitié */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centre le contenu verticalement */
+    }
+
+    /* Ajustement de la Zone pour qu'elle remplisse mieux son espace */
+    .zone-card {
+        width: 90%;
+        max-width: 500px;
+        height: 100%; /* Force la carte à prendre la hauteur */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+/* On empile les avis verticalement sur la droite 
+       car 3 avis côte à côte dans 50% de l'écran seraient trop serrés */
+    .testimonial-grid {
+        flex-direction: column; 
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .testimonial-card {
+        width: 100%; /* Prend toute la largeur de sa colonne (la moitié de l'écran) */
+    }
+
+    /* Alternance de couleurs pour un look Premium */
+    .zone {
+        border-right: 1px solid #eee; /* Petite séparation subtile */
+    }
 
 .contact {
     padding: 80px 0;

@@ -32,47 +32,75 @@ filter: brightness(1.1);
 
 /* SERVICE CARD */
 
-.service-card{
-
-background:white;
-border-radius:8px;
-overflow:hidden;
-
-display: flex;
-flex-direction: column;
-height: 100%;
-justify-content: end;
-
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+    gap: 40px; /* L'espacement est géré uniquement par le gap */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
-.service-card:hover{
-transform: scale(1.05);
-box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+.service-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    /* ⚠️ ATTENTION : Plus de marges ici ! Le "gap" de la grille s'occupe de l'espacement. */
+    border: 1px solid #F0F0F0;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* S'assure que la carte remplit sa cellule de grille */
 }
 
-.service-card img{
-
-height:200px;
-object-fit:cover;
-
+.service-content {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
 }
 
-.service-content{
-
-padding:18px;
-
+.service-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.price{
+.price {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(26, 26, 26, 0.9);
+    color: #E89152;
+    padding: 8px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid rgba(232, 145, 82, 0.4);
+}
 
-background: linear-gradient(145deg, #e89152 0%, #c15422 50%, #8c3c1a 100%);
-color:white;
-padding:10px;
-text-align:center;
-font-weight:600;
+.service-info {
+    font-size: 18px;
+    color: #1A1A1A;
+    padding: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
 
+.service-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 12px;
+    line-height: 28px;
+}
+
+.service-text {
+    font-size: 15px;
+    line-height: 26px; /* Grand interlignage pour la respiration = Luxe */
+    color: #555555;
+    font-weight: 300; 
 }
 
 /* TESTIMONIAL */

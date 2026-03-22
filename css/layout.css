@@ -95,87 +95,213 @@ margin-bottom: 40px;
     opacity: 0.7;
 }
 
-/* FEATURES */
-
-.features{
-display:flex;
-flex-direction:row;
-justify-content:space-around;
-padding: 10px;
-border-radius:8px;
-}
-
-.feature{
-display: flex;
-flex-direction: column;
-text-align:center;
-}
-
-.feature img{
-height: 30px;
-}
-
 /* SERVICES */
 
-.services{
-padding:50px 0;
-
+.services {
+    padding: 12px 24px 20px 24px;
 }
 
-.services-title {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 20px;
+.title-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 24px 40px 24px;
 }
 
-.services-title p{
+.title-services p {
     text-align: center;
 }
 
-.services-title img{
+.title-services img {
     height: 60px;
 }
 
-.services-grid{
+.title-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
 
-display:grid;
-grid-template-columns:1fr;
-gap:20px;
+.wrench-icon {
+    width: 28px;
+    height: auto;
+    margin-right: 12px;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
+}
 
+.services-main-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0px;
+    line-height: 1;
+    letter-spacing: -0.4px;
+}
+
+.services-intro {
+    font-size: 15px;
+    line-height: 24px;
+    color: #666666;
+    margin: 0 auto; /* Centrage automatique */
+    max-width: 320px;
 }
 
 /* ZONE */
 
-.zone{
-padding:50px 0;
+.desktop-split-layout {
+    display: block; /* Par défaut sur mobile */
+    width: 100%;
 }
 
-.zone-content{
-
-display:flex;
-flex-direction:column;
-justify-content: center;
-text-align: center;
-gap:25px;
-
+.premium-section {
+    padding: 40px 20px;
+    width: 100%;
 }
 
-.zone-content img{
-height: 60px;
+.container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* S'assure que le container prend toute la place sur mobile */
 }
 
-/* TESTIMONIALS */
-
-.testimonials{
-padding:50px 0;
+/* Encapsulation des icônes */
+.icon-wrapper {
+    background-color: rgba(224, 108, 58, 0.1);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%; /* Cercle parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
 }
 
-.testimonial-grid{
+.icon-wrapper img {
+    width: 32px;
+    height: 32px;
+}
 
-display:grid;
-grid-template-columns:1fr;
-gap:20px;
+/* --- SECTION ZONE D'INTERVENTION --- */
+.zone {
+    text-align: center;
+}
+
+.zone-card {
+    background: var(--card-bg);
+    padding: 40px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.zone-card h2 {
+    font-size: 24px;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.highlight-cities {
+    color: var(--primary-orange);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.text-muted {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/* --- SECTION AVIS CLIENTS --- */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 26px;
+    color: var(--text-main);
+}
+
+/* Grille mobile : empilage vertical */
+.testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.testimonial-user img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.stars {
+    color: var(--google-yellow);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.google-badge {
+    background-color: #e8f0fe;
+    color: #4285F4;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.testimonial-card p {
+    color: var(--text-muted);
+    line-height: 24px;
+    font-style: italic;
+    font-size: 15px;
 }
 
 /* CONTACT */
