@@ -42,8 +42,6 @@ background-size: cover;
 background-position: center;
 width: 100%;
 
-
-
 color:white;
 display: flex;
 align-items: center;
@@ -93,6 +91,31 @@ margin-bottom: 40px;
     font-weight: 300;
     font-size: 12px;
     opacity: 0.7;
+}
+
+/* Le conteneur qui met l'icône et le texte sur la même ligne */
+.inline-title-wrapper {
+    display: flex;
+    flex-direction: row;     /* Force l'alignement côte à côte */
+    align-items: center;     /* Centre l'icône parfaitement au milieu de la hauteur du texte */
+    justify-content: center; /* Centre l'ensemble au milieu de la carte */
+    margin-bottom: 20px;     /* Espace sous le bloc titre complet */
+}
+
+/* La nouvelle classe universelle pour tes icônes de titres */
+.premium-icon {
+    width: 28px;
+    height: auto;
+    margin-right: 12px;      /* L'espace horizontal précis entre l'icône et le texte */
+    /* Le filtre magique Cuivre Ambré */
+    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
+    display: block;          /* Évite les bugs d'espacement bizarres des images */
+}
+
+/* On s'assure que les titres à l'intérieur perdent leurs marges par défaut */
+.inline-title-wrapper h2 {
+    margin: 0px;             /* Crucial : le flexbox gère l'espacement maintenant */
+    line-height: 1.2;        /* Évite que le texte soit plus haut que l'icône */
 }
 
 /* SERVICES */
@@ -153,13 +176,21 @@ margin-bottom: 40px;
 /* ZONE */
 
 .desktop-split-layout {
-    display: block; /* Par défaut sur mobile */
-    width: 100%;
+    display: flex;
+    flex-direction: column; /* Sur mobile, on empile les sections */
+    gap: 60px;              /* Grand espace de respiration entre la Zone et les Avis */
+    padding-top: 60px;
+    padding-bottom: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+
 }
 
 .premium-section {
-    padding: 40px 20px;
     width: 100%;
+    max-width: 450px; /* Sécurité pour les grands téléphones */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
@@ -169,234 +200,291 @@ margin-bottom: 40px;
     width: 100%; /* S'assure que le container prend toute la place sur mobile */
 }
 
-/* Encapsulation des icônes */
-.icon-wrapper {
-    background-color: rgba(224, 108, 58, 0.1);
-    width: 64px;
-    height: 64px;
-    border-radius: 50%; /* Cercle parfait */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 16px;
-}
-
-.icon-wrapper img {
-    width: 32px;
-    height: 32px;
-}
-
 /* --- SECTION ZONE D'INTERVENTION --- */
-.zone {
-    text-align: center;
-}
-
-.zone-card {
-    background: var(--card-bg);
-    padding: 40px 24px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-}
 
 .zone-card h2 {
-    font-size: 24px;
-    color: var(--text-main);
-    margin-bottom: 16px;
+    font-size: 32px;
+    color: #1A1A1A;
+margin: 0px;
 }
 
 .highlight-cities {
-    color: var(--primary-orange);
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #C15422; /* Notre Cuivre Ambré */
+    line-height: 26px;
+    margin-bottom: 12px;
+    margin-top: 0px;
 }
 
 .text-muted {
-    color: var(--text-muted);
-    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    font-weight: 300;
     line-height: 22px;
+    margin: 0px;
 }
 
 /* --- SECTION AVIS CLIENTS --- */
 
-.section-header {
-    text-align: center;
-    margin-bottom: 40px;
+.section-header .icon-wrapper img {
+    width: 28px;
+    margin-bottom: 12px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
 }
 
 .section-header h2 {
-    font-size: 26px;
-    color: var(--text-main);
+    font-size: 32px;
+    color: #1A1A1A;
+    margin: 0px;
 }
 
-/* Grille mobile : empilage vertical */
+/* La grille d'avis (1 colonne sur mobile) */
 .testimonial-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px; /* Espace entre chaque avis */
 }
 
 .testimonial-card {
-    background-color: #ffffff;
-    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
     border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 24px;
 }
 
+/* L'en-tête de la carte (Photo + Nom + Badge Google) */
 .testimonial-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-between; /* Pousse le badge à droite */
+    align-items: center;
     margin-bottom: 16px;
 }
 
 .testimonial-user {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
 }
 
+/* Les photos de profil */
 .testimonial-user img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%; /* Rond parfait */
     object-fit: cover;
+    border: 1px solid #EAEAEA;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .user-info strong {
-    display: block;
-    color: var(--text-main);
-    font-size: 16px;
-    margin-bottom: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #1A1A1A;
+    font-weight: 600;
 }
 
 .stars {
-    color: var(--google-yellow);
+    color: #E89152; /* Cuivre clair pour les étoiles */
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 2px; /* Sépare légèrement les étoiles */
 }
 
+/* Le badge Google Premium (Grisé et discret plutôt que multicolore fluo) */
 .google-badge {
-    background-color: #e8f0fe;
-    color: #4285F4;
-    font-weight: bold;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    background: #F9F9F7;
+    border-radius: 50%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1A1A1A;
+    border: 1px solid #EDEDED;
 }
 
+/* Le texte de l'avis */
 .testimonial-card p {
-    color: var(--text-muted);
-    line-height: 24px;
-    font-style: italic;
-    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic; /* L'italique donne le ton de la citation */
+    color: #555555;
+    line-height: 26px;
+    margin: 0px;
 }
 
 /* CONTACT */
 
-.contact{
-padding:64px 32px;
-background-image: url(../assets/images/backgroundgrey.avif);
-background-repeat: repeat;
-background-size: 1260px auto;
-background-color: #121212;
-color:white;
+/* --- SECTION CONTACT --- */
+.contact-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #FDFDFB;
+    background-color: var(--grey); /* Ta couleur de fond de base */
+    background-image: url(../assets/images/backgroundgrey.avif); /* Ton chemin vers le dossier */
+    background-repeat: repeat; /* Indispensable pour l'effet seamless */
+    background-position: center;
+    background-size: 1200px;    /* Ajuste cette valeur pour agrandir ou rétrécir le motif */
 }
 
-.contact-wrapper{
-display:flex;
-flex-direction: column;
-gap: 48px;
-}
-
-.contact-title h2{
+/* Le conteneur global de la section */
+.contact-wrapper {
     display: flex;
-    justify-content: flex-start;
-    font-size: 32px;
-    white-space: nowrap;
-    margin-bottom: 32px;
+    flex-direction: column; /* Force le titre à être AU-DESSUS de la grille */
+    align-items: center;    /* Centre tout le contenu */
+    width: 100%;
+    max-width: 1200px;      /* Largeur max pour ne pas trop s'étirer sur grand écran */
+    margin: 0 auto;         /* Centre le conteneur au milieu de la page */
+    padding: 40px 20px;        /* Ajoute un peu de marge sur les côtés */
 }
 
-.contact-content{
-display: flex;
-flex-direction: column;
+/* Le conteneur du titre */
+.inline-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;            /* Force le titre à prendre toute la largeur dispo */
+    margin-bottom: 50px;    /* Ajoute de l'espace sous le titre */
 }
 
-.contact-lign{
-display: flex;
-flex-direction: row;
-align-items: baseline ;
-flex-wrap: nowrap;
-min-height: 60px;
-gap: 15px;
-margin-bottom: 20px;
-width: 100%;
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
+/* --- LES CARTES DE CONTACT --- */
+.contact-card {
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: var(--radius);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.02);
+}
 
-.contact-item{
+.contact-card-header {
     display: flex;
     align-items: center;
-    flex-shrink: 0;
-    width: 30px;
-    margin-top: 0px;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
-
-.contact-item img{
-    height: 20px;
+.contact-card-header img {
     width: 20px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%); /* Notre Cuivre */
 }
 
-.contact-item a:hover{
-color: #e65c1c;
+.contact-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #C15422; /* Cuivre */
+    font-weight: 600;
 }
 
-
-.contact-text{
-display: flex;
-flex-direction: row;
-align-items: center;
-gap: 15px;
-column-gap: 12px;
-row-gap: 5px;
-flex-wrap: wrap;
-}
-
-.contact-text span{
-font-size: 18px;
-font-weight: bold;
-white-space: nowrap;
-flex-shrink: 0;
-}
-
-.contact-text a,
-.contact-text p {
+.contact-value {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A1A1A;
     text-decoration: none;
-    font-size: 18px;
-    margin: 0;
+    margin-bottom: 8px;
 }
 
-.contact-text p,
-.contact-text a,
-.contact-text span {
-    white-space: nowrap;
+.contact-value-alt {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #1A1A1A;
+    margin-bottom: 8px;
 }
 
-.contact-text a:hover {
-color: #e65c1c;
+.contact-value-small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    text-decoration: underline;
+    text-decoration-color: rgba(193, 84, 34, 0.3);
+}
+
+.contact-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666666;
+    margin: 0px;
+    font-weight: 300;
+}
+
+/* --- LE FORMULAIRE --- */
+.form-container {
+    background: #FFFFFF;
+    padding: 30px 24px;
+    border-radius: 4px;
+    border: 1px solid #EAEAEA;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #E0E0E0;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background-color: #FAFAFA;
+    box-sizing: border-box; /* Crucial pour ne pas déborder */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #C15422; /* Focus cuivre */
+    background-color: #FFFFFF;
+}
+
+/* Le Bouton Envoyer (Style Hero) */
+.btn-form {
+    background: linear-gradient(145deg, #E89152 0%, #C15422 50%, #8C3C1A 100%);
+    color: #FFFFFF;
+    padding: 18px;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0px 8px 20px rgba(140, 60, 26, 0.3);
+    margin-top: 10px;
 }
 
 /* FOOTER */

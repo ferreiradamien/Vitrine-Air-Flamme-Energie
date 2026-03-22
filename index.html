@@ -148,10 +148,11 @@
             <section class="zone premium-section">
                 <div class="container zone-content">
                     <div class="zone-card">
-                        <div class="icon-wrapper">
-                            <img src="assets/icons/truck.svg" alt="icon truck">
+                        <div class="inline-title-wrapper">
+                            <img src="assets/icons/truck.svg" class="premium-icon" alt="icon truck">
+                            <h2>Zone d'intervention</h2>
                         </div>
-                        <h2>Zone d'intervention</h2>
+                        
                         <p class="highlight-cities">
                             Rians, Saint-Maximin, Brignoles, Aix-en-Provence, Pertuis.
                         </p>
@@ -162,14 +163,15 @@
                 </div>
             </section>
 
+            <!-- AVIS -->
             <section class="testimonials premium-section">
                 <div class="container testimonials-content">
                     
                     <div class="section-header">
-                        <div class="icon-wrapper">
-                            <img src="assets/icons/badge-check.svg" alt="icon badge check">
+                        <div class="inline-title-wrapper">
+                            <img src="assets/icons/badge-check.svg" class="premium-icon" alt="icon badge check">
+                            <h2>Ils nous font confiance</h2>
                         </div>
-                        <h2>Ils nous font confiance</h2>
                     </div>
 
                     <div class="testimonial-grid">
@@ -221,57 +223,68 @@
 
         <!-- CONTACT -->
 
-        <section class="contact">
-
+        <section class="contact-section">
             <div class="container contact-wrapper">
-
-                <div class="contact-content">
-
-                    <div class="contact-title">
-                        <h2>Contactez-nous</h2>
-                    </div>
-
-                    <div class="contact-lign">
-                        <div class="contact-item">
-                            <img src="assets/icons/phone.svg" alt="icon phone">
-                        </div>
-
-                        <div class="contact-text">
-                            <span>Téléphone :</span>
-                            <a href="tel:+33612345678"  class="phone-cta">06 12 34 56 78</a>
-                        </div>
-                    </div>
-
-                    <div class="contact-lign">
-                        <div class="contact-item">
-                            <img src="assets/icons/map-pinned.svg" alt="icon map">
-                        </div>
-
-                        <div class="contact-text">
-                            <span>Adresse :</span>
-                            <p>330 route de Pourrières 83560 Rians</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-lign">
-                        <div class="contact-item">
-                            <img src="assets/icons/mail.svg" alt="icon mail">
-                        </div>
-
-                        <div class="contact-text">
-                            <span>Email :</span>
-                            <a href="mailto:contact@airflamme.fr">contact@airflamme.fr</a>
-                        </div>
-                    </div>
+                
+                <div class="inline-title-wrapper">
+                    <img src="assets/icons/mail.svg" class="premium-icon" alt="icon contact">
+                    <h2>Contactez-nous</h2>
                 </div>
 
-                <div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Nom">
-                        <input type="email" placeholder="Email">
-                        <textarea rows="4" placeholder="Votre message"></textarea>
-                        <button class="btn-form">Envoyer</button>
-                    </form>
+                <div class="contact-grid">
+                    
+                    <div class="contact-left">
+                        <div class="action-item">
+                            <p class="action-desc">
+                                <strong>Assistance immédiate :</strong> Contactez-nous directement pour une urgence ou un dépannage.
+                            </p>
+                            <a href="tel:+33612345678" class="btn-action btn-phone">
+                                <img src="assets/icons/phone.svg" alt="icon phone" class="icon-inside">
+                                Appeler maintenant
+                            </a>
+                        </div>
+
+                        <div class="action-item">
+                            <a href="#contact-form" class="btn-premium-outline">
+                                <img src="assets/icons/headset.svg" alt="icon callback" class="icon-inside">
+                                Demander à être rappelé
+                            </a>
+                            <div class="callback-notice">
+                                <p>
+                                    <strong>Expertise sur le terrain :</strong> Nos techniciens sont actuellement en intervention pour garantir la sécurité de nos installations. 
+                                </p>
+                                <p class="callback-highlight">
+                                    Pour une étude personnalisée de votre projet, demandez un rappel : <strong>nous vous recontactons dès 17h30.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-right">
+                        <div class="action-item">
+                            <a href="mailto:contact@airflamme.fr" class="btn-action btn-mail">
+                                <img src="assets/icons/mail.svg" alt="icon mail" class="icon-inside">
+                                Envoyer un mail
+                            </a>
+                            <p class="action-desc">
+                                Ou utilisez notre formulaire ci-dessous pour nous transmettre les détails de votre projet.
+                            </p>
+                        </div>
+
+                        <div class="form-container" id="contact-form">
+                            <form class="contact-form">
+                                <input type="text" placeholder="Nom complet">
+                                <input type="email" placeholder="Adresse Email">
+                                <textarea rows="4" placeholder="Votre message..."></textarea>
+                                
+                                <button type="submit" class="btn-form">
+                                    Envoyer ma demande
+                                    <img src="assets/icons/send.svg" alt="icon send" class="icon-send">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

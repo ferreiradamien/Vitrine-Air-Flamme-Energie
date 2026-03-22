@@ -77,19 +77,33 @@ flex-direction:row;
 width: auto;
 }
 
-.contact-wrapper{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: flex-start;
-gap: 30px;
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 40px;          /* Espace entre la colonne gauche et droite */
+    width: 100%;        /* Prend toute la place dans le .contact-wrapper */
+    align-items: start; /* Aligne le contenu vers le haut */
 }
 
-.contact-wrapper > div:last-child {
-flex: 1;
-min-width: 300px;
-max-width: 50%;
+.contact-wrapper{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+gap: 20px;
 }
+
+.inline-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre le titre parfaitement */
+    margin-bottom: 50px;
+}
+
 
 .premium-section {
 padding-top: 80px;
@@ -107,7 +121,7 @@ justify-content: center;
 }
 
 .testimonial-card {
-    width: 32%; /* Environ un tiers de la largeur pour 3 avis */
+    width: 100%; /* Environ un tiers de la largeur pour 3 avis */
     max-width: 350px;
 }
 
@@ -116,11 +130,7 @@ justify-content: center;
         box-shadow: var(--shadow-hover);
     }
 
-.contact-content{
-    flex: 1;
-    min-width: 350px;
-    max-width: 45%;
-}
+
 
 .contact-lign{
 margin-bottom: 40px;
@@ -184,6 +194,7 @@ font-size: 18px;
 .cards-wrapper {
         grid-template-columns: repeat(3, 1fr); /* Passe à 3 colonnes */
         gap: 40px;
+        max-width: 1800px;
     }
 
     /* On garde l'effet de survol uniquement pour les ordinateurs (pas de tactile) */
@@ -194,10 +205,11 @@ font-size: 18px;
 
 .desktop-split-layout {
     display: flex; /* Active le côte à côte */
-    align-items: stretch; /* Les deux sections feront la même hauteur */
+    flex-direction: row;
+    align-items: flex-start; /* Les deux sections feront la même hauteur */
     max-width: 1200px;
     margin: 0 auto;
-    gap: 0px; /* On gère l'espace via les paddings internes */
+    gap: 0; /* On gère l'espace via les paddings internes */
 }
 
 .zone, .testimonials {
@@ -220,7 +232,6 @@ font-size: 18px;
 /* On empile les avis verticalement sur la droite 
        car 3 avis côte à côte dans 50% de l'écran seraient trop serrés */
     .testimonial-grid {
-        flex-direction: column; 
         width: 90%;
         margin: 0 auto;
     }
@@ -238,18 +249,19 @@ font-size: 18px;
     padding: 80px 0;
 }
 
+.contact-grid {
+    gap: 200px; /* On aère encore plus si l'écran est grand */
+}
+
 .contact-wrapper{
+
     max-width: 1200px;
     margin: 0 auto;
-    gap: 80px;
+    gap: 20px;
 }
 
 .contact-content {
     max-width: 40%;
-}
-
-.contact-wrapper > div:last-child {
-    max-width: 50%;
 }
 
 .contact-lign{

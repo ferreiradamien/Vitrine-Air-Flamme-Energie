@@ -29,7 +29,7 @@ line-height:1.6;
     --text-muted: #636e72;
     --bg-color: #fcfcfc;
     --card-bg: #ffffff;
-    --radius: 4px; /* On garde les arrondis en px pour la précision */
+    --radius: 6px;
     --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
     --google-yellow: #FBBC05;
