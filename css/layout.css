@@ -266,7 +266,6 @@ margin: 0px;
     color: #1A1A1A;
     margin: 0px;
     padding: 0px;
-    white-space: nowrap; /* Empêche le titre de revenir à la ligne sur petit écran */
 }
 
 /* La grille d'avis (1 colonne sur mobile) */
