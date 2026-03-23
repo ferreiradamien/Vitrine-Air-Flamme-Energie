@@ -20,11 +20,12 @@ line-height:1.6;
 
 :root{
 
---primary:#e65c1c;
+--primary: #e89152;
+--secondary: #e15422;
+--tertiary: #8c3c1a;
 --dark:#1c1c1c;
 --light:#ffffff;
 --grey:#f1f1f1;
---primary-orange: #e06c3a;
     --text-main: #2d3436;
     --text-muted: #636e72;
     --bg-color: #fcfcfc;
@@ -33,7 +34,6 @@ line-height:1.6;
     --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
     --google-yellow: #FBBC05;
-
 }
 
 /* CONTAINER */

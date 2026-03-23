@@ -11,9 +11,28 @@ display:flex;
 gap: 30px;
 }
 
-.logo img{
-height: 120px;
+.navbar{
+    margin-top: -40px;
 }
+
+.logo img{
+height: 180px;
+padding-top: 10px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.hero-actions .btn,
+.hero-actions .btn-premium-outline {
+    width: 340px;
+}
+
 
 .service-card:hover{
 transform: scale(1.02);
@@ -39,16 +58,20 @@ font-size:42px;
 
 .hero{
 height: 600px;
+width: 100%;
 display: flex;
-align-items: center;
+align-items: flex-end;
 justify-content: space-between;
 text-align: left;
 }
 
 .hero-content{
-    margin-left: 45%;
-    margin-top: 100px;
-    width: 50%;
+
+    margin-top: 60px;
+    margin-right: 80px;
+    align-items: flex-start;
+    width: 45%;
+    height: 600px;
 }
 
 .features{
@@ -108,6 +131,14 @@ gap: 20px;
     margin-bottom: 50px;
 }
 
+.desktop-split-layout {
+    display: flex; /* Active le côte à côte */
+    flex-direction: row;
+    align-items: flex-start; /* Les deux sections feront la même hauteur */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* On gère l'espace via les paddings internes */
+}
 
 .premium-section {
 padding-top: 80px;
@@ -168,15 +199,17 @@ max-width:1800px;
 }
 
 .logo img{
-height: 160px;
+height: 260px;
 }
 
 .hero{
-height: 800px;
+height: 700px;
 }
 
 .hero-content{
-    margin-top: 200px;
+    max-height: 400px;
+    margin-top: 160px;
+    margin-right: 120px;
 }
 
 .txt-feature{
@@ -188,7 +221,7 @@ height: 800px;
 
 .nav-menu{
 display:flex;
-gap: 80px;
+gap: 50px;
 }
 
 .nav-menu a{
@@ -211,13 +244,9 @@ padding-bottom: 40px;
         box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-.desktop-split-layout {
-    display: flex; /* Active le côte à côte */
-    flex-direction: row;
-    align-items: flex-start; /* Les deux sections feront la même hauteur */
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 0; /* On gère l'espace via les paddings internes */
+.desktop-split-layout{
+    max-width: 1600px;
+    gap:60px;
 }
 
 .zone, .testimonials {
@@ -263,7 +292,7 @@ padding-bottom: 40px;
 
 .contact-wrapper{
 
-    max-width: 1200px;
+    max-width: 600px;
     margin: 0 auto;
     gap: 20px;
 }
