@@ -384,6 +384,7 @@ margin: 0px;
 
 .cgv ul{
 list-style-position: inside;
+word-break: break-word;
 }
 
 /* FOOTER */
