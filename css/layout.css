@@ -1,23 +1,30 @@
 /* HEADER */
 
 header{
-position: absolute;
-width: 100%;
-display: flex;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
 .navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-color: white;
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    width: 100%;
 }
 
 .nav-menu{
-display: none;
-white-space: nowrap;
+    display: none;
+    list-style: none;
+    white-space: nowrap;
+    width: 100%;
+}
 
+.nav-menu a{
+    text-decoration: none;
+    color: white;
 }
 
 /* HERO */
@@ -33,68 +40,71 @@ white-space: nowrap;
 }
 
 .hero{
-background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/images/salon-hiver-hero.webp");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-width: 100%;
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0.85) 100%), url("../assets/images/salon-hiver-hero.webp");
 
-color:white;
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-padding: 60px 24px;
-min-height: 550px;
-box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
-box-sizing: border-box; z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 24px;
+    min-height: 550px;
+    box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
+    box-sizing: border-box; z-index: 1;
 }
 
 .hero-title{
-    margin-top: 0px;
-    margin-bottom: 20px;
     line-height: 44px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    text-shadow: 0 2px 8px rgba(0,0,0,1);
 }
 
 .hero-title span {
-margin-bottom: 16px;
-color: var(--secondary);
-text-shadow: 0 2px 10px rgba(0,0,0,0.8);
--webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
-font-weight: 700;
+    color: var(--secondary);
+    text-shadow: 0 2px 8px rgba(0,0,0,1);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
 } 
 
-/* Le conteneur qui met l'icône et le texte sur la même ligne */
-.inline-title-wrapper {
+/* FEATURES */
+
+.features{
     display: flex;
-    flex-direction: row;     /* Force l'alignement côte à côte */
-    align-items: center;     /* Centre l'icône parfaitement au milieu de la hauteur du texte */
-    justify-content: center; /* Centre l'ensemble au milieu de la carte */
-    margin-bottom: 20px;     /* Espace sous le bloc titre complet */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 16px;
 }
 
-/* La nouvelle classe universelle pour tes icônes de titres */
-.premium-icon {
-    width: 28px;
-    height: auto;
-    margin-right: 12px;      /* L'espace horizontal précis entre l'icône et le texte */
-    /* Le filtre magique Cuivre Ambré */
-    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
-    display: block;          /* Évite les bugs d'espacement bizarres des images */
+.feature{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    white-space: nowrap;
 }
 
-/* On s'assure que les titres à l'intérieur perdent leurs marges par défaut */
-.inline-title-wrapper h2 {
-    margin: 0px;             /* Crucial : le flexbox gère l'espacement maintenant */
-    line-height: 1.2;        /* Évite que le texte soit plus haut que l'icône */
+.feature img{
+    height: 40px;
+}
+
+.feature h3{
+    font-size: 14px;
 }
 
 /* SERVICES */
 
 .services {
-    padding: 12px 24px 20px 24px;
+    padding: 20px 18px;
 }
 
 .title-services {
@@ -102,7 +112,6 @@ font-weight: 700;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 50px 24px 40px 24px;
 }
 
 .title-services p {
@@ -151,12 +160,31 @@ font-weight: 700;
 .desktop-split-layout {
     display: flex;
     flex-direction: column; /* Sur mobile, on empile les sections */
-    gap: 60px;              /* Grand espace de respiration entre la Zone et les Avis */
-    padding-top: 60px;
-    padding-bottom: 80px;
-    padding-left: 24px;
-    padding-right: 24px;
+}
 
+/* Le conteneur qui met l'icône et le texte sur la même ligne */
+.inline-title-wrapper {
+    display: flex;
+    flex-direction: row;     /* Force l'alignement côte à côte */
+    align-items: center;     /* Centre l'icône parfaitement au milieu de la hauteur du texte */
+    justify-content: center; /* Centre l'ensemble au milieu de la carte */
+    margin-bottom: 20px;     /* Espace sous le bloc titre complet */
+}
+
+/* La nouvelle classe universelle pour tes icônes de titres */
+.premium-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;      /* L'espace horizontal précis entre l'icône et le texte */
+    /* Le filtre magique Cuivre Ambré */
+    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
+    display: block;          /* Évite les bugs d'espacement bizarres des images */
+}
+
+/* On s'assure que les titres à l'intérieur perdent leurs marges par défaut */
+.inline-title-wrapper h2 {
+    margin: 0px;             /* Crucial : le flexbox gère l'espacement maintenant */
+    line-height: 1.2;        /* Évite que le texte soit plus haut que l'icône */
 }
 
 .premium-section {
@@ -165,13 +193,6 @@ font-weight: 700;
     max-width: 450px; /* Sécurité pour les grands téléphones */
     margin-left: auto;
     margin-right: auto;
-}
-
-.container {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%; /* S'assure que le container prend toute la place sur mobile */
 }
 
 /* --- SECTION ZONE D'INTERVENTION --- */
@@ -204,146 +225,6 @@ margin: 0px;
     line-height: 22px;
     margin: 0px;
 }
-
-/* --- SECTION AVIS CLIENTS --- 
-
-.section-header .icon-wrapper img {
-    width: 28px;
-    margin-bottom: 12px;
-    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
-}
-
-.section-header .inline-title-wrapper .premium-icon {
-    margin: 0 !important; /* Supprime les marges qui décalent l'icône 
-    width: 28px !important;  Force une taille visible sur smartphone 
-    height: auto;
-    display: inline-block !important;
-}
-
-.section-header .premium-icon {
-    margin-bottom: 0 !important; /* Annule l'ancienne marge du bas si elle existe 
-    margin-right: 12px !important; /* Espace précis avec le texte 
-}
-
-.section-header .inline-title-wrapper {
-    display: flex !important;    Force le mode Flex 
-    flex-direction: row !important;  Force l'alignement côte à côte 
-    align-items: center !important; /* Aligne l'icône verticalement au milieu du texte 
-    justify-content: center;    /* Centre le groupe (Icône + Titre) 
-    width: auto;                /* Empêche la boîte de prendre toute la largeur 
-    gap: 12px;
-    margin: 0 auto 30px auto;   /* Centre la boîte et met de l'espace en dessous 
-}
-
-.section-header .inline-title-wrapper h2 {
-    font-size: 32px;
-    color: #1A1A1A;
-    margin: 0px;
-    padding: 0px;
-    white-space: nowrap; /* Empêche le titre de revenir à la ligne sur petit écran 
-}
-
-/* La grille d'avis (1 colonne sur mobile) 
-.testimonial-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 24px; /* Espace entre chaque avis 
-}
-
-.testimonial-card {
-    background: #FFFFFF;
-    border: 1px solid #F0F0F0;
-    border-radius: var(--radius);
-    padding: 24px;
-}
-
-/* L'en-tête de la carte (Photo + Nom + Badge Google) 
-.testimonial-header {
-    display: flex;
-    justify-content: space-between; /* Pousse le badge à droite 
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.testimonial-user {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* Les photos de profil 
-.testimonial-user img {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%; /* Rond parfait 
-    object-fit: cover;
-    border: 1px solid #EAEAEA;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.user-info strong {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    color: #1A1A1A;
-    font-weight: 600;
-}
-
-.stars {
-    color: #E89152; /* Cuivre clair pour les étoiles 
-    font-size: 14px;
-    letter-spacing: 2px; /* Sépare légèrement les étoiles 
-}
-
-/* Le badge Google Premium (Grisé et discret plutôt que multicolore fluo) 
-.google-badge {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #F9F9F7;
-    border-radius: 50%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #1A1A1A;
-    border: 1px solid #EDEDED;
-}
-
-/* Le texte de l'avis 
-.testimonial-card p {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-style: italic; /* L'italique donne le ton de la citation 
-    color: #555555;
-    line-height: 26px;
-    margin: 0px;
-}
-
-*/
-
-/* CONTACT */
-
-/* --- SECTION CONTACT 
-.contact-section {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
-    color: #FDFDFB;
-    background-color: var(--grey); /* Ta couleur de fond de base 
-    background-image: url(../assets/images/backgroundgrey.avif); /* Ton chemin vers le dossier 
-    background-repeat: repeat; /* Indispensable pour l'effet seamless 
-    background-position: center;
-    background-size: 1200px;    /* Ajuste cette valeur pour agrandir ou rétrécir le motif 
-}
-
-*/
 
 /* Le conteneur global de la section */
 .contact-wrapper {
@@ -492,12 +373,19 @@ margin: 0px;
     margin-top: 10px;
 }
 
+/* CGV */
+
+.cgv{
+    padding: 20px 18px;
+    text-align: center;
+}
+
 /* FOOTER */
 
 footer{
-color: var(--dark);
-text-align:center;
-padding-bottom: 20px;
-font-size:14px;
+    color: var(--dark);
+    text-align:center;
+    padding-bottom: 20px;
+    font-size:14px;
 }
 

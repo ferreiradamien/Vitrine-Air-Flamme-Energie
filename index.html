@@ -8,6 +8,7 @@
 
 <title>Air Flamme Energie | Ramoneur dans le Var</title>
 
+<base href="/">
 <link rel="icon" type="image/png" href="assets/icons/logo-favicon-airflamme.png">
 <link rel="apple-touch-icon" href="assets/icons/appletouch-icon-airflamme.png">
 
@@ -25,25 +26,23 @@
         <!-- HEADER -->
 
         <header>
+            <a href="/" class="logo">
+                <picture>
+                    <source srcset=assets/icons/logo-airflamme-horizontal.webp media="(min-width: 768px)">
+                    <img src="assets/icons/logo-airflamme-vertical.webp" alt="air flamme energie - expert ramonneur">
+                </picture>
+            </a>
 
-            <div class="container navbar">
+        <!-- MENU BURGER QUAND JAVASCRIPT ACQUIS -->
 
-                <a href="/" class="logo">
-                    <picture>
-                        <source srcset=assets/icons/logo-airflamme-horizontal.webp media="(min-width: 768px)">
-                        <img src="assets/icons/logo-airflamme-vertical.webp" alt="air flamme energie - expert ramonneur">
-                    </picture>
-                </a>
-
-                <nav class="nav-menu">
-                    <a href="#">Accueil</a>
-                    <a href="#">Nos Services</a>
-                    <a href="#">Informations & Conseils</a>
-                    <a href="#">Contact</a>
-                </nav>
-
-            </div>
-
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/nos-services/index.html">Nos Services</a></li>
+                    <li><a href="pages/informations-et-conseils/index.html">Informations & Conseils</a></li>
+                    <li><a href="pages/contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
         </header>
 
         <!-- HERO -->
@@ -58,27 +57,54 @@
                 <div class="hero-actions">
                     <a class="btn" href="https://altitude-460.gazoleen.com/rdv" target="_blank">prendre un rendez-vous</a>
                     
-                    <a href="#contact-form" class="btn-premium-outline">
+                    <a href="pages/contact/index.html" class="btn-premium-outline">
                         <img src="assets/icons/headset.svg" alt="icon callback" class="icon-inside">
                         Demander à être rappelé
                     </a>
                 </div>
             </div>
-            
+
+            <div class="container features">
+
+                <div class="feature">
+                    <div class="feature-icons">
+                        <img src="assets/icons/calendar-range.svg">
+                    </div>
+                    <div class="txt-feature">
+                        <h3>À votre service depuis 2018</h3>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icons">
+                        <img src="assets/icons/shield-check.svg">
+                    </div>
+                    <div class="txt-feature">
+                        <h3>Technicien Certifié & Assuré</h3>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icons">
+                        <img src="assets/icons/map-pinned.svg">
+                    </div>
+                    <div class="txt-feature">
+                        <h3>Intervention rapide dans le Var</h3>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- SERVICES -->
 
         <section class="services">
         
-                <div class="title-services">
-                    <div class="title-wrapper">
-                        <img src="assets/icons/wrench.svg" class="wrench-icon">
-                        <h2 class="services-main-title">Nos Services</h2>
-                    </div>
-
-                    <!-- <p class="services-intro">Intervention professionnel de ramonage, entretien et dépannage de poêles à bois et granulés à domicile.</p> -->
+            <div class="title-services">
+                <div class="title-wrapper">
+                    <img src="assets/icons/wrench.svg" class="wrench-icon">
+                    <h2 class="services-main-title">Nos Services</h2>
                 </div>
+            </div>
 
             <div class="cards-wrapper">
 
@@ -93,9 +119,6 @@
                     <div class="service-info">
                         <h3 class="service-title">Ramonage & Entretien Poêle à Bois</h3>
                         <span class="price">A partir de 79€</span>
-                        <!-- <p class="service-text">
-                            Préservez la performance et le rendement de votre installation ainsi que la sécurité de votre foyer. Intervention compléte et expertise certifié pour une chaleur authentique et durable.
-                        </p> -->
                     </div>
 
                 </div>
@@ -112,9 +135,6 @@
                     <div class="service-info">
                         <h3 class="service-title">Ramonage & Maintenance Poêle à Granulés</h3>
                         <span class="price">A partir de 179€</span>
-                        <!-- <p class="service-text">
-                            Optimisez l'électronique et la combustion de votre appareil. Un entretien technique de précision pour un confort thermique automatisé et sans faille.
-                        </p> -->
                     </div>
 
                 </div>
@@ -125,24 +145,18 @@
 
                     <div class="service-content">
                         <img src="assets/images/technicien-intervention.webp" alt="Ramonnage poêle à bois">
-
                     </div>
 
                     <div class="service-info">
                         <h3 class="service-title">Dépannage & Urgence</h3>
                         <span class="price">En savoir plus</span>
-
-                        <!-- <p class="service-text">
-                            Rétablissez votre confort sans attendre. Une intervention réactive et précise pour sécuriser votre installation en cas de panne ou de dysfonctionnement.
-                        </p> -->
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- ZONE -->
-        <div class="desktop-split-layout">
+        <div class="container desktop-split-layout">
 
             <section class="zone premium-section">
                 <div class="container zone-content">
@@ -183,7 +197,7 @@
                     </div>
 
                     <div class="action-item">
-                        <a href="#contact-form" class="btn-premium-outline">
+                        <a href="pages/contact/index.html" class="btn-premium-outline">
                             <img src="assets/icons/headset.svg" alt="icon callback" class="icon-inside">
                             Demander à être rappelé
                         </a>
@@ -198,62 +212,6 @@
                     </div>
                 </div>
             </div>
-            <!-- AVIS
-            <section class="testimonials premium-section">
-                <div class="container testimonials-content">
-                    
-                    <div class="section-header">
-                        <div class="inline-title-wrapper">
-                            <img src="assets/icons/badge-check.svg" class="premium-icon" alt="icon badge check">
-                            <h2>Ils nous font confiance</h2>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-grid">
-                        <div class="testimonial-card">
-                            <div class="testimonial-header">
-                                <div class="testimonial-user">
-                                    <img src="img/user1.jpg" alt="Photo de Marie L.">
-                                    <div class="user-info">
-                                        <strong>Marie L.</strong>
-                                        <div class="stars">★★★★★</div>
-                                    </div>
-                                </div>
-                                <span class="google-badge">G</span> 
-                            </div>
-                            <p>"Excellent service, très professionnel !"</p>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-header">
-                                <div class="testimonial-user">
-                                    <img src="img/user2.jpg" alt="Photo de Jean P.">
-                                    <div class="user-info">
-                                        <strong>Jean P.</strong>
-                                        <div class="stars">★★★★★</div>
-                                    </div>
-                                </div>
-                                <span class="google-badge">G</span>
-                            </div>
-                            <p>"Ponctuel et efficace, je recommande à 100% !"</p>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="testimonial-header">
-                                <div class="testimonial-user">
-                                    <img src="img/user3.jpg" alt="Photo de Sophie D.">
-                                    <div class="user-info">
-                                        <strong>Sophie D.</strong>
-                                        <div class="stars">★★★★★</div>
-                                    </div>
-                                </div>
-                                <span class="google-badge">G</span>
-                            </div>
-                            <p>"Travail soigné, je suis très satisfaite."</p>
-                        </div>
-                    </div>
-                </div>
-            </section>  -->
         </div>
 
         <!-- FOOTER -->
@@ -263,7 +221,8 @@
             <p>
                 © 2026 Air Flamme Energie - Tous droits réservés
             </p>
-
+            <a href="pages/mentions-legales/">Mentions légales</a>
+            <a href="pages/cgv/">CGV</a>
         </footer>
 
     </body>

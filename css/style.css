@@ -1,31 +1,31 @@
 /* RESET */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family: "Segoe UI", Arial, sans-serif;
-background-image: url(../assets/images/background-light.webp);
-background-repeat: repeat;
-background-size: 1260px auto;
-background-color: var(--light);
-color:#333;
-line-height:1.6;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-image: url(../assets/images/background-light.webp);
+    background-repeat: repeat;
+    background-size: 1260px auto;
+    background-color: var(--light);
+    color:#333;
+    line-height:1.6;
 }
 
 /* VARIABLES */
 
 :root{
 
---primary: #e89152;
---secondary: #e15422;
---tertiary: #8c3c1a;
---dark:#1c1c1c;
---light:#ffffff;
---grey:#f1f1f1;
+    --primary: #e89152;
+    --secondary: #e15422;
+    --tertiary: #8c3c1a;
+    --dark:#1c1c1c;
+    --light:#ffffff;
+    --grey:#f1f1f1;
     --text-main: #2d3436;
     --text-muted: #636e72;
     --bg-color: #fcfcfc;
@@ -39,43 +39,47 @@ line-height:1.6;
 /* CONTAINER */
 
 .container{
-width: 92%;
-margin:auto;
+    width: 92%;
+    margin:auto;
 }
+
+/* BODY */
+
 
 /* TITRES */
 
 h1{
-font-size:38px;
-font-weight:700;
+    font-size:42px;
+    font-weight: bold;
 }
 
 h2{
-font-size:24px;
-margin-bottom:20px;
-text-align: center;
+    font-size:24px;
+    margin-bottom:20px;
+    text-align: center;
+    text-wrap: nowrap;
 }
 
 h3{
-font-size:20px;
-white-space: wrap;
+    font-size:20px;
+    white-space: wrap;
 }
 
 p{
-font-size:15px;
+    font-size:15px;
 }
 
 /* LIENS */
 
 a{
-text-decoration:none;
-color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
 /* IMAGES */
 
 img{
-width:100%;
-display:block;
+    width:100%;
+    display:block;
 }
 

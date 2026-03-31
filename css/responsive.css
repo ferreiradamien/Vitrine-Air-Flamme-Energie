@@ -3,21 +3,32 @@
 @media (min-width:768px){
 
 .container{
-width:90%;
+    width:90%;
+}
+
+header{
+    margin-top: -20px;
 }
 
 .nav-menu{
-display:flex;
-gap: 30px;
+    display:flex;
+    justify-content: space-around;
 }
 
-.navbar{
-    margin-top: -40px;
+
+.nav-menu li{
+    transition: all 0.3s ease;
+}
+
+.nav-menu li:hover{
+    transform: translateY(-2px);
+    text-decoration: underline;
+    margin-bottom: 2px solid var(--secondary);
 }
 
 .logo img{
-height: 180px;
-padding-top: 10px;
+    height: 180px;
+    padding-top: 10px;
 }
 
 .hero-actions {
@@ -33,10 +44,20 @@ padding-top: 10px;
     width: 340px;
 }
 
+.feature{
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
+}
+
+.feature h3{
+    font-size: 16px;
+}
 
 .service-card:hover{
-transform: scale(1.02);
-box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 .cards-wrapper {
@@ -48,21 +69,15 @@ box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     margin-bottom: 0px;
     max-width: 100%;
 }
-.testimonial-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-h1{
-font-size:42px;
-}
 
 .hero{
-height: 600px;
-width: 100%;
-display: flex;
-align-items: flex-end;
-justify-content: space-between;
-text-align: left;
+    height: 700px;
+    width: 100%;
+    padding-top: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: left;
 }
 
 .hero-content{
@@ -74,30 +89,12 @@ text-align: left;
     height: 600px;
 }
 
-.features{
-    margin-bottom: 10px;
-}
-
-.feature{
-flex-direction: row;
-text-align:start;
-white-space: nowrap;
-}
-
-.feature img{
-height: 40px;
-}
-
-.txt-feature{
-padding-left: 20px;
-}
-
 .zone-content{
-flex-direction:row;
+    flex-direction:row;
 }
 
 .btn{
-width: auto;
+    width: auto;
 }
 
 .title-services {
@@ -114,14 +111,14 @@ width: auto;
 }
 
 .contact-wrapper{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
 .inline-title-wrapper {
@@ -141,18 +138,18 @@ gap: 20px;
 }
 
 .premium-section {
-padding-top: 80px;
-padding-bottom: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .zone-card h2, .section-header h2 {
-font-size: 32px;
+    font-size: 32px;
 }
 
 /* Passage en ligne sur PC */
 .testimonial-grid {
-flex-direction: row;
-justify-content: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .testimonial-card {
@@ -161,14 +158,14 @@ justify-content: center;
 }
 
 .testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
-    }
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
 
 
 
 .contact-lign{
-margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .contact-text{
@@ -178,14 +175,14 @@ margin-bottom: 40px;
     gap: 15px;
 }
 .contact-title h2 {
-font-size: 40px;
+    font-size: 40px;
 }
 
 .contact-text p,
 .contact-text a {
-white-space: normal;
-word-break: break-word;
-max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 }
@@ -195,53 +192,57 @@ max-width: 100%;
 @media (min-width:1024px){
 
 .container{
-max-width:1800px;
+    max-width:1800px;
 }
 
 .logo img{
-height: 260px;
+    height: 260px;
+}
+
+header{
+    margin-top: -30px;
 }
 
 .hero{
-height: 700px;
+    height: 700px;
 }
 
 .hero-content{
     max-height: 400px;
     margin-top: 160px;
-    margin-right: 120px;
+    margin-right: 140px;
 }
 
-.txt-feature{
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.navbar{
+    width: 55%;
 }
-
-.nav-menu{
-display:flex;
-gap: 50px;
-}
-
 .nav-menu a{
-font-size: 18px;
+    font-size: 18px;
+}
+
+.features{
+    justify-content: center;
+    gap: 120px;
+}
+
+.feature h3{
+    font-size: 18px;
 }
 
 .title-services p {
-padding-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 .cards-wrapper {
-        grid-template-columns: repeat(3, 1fr); /* Passe à 3 colonnes */
-        gap: 40px;
-        max-width: 1800px;
-    }
+    grid-template-columns: repeat(3, 1fr); /* Passe à 3 colonnes */
+    gap: 40px;
+    max-width: 1800px;
+}
 
-    /* On garde l'effet de survol uniquement pour les ordinateurs (pas de tactile) */
-    .service-card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+/* On garde l'effet de survol uniquement pour les ordinateurs (pas de tactile) */
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 .desktop-split-layout{
@@ -250,37 +251,37 @@ padding-bottom: 40px;
 }
 
 .zone, .testimonials {
-        width: 50%; /* Chaque section prend la moitié */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centre le contenu verticalement */
-    }
+    width: 50%; /* Chaque section prend la moitié */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le contenu verticalement */
+}
 
-    /* Ajustement de la Zone pour qu'elle remplisse mieux son espace */
-    .zone-card {
-        width: 90%;
-        max-width: 500px;
-        height: 100%; /* Force la carte à prendre la hauteur */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+/* Ajustement de la Zone pour qu'elle remplisse mieux son espace */
+.zone-card {
+    width: 90%;
+    max-width: 500px;
+    height: 100%; /* Force la carte à prendre la hauteur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* On empile les avis verticalement sur la droite 
-       car 3 avis côte à côte dans 50% de l'écran seraient trop serrés */
-    .testimonial-grid {
-        width: 90%;
-        margin: 0 auto;
-    }
+    car 3 avis côte à côte dans 50% de l'écran seraient trop serrés */
+.testimonial-grid {
+    width: 90%;
+    margin: 0 auto;
+}
 
-    .testimonial-card {
-        width: 100%; /* Prend toute la largeur de sa colonne (la moitié de l'écran) */
-    }
+.testimonial-card {
+    width: 100%; /* Prend toute la largeur de sa colonne (la moitié de l'écran) */
+}
 
-    /* Alternance de couleurs pour un look Premium */
-    .zone {
-        border-right: 1px solid #eee; /* Petite séparation subtile */
-    }
+/* Alternance de couleurs pour un look Premium */
+.zone {
+    border-right: 1px solid #eee; /* Petite séparation subtile */
+}
 
 .contact {
     padding: 80px 0;
@@ -302,7 +303,7 @@ padding-bottom: 40px;
 }
 
 .contact-lign{
-margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 }
