@@ -376,6 +376,7 @@ margin: 0px;
 /* CGV */
 
 .cgv{
+    width: 100%;
     padding: 20px 18px;
     text-align: center;
 }
