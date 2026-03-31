@@ -380,6 +380,10 @@ margin: 0px;
     text-align: center;
 }
 
+.cgv ul{
+list-style-position: inside;
+}
+
 /* FOOTER */
 
 footer{
