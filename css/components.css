@@ -281,6 +281,54 @@ filter: brightness(1.1);
     font-weight: 600;
 }
 
+/* --- FORMULAIRE & BOUTON SEND --- */
+.form-container {
+    background: #FFFFFF;
+    padding: 30px 24px;
+    border-radius: var(--radius);
+    border: 1px solid #EDEDED;
+}
+
+.btn-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #1A1A1A; /* Noir pour contraster avec le bouton appel */
+    color: #FFFFFF;
+    padding: 18px;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.icon-send {
+    width: 16px;
+    filter: brightness(0) invert(1); /* Blanc */
+}
+
+.btn-form:hover{
+    transform: translateY(-2px);
+}
+
+/* Inputs du formulaire */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    background: #FAFAFA;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
 .logo {
     display: flex;
     align-items: center;
