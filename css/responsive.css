@@ -55,8 +55,6 @@ header{
     font-size: 16px;
 }
 
-
-
 .cards-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px; 
@@ -234,6 +232,11 @@ header{
     grid-template-columns: repeat(3, 1fr); /* Passe à 3 colonnes */
     gap: 40px;
     max-width: 1800px;
+}
+
+.service-card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 .desktop-split-layout{
