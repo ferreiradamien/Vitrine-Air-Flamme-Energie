@@ -378,6 +378,7 @@ margin: 0px;
 .cgv{
     width: 100%;
     padding: 20px 18px;
+    box-sizing: border-box;
     text-align: center;
 }
 
