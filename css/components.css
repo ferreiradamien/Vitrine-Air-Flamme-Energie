@@ -80,6 +80,11 @@ filter: brightness(1.1);
     width: 100%; /* S'assure que la carte remplit sa cellule de grille */
 }
 
+.service-card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
 .service-content {
     position: relative;
     width: 100%;
