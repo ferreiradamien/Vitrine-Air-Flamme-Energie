@@ -394,24 +394,24 @@ word-break: break-word;
 /* FAQ */
 
 /* FAQ Accordion Styles */
-#faq {
+.faq {
     max-width: 800px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
     padding: 2rem;
 }
 
-#faq h1 {
+.faq h1 {
     text-align: center;
     margin-bottom: 2rem;
     color: #1a1a1a;
 }
 
-#faq section {
+.faq section {
     margin-bottom: 2rem;
 }
 
-#faq details {
+.faq details {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 0.5rem 0;
@@ -420,12 +420,12 @@ word-break: break-word;
     transition: all 0.3s ease;
 }
 
-#faq details[open] {
+.faq details[open] {
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#faq summary {
+.faq summary {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
@@ -433,11 +433,11 @@ word-break: break-word;
     list-style: none;
 }
 
-#faq summary::marker {
+.faq summary::marker {
     content: "";
 }
 
-#faq summary::after {
+.faq summary::after {
     content: "▼";
     font-size: 0.8rem;
     position: absolute;
@@ -445,17 +445,17 @@ word-break: break-word;
     transition: transform 0.3s ease;
 }
 
-#faq details[open] summary::after {
+.faq details[open] summary::after {
     transform: rotate(180deg);
 }
 
-#faq p,
-#faq ul {
+.faq p,
+.faq ul {
     margin: 0.5rem 0 0 0;
     padding-left: 1rem;
 }
 
-#faq ul li {
+.faq ul li {
     margin-bottom: 0.3rem;
 }
 
