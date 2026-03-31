@@ -387,6 +387,10 @@ list-style-position: inside;
 word-break: break-word;
 }
 
+.cgv h2{
+    text-wrap: wrap;
+}
+
 /* FOOTER */
 
 footer{
