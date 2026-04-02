@@ -7,8 +7,9 @@
 }
 
 header{
-    margin-top: -20px;
+    margin-top: -50px;
 }
+
 
 .nav-menu{
     display:flex;
@@ -39,6 +40,10 @@ header{
     white-space: nowrap;
 }
 
+h1{
+    font-size: 32px;
+    font-weight: bold;
+}
 .hero-actions .btn,
 .hero-actions .btn-premium-outline {
     width: 340px;
@@ -77,8 +82,8 @@ header{
 
 .hero-content{
 
-    margin-top: 60px;
-    margin-right: 80px;
+    margin-top: 120px;
+    margin-right: 150px;
     align-items: flex-start;
     width: 45%;
     height: 600px;
@@ -191,11 +196,11 @@ header{
 }
 
 .logo img{
-    height: 260px;
+    height: 300px;
 }
 
 header{
-    margin-top: -30px;
+    margin-top: -80px;
 }
 
 .hero{
