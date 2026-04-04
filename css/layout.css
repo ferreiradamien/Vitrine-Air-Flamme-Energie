@@ -48,7 +48,7 @@ header{
     flex-direction: column;
     justify-content: flex-end;
     text-align:left;
-    padding: 30px 12px;
+    padding: 30px;
     min-height: 550px;
     box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
     box-sizing: border-box; z-index: 1;
@@ -60,9 +60,8 @@ header{
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    max-width: 360px;
+    max-width: 320px;
     margin-top: 80px;
-    margin-left: 42%;
     margin-right: 0%;
     box-sizing: border-box;
 }
