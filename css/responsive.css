@@ -101,10 +101,6 @@ h1{
     flex-direction:row;
 }
 
-.btn{
-    width: auto;
-}
-
 .title-services {
     flex-direction: column; /* Aligne les éléments horizontalement */
     justify-content: center; /* Centre le groupe image + texte */

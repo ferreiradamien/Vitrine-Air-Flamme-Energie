@@ -61,8 +61,8 @@ header{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 100%;
-    max-width: 300px;
+    width: 80%;
+    max-width: 340px;
     margin-top: 80px;
     margin-right: 0%;
     box-sizing: border-box;
