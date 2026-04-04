@@ -213,14 +213,10 @@ header .navbar{
     margin-top: -40px;
 }
 
-.hero{
-    padding-right: 4%;
-}
-
 .hero-content{
     margin-top: 80px;
     gap: 80px;
-    max-width: 48%;
+    max-width: 50%;
 }
 
 .hero-actions{
