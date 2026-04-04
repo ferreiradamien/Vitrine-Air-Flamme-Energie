@@ -48,7 +48,7 @@ header{
     flex-direction: column;
     justify-content: flex-end;
     text-align:left;
-    padding-right: 4%;
+    padding-right: 0%;
     gap: 30px;
     padding-bottom: 20px;
     min-height: 550px;
