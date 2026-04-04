@@ -64,9 +64,9 @@ header{
     align-items: flex-start;
     width: 100%;
     flex: 1;
-    max-width: 280px;
+    max-width: 300px;
     margin-top: 80px;
-    margin-right: 6%;
+    margin-right: 4%;
     box-sizing: border-box;
 }
 
