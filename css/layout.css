@@ -50,6 +50,7 @@ header{
     text-align:left;
     padding-right: 4%;
     gap: 30px;
+    padding-bottom: 20px;
     min-height: 550px;
     box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
     box-sizing: border-box; z-index: 1;
@@ -63,9 +64,9 @@ header{
     align-items: flex-start;
     width: 100%;
     flex: 1;
-    max-width: 320px;
+    max-width: 280px;
     margin-top: 80px;
-    margin-right: 0%;
+    margin-right: 6%;
     box-sizing: border-box;
 }
 
@@ -95,7 +96,6 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    margin-top: 20px;
     gap: 16px;
 }
 
