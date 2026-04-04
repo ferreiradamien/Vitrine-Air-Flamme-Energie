@@ -34,8 +34,8 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    color: var(--secondary); /* Cuivre */
-    border: 1px solid var(--secondary);
+    color: var(--light);
+    border: 1px solid var(--light);
     padding: 18px 10px;
     margin: 20px 0px 20px 0px;
     border-radius: var(--radius);
@@ -45,11 +45,12 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
+    filter: brightness(0) invert(1);
     transition: all 0.3s ease;
 }
 
 .btn-premium-outline:hover {
-    background: rgba(232, 145, 82, 0.05);
+    background: rgba(232, 145, 82, 0.10);
     transform: translateY(-2px);
 }
 
@@ -57,24 +58,13 @@
     transform: translateY(1px);
 }
 
-.hero-actions .btn-premium-outline{
-    color: var(--light);
-    border: 1px solid var(--light);
-    filter: brightness(0) invert(1); 
-}
-
 .btn-premium-outline .icon-inside{
     filter: none;
 }
 
-.hero-actions .btn-premium-outline{
-    color: var(--secondary);
-    border: 1px solid var(--secondary);
-}
-
 .hero-actions .btn,
 .hero-actions .btn-premium-outline {
-    width: 340px;
+    width: 320px;
 }
 
 /* SERVICE CARD */
