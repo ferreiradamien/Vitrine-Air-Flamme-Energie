@@ -2,14 +2,14 @@
 
 .btn{
     display:inline-block;
-    padding:16px 32px;
-    margin: 20px 0px 40px 0px;
+    margin: 20px 0px 20px 0px;
+    padding: 18px 10px;
     background: linear-gradient(145deg, #e89152 0%, #c15422 50%, #8c3c1a 100%);
     color:#fff;
     border-radius:var(--radius);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-weight:700;
+    font-weight:600;
     font-size: 14px;
     text-align:center;
     cursor: pointer;
@@ -29,22 +29,42 @@
     box-shadow: 0 5px 10px rgba(140, 60, 26, 0.2);
 }
 
-.btn-action, .btn-premium-outline {
+.btn-premium-outline {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;            /* Les boutons prennent la largeur de leur colonne */
-    white-space: nowrap;    /* Empêche le texte de se couper sur deux lignes */
-    min-height: 60px;    /* Donne de la hauteur */
-    width: 100%;         /* Pour qu'ils occupent toute leur colonne */
-    box-sizing: border-box;
+    justify-content: center;
+    gap: 12px;
+    color: var(--secondary); /* Cuivre */
+    border: 1px solid var(--secondary);
+    padding: 18px 10px;
+    margin: 20px 0px 20px 0px;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.hero-actions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.btn-premium-outline:hover {
+    background: rgba(232, 145, 82, 0.05);
+    transform: translateY(-2px);
+}
+
+.btn-premium-outline:active{
+    transform: translateY(1px);
+}
+
+.hero-actions .btn-premium-outline{
+    color: var(--light);
+    border: 1px solid var(--light);
+    filter: brightness(0) invert(1); 
+}
+
+.btn-premium-outline .icon-inside{
+    filter: none;
 }
 
 .hero-actions .btn-premium-outline{
@@ -196,40 +216,6 @@
 .btn-phone:active{
     transform: translateY(1px);
     box-shadow: 0 5px 10px rgba(140, 60, 26, 0.2);
-}
-
-/* --- Bouton Rappel (Outline Cuivre) --- */
-.btn-premium-outline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: var(--secondary); /* Cuivre */
-    border: 1px solid var(--secondary);
-    padding: 18px 32px;
-    border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.hero-actions .btn-premium-outline{
-    color: var(--light);
-    border: 1px solid var(--light);
-    filter: brightness(0) invert(1); 
-}
-
-.btn-premium-outline .icon-inside{
-    filter: none;
-}
-
-.btn-premium-outline:hover {
-    background: rgba(232, 145, 82, 0.05);
-    transform: translateY(-2px);
 }
 
 /* --- Texte d'explication --- */

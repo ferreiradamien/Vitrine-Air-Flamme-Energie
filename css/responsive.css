@@ -44,9 +44,14 @@ h1{
     font-size: 32px;
     font-weight: bold;
 }
+
 .hero-actions .btn,
 .hero-actions .btn-premium-outline {
     width: 340px;
+}
+
+.features{
+    margin-bottom: 12px;
 }
 
 .feature{
@@ -73,7 +78,7 @@ h1{
 .hero{
     height: 700px;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 120px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -81,12 +86,13 @@ h1{
 }
 
 .hero-content{
-
-    margin-top: 120px;
-    margin-right: 150px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: 8%;
+    gap: 40px;
     align-items: flex-start;
-    width: 45%;
-    height: 600px;
+    width: 100%;
+    max-width: 50%;
 }
 
 .zone-content{
@@ -162,8 +168,6 @@ h1{
     box-shadow: var(--shadow-hover);
 }
 
-
-
 .contact-lign{
     margin-bottom: 40px;
 }
@@ -203,14 +207,29 @@ header{
     margin-top: -80px;
 }
 
-.hero{
-    height: 700px;
+header .navbar{
+    margin-top: -40px;
 }
 
 .hero-content{
-    max-height: 400px;
-    margin-top: 160px;
-    margin-right: 140px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: 0%;
+    gap: 80px;
+    max-width: 58%;
+    min-width: 20%;
+}
+
+.hero-actions{
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 42px;
+}
+
+h1{
+    font-size: 34px;
+    font-weight: bold;
 }
 
 .navbar{
@@ -222,6 +241,7 @@ header{
 
 .features{
     justify-content: center;
+    margin-bottom: 12px;
     gap: 120px;
 }
 
