@@ -56,17 +56,15 @@ header{
     box-sizing: border-box; z-index: 1;
 }
 
-
 .hero-content{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    flex: 1;
     max-width: 300px;
     margin-top: 80px;
-    margin-right: 4%;
+    margin-right: 0%;
     box-sizing: border-box;
 }
 
