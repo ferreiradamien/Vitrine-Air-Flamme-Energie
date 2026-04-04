@@ -64,8 +64,10 @@
 
 .hero-actions .btn,
 .hero-actions .btn-premium-outline {
-    width: 300px;
+    width: 275px;
+    text-wrap: nowrap;
 }
+
 
 /* SERVICE CARD */
 
