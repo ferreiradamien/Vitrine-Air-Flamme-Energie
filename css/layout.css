@@ -58,7 +58,6 @@ header{
 }
 
 .hero-content{
-    background-color: #1A1A1A;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
