@@ -63,7 +63,8 @@ header{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 280px;
+    max-width: 55%;
+    margin-right: 2%;
     margin-top: 80px;
     box-sizing: border-box;
 }
