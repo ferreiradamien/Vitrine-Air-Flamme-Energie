@@ -49,19 +49,19 @@ body{
 /* TITRES */
 
 h1{
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 h2{
-    font-size:24px;
+    font-size:20px;
     margin-bottom:20px;
     text-align: center;
     text-wrap: nowrap;
 }
 
 h3{
-    font-size:20px;
+    font-size:18px;
     white-space: wrap;
 }
 
