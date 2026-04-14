@@ -1,0 +1,6 @@
+# Robots.txt — Air Flamme Énergie
+# www.airflammeenergie.fr
+User-agent: *
+Allow: /
+# Sitemap
+Sitemap: https://www.airflammeenergie.fr/sitemap.xml
