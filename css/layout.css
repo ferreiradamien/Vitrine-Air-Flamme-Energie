@@ -311,6 +311,10 @@ margin: 0px;
     gap: 24px; /* Espace entre chaque avis */
 }
 
+.testimonial-grid li{
+    list-style: none;
+}
+
 .testimonial-card {
     background: #FFFFFF;
     border: 1px solid #F0F0F0;
