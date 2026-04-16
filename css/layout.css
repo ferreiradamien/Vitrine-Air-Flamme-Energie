@@ -255,12 +255,16 @@ header{
     justify-content: space-between;
     flex-direction: column; /* Force le titre à être AU-DESSUS de la grille */
     align-items: center;    /* Centre tout le contenu */
-    width: 90%;
-    gap: 20px;
+    width: 100%;
     max-width: 450px;    /* Largeur max pour ne pas trop s'étirer sur grand écran */
-    margin: 0 auto;         /* Centre le conteneur au milieu de la page */
-    padding: 20px 20px;        /* Ajoute un peu de marge sur les côtés */
+    margin: 10 auto;         /* Centre le conteneur au milieu de la page */
+    padding: 40px 10px;        /* Ajoute un peu de marge sur les côtés */
     border-radius: var(--radius);
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
 }
 
 .zone-perim{

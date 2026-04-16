@@ -161,7 +161,6 @@
 .action-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
 }
 
 /* Style de base des boutons */
