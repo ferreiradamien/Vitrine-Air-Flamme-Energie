@@ -16,8 +16,8 @@ body{
     line-height:1.6;
 }
 
-iframe {
-    max-width: 100vh;
+iframe[src*="embeddedChatbot"] {
+    width: clamp(300px, 90vw, 444px);
 }
 
 /* VARIABLES */
