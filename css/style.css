@@ -16,6 +16,14 @@ body{
     line-height:1.6;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
+iframe{
+    min-width: 100vw;
+}
+
 iframe[src*="embeddedChatbot"] {
     width: clamp(300px, 90vw, 444px);
 }
