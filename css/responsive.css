@@ -3,7 +3,7 @@
 @media (min-width:768px){
 
 .container{
-    width:90%;
+    width: 90%;
 }
 
 header{
@@ -124,30 +124,40 @@ h1{
     gap: 20px;
 }
 
+/*
+
 .inline-title-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center; /* Centre le titre parfaitement */
+    justify-content: center;
     margin-bottom: 50px;
 }
 
+
+
+
 .desktop-split-layout {
-    display: flex; /* Active le côte à côte */
+    display: flex; 
     flex-direction: row;
-    align-items: flex-start; /* Les deux sections feront la même hauteur */
+    align-items: flex-start; 
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px; /* On gère l'espace via les paddings internes */
+    gap: 20px; 
 }
+
+*/
 
 .premium-section {
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
+/*
 .zone-card h2, .section-header h2 {
     font-size: 32px;
 }
+
+*/
 
 /* Passage en ligne sur PC */
 .testimonial-grid {

@@ -44,9 +44,8 @@ header{
 
     color:white;
     display: flex;
-    align-items: flex-end;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content:space-between;
     text-align:left;
     gap: 30px;
     padding-bottom: 20px;
@@ -58,17 +57,18 @@ header{
 .hero-content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 260px;
-    margin-right: 2px;
-    margin-top: 80px;
-    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 18px;
+    margin-top: 82px;
+    width: 100%;
+    gap: 20px;
 }
+
 
 .hero-title{
     text-align: left;
-    line-height: 40px;
+    line-height: 32px;
     text-shadow: 0 2px 8px rgba(0,0,0,1);
 }
 
@@ -169,6 +169,7 @@ header{
 .desktop-split-layout {
     display: flex;
     flex-direction: column; /* Sur mobile, on empile les sections */
+    gap: 20px; /* Espace entre les sections */
 }
 
 /* Le conteneur qui met l'icône et le texte sur la même ligne */
@@ -195,6 +196,8 @@ header{
     margin: 0px;             /* Crucial : le flexbox gère l'espacement maintenant */
     line-height: 1.2;        /* Évite que le texte soit plus haut que l'icône */
 }
+
+
 
 .premium-section {
 
@@ -268,41 +271,65 @@ margin: 0px;
 }
 /* --- SECTION AVIS CLIENTS --- */
 
+/*
+
+.section-header {
+    display: flex;
+    flex-direction: column; /* Empile l'icône et le titre verticalement 
+    align-items: center;    /* Centre horizontalement 
+    margin-bottom: 30px;     /* Espace sous le bloc titre complet 
+}
+
+*/
+
+/*
+
 .section-header .icon-wrapper img {
     width: 28px;
     margin-bottom: 12px;
     filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
 }
 
+/*
+
 .section-header .inline-title-wrapper .premium-icon {
-    margin: 0 !important; /* Supprime les marges qui décalent l'icône */
-    width: 26px !important; /* Force une taille visible sur smartphone */
+    margin: 0 !important; /* Supprime les marges qui décalent l'icône 
+    width: 26px !important; /* Force une taille visible sur smartphone 
     height: auto;
     display: inline-block !important;
 }
 
+*/
+
+/*
 .section-header .premium-icon {
-    margin-bottom: 0 !important; /* Annule l'ancienne marge du bas si elle existe */
-    margin-right: 12px !important; /* Espace précis avec le texte */
+    margin-bottom: 0 !important; /* Annule l'ancienne marge du bas si elle existe 
+    margin-right: 12px !important; /* Espace précis avec le texte 
 }
+*/
 
+/*
 .section-header .inline-title-wrapper {
-    display: flex !important;   /* Force le mode Flex */
-    flex-direction: row !important; /* Force l'alignement côte à côte */
-    align-items: center !important; /* Aligne l'icône verticalement au milieu du texte */
-    justify-content: center;    /* Centre le groupe (Icône + Titre) */
-    width: auto;                /* Empêche la boîte de prendre toute la largeur */
+    display: flex !important;   /* Force le mode Flex 
+    flex-direction: row !important; /* Force l'alignement côte à côte 
+    align-items: center !important; /* Aligne l'icône verticalement au milieu du texte 
+    justify-content: center;    /* Centre le groupe (Icône + Titre) 
+    width: auto;                /* Empêche la boîte de prendre toute la largeur 
     gap: 12px;
-    margin: 0 auto 30px auto;   /* Centre la boîte et met de l'espace en dessous */
+    margin: 0 auto 30px auto;   /* Centre la boîte et met de l'espace en dessous 
 }
 
+*/
+/*
 .section-header .inline-title-wrapper h2 {
     font-size: 32px;
     color: #1A1A1A;
     margin: 0px;
     padding: 0px;
-    white-space: nowrap; /* Empêche le titre de revenir à la ligne sur petit écran */
+    white-space: nowrap; /* Empêche le titre de revenir à la ligne sur petit écran
 }
+
+*/
 
 /* La grille d'avis (1 colonne sur mobile) */
 .testimonial-grid {
