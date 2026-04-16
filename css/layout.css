@@ -52,6 +52,7 @@ header{
     min-height: 550px;
     box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
     box-sizing: border-box; z-index: 1;
+    overflow: hidden;
 }
 
 .hero-content{
