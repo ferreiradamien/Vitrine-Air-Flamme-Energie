@@ -117,19 +117,6 @@ h1{
     padding-bottom: 20px;
 }
 
-.contact-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-}
-
-/*
-
 .inline-title-wrapper {
     width: 100%;
     display: flex;
@@ -137,41 +124,25 @@ h1{
     margin-bottom: 50px;
 }
 
-
-
-
-.desktop-split-layout {
-    display: flex; 
-    flex-direction: row;
-    align-items: flex-start; 
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px; 
-}
-
-*/
-
 .premium-section {
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-/*
+
 .zone-card h2, .section-header h2 {
     font-size: 32px;
 }
 
-*/
 
 /* Passage en ligne sur PC */
 .testimonial-grid {
-    flex-direction: row;
     justify-content: center;
 }
 
 .testimonial-card {
     width: 100%; /* Environ un tiers de la largeur pour 3 avis */
-    max-width: 350px;
+    max-width: 760px;
 }
 
 .testimonial-card:hover {
@@ -316,13 +287,6 @@ h1{
 
 .contact-grid {
     gap: 200px; /* On aère encore plus si l'écran est grand */
-}
-
-.contact-wrapper{
-
-    max-width: 600px;
-    margin: 0 auto;
-    gap: 20px;
 }
 
 .contact-content {

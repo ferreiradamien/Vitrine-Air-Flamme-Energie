@@ -168,18 +168,22 @@ header{
 /* ZONE */
 
 .desktop-split-layout {
-    display: flex;
-    flex-direction: column; /* Sur mobile, on empile les sections */
-    gap: 20px; /* Espace entre les sections */
+    display: grid;
+    grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+    gap: 40px; /* L'espacement est géré uniquement par le gap */
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
 }
 
 /* Le conteneur qui met l'icône et le texte sur la même ligne */
 .inline-title-wrapper {
     display: flex;
-    flex-direction: row;     /* Force l'alignement côte à côte */
-    align-items: center;     /* Centre l'icône parfaitement au milieu de la hauteur du texte */
-    justify-content: center; /* Centre l'ensemble au milieu de la carte */
-    margin-bottom: 20px;     /* Espace sous le bloc titre complet */
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    gap: 12px;
 }
 
 /* La nouvelle classe universelle pour tes icônes de titres */
@@ -195,16 +199,15 @@ header{
 .inline-title-wrapper h2 {
     margin: 0px;             /* Crucial : le flexbox gère l'espacement maintenant */
     line-height: 1.2;        /* Évite que le texte soit plus haut que l'icône */
+    white-space: nowrap;
+    font-size: 32px;
 }
-
-
 
 .premium-section {
 
-    width: 100%;
-    max-width: 450px; /* Sécurité pour les grands téléphones */
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    width: 100%; /* S'assure que la carte remplit sa cellule de grille */
 }
 
 /* --- SECTION ZONE D'INTERVENTION --- */
@@ -219,7 +222,7 @@ header{
 .zone-card h2 {
     font-size: 32px;
     color: #1A1A1A;
-margin: 0px;
+    margin: 0px;
 }
 
 .zone-card p{
@@ -247,28 +250,20 @@ margin: 0px;
 
 /* Le conteneur global de la section */
 .contact-wrapper {
+    background-color: rgb(34, 34, 34);
+    color: var(--light);
     display: flex;
+    justify-content: space-between;
     flex-direction: column; /* Force le titre à être AU-DESSUS de la grille */
     align-items: center;    /* Centre tout le contenu */
-    width: 100%;
-    max-width: 450px;      /* Largeur max pour ne pas trop s'étirer sur grand écran */
+    width: 90%;
+    gap: 20px;
+    max-width: 450px;    /* Largeur max pour ne pas trop s'étirer sur grand écran */
     margin: 0 auto;         /* Centre le conteneur au milieu de la page */
     padding: 20px 20px;        /* Ajoute un peu de marge sur les côtés */
     border-radius: var(--radius);
 }
 
-/* Le conteneur du titre */
-.inline-title-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;            /* Force le titre à prendre toute la largeur dispo */
-    margin-bottom: 10px;    /* Ajoute de l'espace sous le titre */
-}
-
-.inline-title-wrapper h2{
-    font-size: 32px;
-}
 /* --- SECTION AVIS CLIENTS --- */
 
 
