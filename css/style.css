@@ -16,11 +16,8 @@ body{
     line-height:1.6;
 }
 
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+iframe {
+    max-width: 100vh;
 }
 
 /* VARIABLES */
