@@ -186,7 +186,6 @@ header{
     width: 28px;
     height: 28px;
     margin-right: 12px;      /* L'espace horizontal précis entre l'icône et le texte */
-    /* Le filtre magique Cuivre Ambré */
     filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
     display: block;          /* Évite les bugs d'espacement bizarres des images */
 }

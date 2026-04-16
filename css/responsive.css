@@ -96,6 +96,10 @@ h1{
     max-width: 50%;
 }
 
+.hero-title{
+    text-align: left;
+}
+
 .zone-content{
     flex-direction:row;
 }
