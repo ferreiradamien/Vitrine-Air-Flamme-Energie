@@ -12,6 +12,27 @@ body{
     line-height:1.6;
 }
 
+/* Empêche tout scroll horizontal parasite */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Corrige le chatbot (iframe injectée) */
+iframe[src*="embeddedChatbot"] {
+    position: fixed !important;
+    right: 8px !important;
+    left: auto !important;
+
+/* Responsive = ne dépasse jamais l’écran */
+    width: min(90vw, 444px) !important;
+    max-width: calc(100vw - 16px) !important;
+
+/* Supprime la cause principale du débordement */
+    clip-path: none !important;
+
+/* Sécurité anti-débordement */
+    transform: translateX(0) !important;
+}
 
 /* VARIABLES */
 
