@@ -190,7 +190,6 @@ header{
 .premium-icon {
     width: 28px;
     height: 28px;
-    margin-right: 12px;      /* L'espace horizontal précis entre l'icône et le texte */
     filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
     display: block;          /* Évite les bugs d'espacement bizarres des images */
 }
@@ -263,6 +262,27 @@ header{
     padding: 20px 20px;        /* Ajoute un peu de marge sur les côtés */
     border-radius: var(--radius);
 }
+
+.zone-perim{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 10px 0;
+    font-weight: bold;
+}
+
+.zone1{
+    color: #fb613b;
+}
+
+.zone2{
+    color: #3d603c;
+}
+
+.zone3{
+    color: #781d88;
+}
+
+
 
 /* --- SECTION AVIS CLIENTS --- */
 
@@ -410,6 +430,15 @@ header{
     color: #555555;
     line-height: 26px;
     margin: 0px;
+}
+
+.exp-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0 10px 0;
+    font-weight: bold;
+    width: 100%;
 }
 
 /* --- LES CARTES DE CONTACT --- */
