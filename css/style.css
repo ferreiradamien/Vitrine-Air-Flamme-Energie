@@ -10,6 +10,7 @@ body{
     background-color: var(--light);
     color:#333;
     line-height:1.6;
+    overflow-x: hidden;
 }
 
 /* Empêche tout scroll horizontal parasite */
@@ -25,7 +26,7 @@ iframe[src*="embeddedChatbot"] {
 
 /* Responsive = ne dépasse jamais l’écran */
     width: min(90vw, 444px) !important;
-    max-width: calc(100vw - 16px) !important;
+    max-width: calc(100% - 16px) !important;
 
 /* Supprime la cause principale du débordement */
     clip-path: none !important;
