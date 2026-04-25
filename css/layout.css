@@ -266,7 +266,7 @@ header{
     align-items: center;    /* Centre tout le contenu */
     width: 100%;
     max-width: 450px;    /* Largeur max pour ne pas trop s'étirer sur grand écran */
-    margin: 10 auto;         /* Centre le conteneur au milieu de la page */
+    margin: 10px auto;         /* Centre le conteneur au milieu de la page */
     padding: 40px 10px;        /* Ajoute un peu de marge sur les côtés */
     border-radius: var(--radius);
 }
