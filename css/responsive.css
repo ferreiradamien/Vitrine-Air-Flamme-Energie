@@ -48,12 +48,14 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
+        padding-bottom: 6px; /* ← garantit les 6px en bas */
     }
 
     .hero-content {
-        margin-top: 40px;
+        margin-top: auto;   /* ← centre le contenu entre le haut et les features */
+        margin-bottom: auto;
         margin-left: auto;
         margin-right: 8%;
         gap: 40px;
