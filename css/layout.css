@@ -1866,30 +1866,30 @@ header {
 
     /* Styles spécifiques à la page mentions légales */
     .legal-hero {
-      background-image: linear-gradient(
-      rgba(0, 0, 0, 0.85) 0%,
-      rgba(0, 0, 0, 0.3) 20%,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0.3) 80%,
-      rgba(0, 0, 0, 0.85) 100%), url("../../assets/images/salon-hiver-hero.webp");
+        background-image: linear-gradient(
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.3) 80%,
+        rgba(0, 0, 0, 0.85) 100%), url("../assets/images/salon-hiver-hero.webp");
 
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content:space-between;
-      text-align:left;
-      gap: 30px;
-      padding-bottom: 20px;
-      min-height: 550px;
-      box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
-      box-sizing: border-box; z-index: 1;
-      overflow: hidden;
-      color:white;
-      padding: 3rem 1.5rem 2rem;
-      text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        text-align:left;
+        gap: 30px;
+        padding-bottom: 20px;
+        min-height: 550px;
+        box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
+        box-sizing: border-box; z-index: 1;
+        overflow: hidden;
+        color:white;
+        padding: 3rem 1.5rem 2rem;
+        text-align: center;
     }
 
     .legal-hero h1 {
