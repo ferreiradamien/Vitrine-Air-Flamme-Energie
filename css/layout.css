@@ -66,6 +66,14 @@ header{
     gap: 20px;
 }
 
+.hero-content p{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: var(--radius);
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 320px;
+    padding: 0.5rem;
+}
 
 .hero-title{
     text-align: center;
@@ -93,6 +101,7 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    margin-bottom: 6px;
     gap: 16px;
 }
 
@@ -717,7 +726,7 @@ Réutilise .hero de layout.css, on surcharge uniquement l'image
 
 
 /* ──────────────────────────────────────────────────────────────
-   STRUCTURE DES SECTIONS
+STRUCTURE DES SECTIONS
    ────────────────────────────────────────────────────────────── */
 
 .section-wrap {
@@ -725,8 +734,6 @@ Réutilise .hero de layout.css, on surcharge uniquement l'image
 }
 
 .section-wrap.dark-bg  { background: var(--dark); }
-.section-wrap.white-bg { background: var(--light); }
-.section-wrap.light-bg { background: var(--grey); }
 
 /* En-tête de section centré (icône + titre + sous-titre) */
 .section-header {

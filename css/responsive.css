@@ -49,7 +49,9 @@ h1{
 .hero-actions .btn-premium-outline {
     width: 340px;
 }
-
+.hero-content p{
+    max-width: 780px;
+}
 .features{
     margin-bottom: 12px;
 }
