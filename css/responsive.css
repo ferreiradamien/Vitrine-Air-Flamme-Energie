@@ -219,7 +219,7 @@
     .nav-menu a { font-size: 18px; }
 
     /* Features */
-    .features  { justify-content: center; gap: 120px; }
+    .features  { justify-content: center; gap: 120px; margin-bottom: 6px;}
     .feature h3 { font-size: 18px; }
 
     .title-services p { padding-bottom: 40px; }
