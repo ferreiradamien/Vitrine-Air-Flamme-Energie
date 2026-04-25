@@ -158,68 +158,81 @@
         <div class="form-title">Demande de rendez-vous</div>
         <div class="form-subtitle">Devis gratuit · Réponse sous 24h · Sans engagement</div>
 
-        <form action="#" method="POST">
-
-        <div class="form-row">
-            <div class="form-group">
-            <label for="prenom">Prénom <span class="form-required">*</span></label>
-            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
-            </div>
-            <div class="form-group">
-            <label for="nom">Nom <span class="form-required">*</span></label>
-            <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group">
-            <label for="telephone">Téléphone <span class="form-required">*</span></label>
-            <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" required />
-            </div>
-            <div class="form-group">
-            <label for="ville">Ville <span class="form-required">*</span></label>
-            <input type="text" id="ville" name="ville" placeholder="Votre ville" required />
-            </div>
-        </div>
-
+        <form
+        id="rdv-form"
+        action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+        method="POST"
+        novalidate
+        >
+        <!-- Champ anti-spam honeypot (invisible pour les humains) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        
+        <!-- Redirection après envoi réussi -->
+        <input type="hidden" name="_next" value="https://ferreiradamien.github.io/Vitrine-Air-Flamme-Energie/pages/contact/merci.html">
+        
+        <!-- Sujet de l'email reçu -->
+        <input type="hidden" name="_subject" value="Nouvelle demande de RDV — Air Flamme Énergie">
+        
         <div class="form-group">
-            <label for="service">Type de prestation <span class="form-required">*</span></label>
-            <select id="service" name="service" required>
+            <label for="prenom">Prénom <span aria-hidden="true">*</span></label>
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name" placeholder="Votre prénom">
+        </div>
+        
+        <div class="form-group">
+            <label for="nom">Nom <span aria-hidden="true">*</span></label>
+            <input type="text" id="nom" name="nom" required autocomplete="family-name" placeholder="Votre nom">
+        </div>
+        
+        <div class="form-group">
+            <label for="telephone">Téléphone <span aria-hidden="true">*</span></label>
+            <input type="tel" id="telephone" name="telephone" required autocomplete="tel" placeholder="06 XX XX XX XX">
+        </div>
+        
+        <div class="form-group">
+            <label for="ville">Ville <span aria-hidden="true">*</span></label>
+            <input type="text" id="ville" name="ville" required autocomplete="address-level2" placeholder="Votre commune">
+        </div>
+        
+        <div class="form-group">
+            <label for="prestation">Type de prestation <span aria-hidden="true">*</span></label>
+            <select id="prestation" name="prestation" required>
             <option value="" disabled selected>Choisissez une prestation</option>
-            <option value="entretien-bois">Entretien poêle à bois — 95 €</option>
-            <option value="entretien-granules">Entretien poêle à granulés — 210 €</option>
-            <option value="depannage">Dépannage — Devis gratuit</option>
-            <option value="contrat-bois">Contrat entretien bois — à partir de 79 €/an</option>
-            <option value="contrat-granules">Contrat entretien granulés — à partir de 179 €/an</option>
-            <option value="bois-chauffage">Commande bois de chauffage</option>
-            <option value="autre">Autre demande</option>
+            <option value="Entretien poêle à bois — 95 €">Entretien poêle à bois — 95 €</option>
+            <option value="Entretien poêle à granulés — 210 €">Entretien poêle à granulés — 210 €</option>
+            <option value="Dépannage — Devis gratuit">Dépannage — Devis gratuit</option>
+            <option value="Contrat entretien bois — 95 €/an">Contrat entretien bois — 95 €/an</option>
+            <option value="Contrat entretien granulés — 210 €/an">Contrat entretien granulés — 210 €/an</option>
+            <option value="Commande bois de chauffage">Commande bois de chauffage</option>
+            <option value="Autre demande">Autre demande</option>
             </select>
         </div>
-
+        
         <div class="form-group">
-            <label for="appareil">Marque / modèle de l'appareil</label>
-            <input type="text" id="appareil" name="appareil" placeholder="Ex : Godin, Invicta, MCZ, Palazzetti..." />
+            <label for="marque">Marque / modèle de l'appareil</label>
+            <input type="text" id="marque" name="marque" placeholder="Ex : Jotul F 305, Palazzetti Elisa...">
         </div>
-
+        
         <div class="form-group">
             <label for="adresse">Adresse d'intervention</label>
-            <input type="text" id="adresse" name="adresse" placeholder="Numéro, rue, ville" />
+            <input type="text" id="adresse" name="adresse" autocomplete="street-address" placeholder="Rue, code postal, commune">
         </div>
-
+        
         <div class="form-group">
             <label for="message">Message / précisions</label>
-            <textarea id="message" name="message" placeholder="Décrivez votre besoin, une panne éventuelle, vos disponibilités..."></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Décrivez votre besoin, indiquez vos disponibilités..."></textarea>
         </div>
-
-        <button type="submit" class="btn-submit">
+        
+        <!-- Message d'erreur / succès (géré par JS ci-dessous) -->
+        <div id="form-status" role="alert" aria-live="polite" style="display:none;"></div>
+        
+        <button type="submit" class="btn" id="form-submit">
             📅 Envoyer ma demande de rendez-vous
         </button>
-
-        <p class="form-note">
-            Vos données sont utilisées uniquement pour la gestion de votre demande.<br/>
+        
+        <p class="form-rgpd">
+            Vos données sont utilisées uniquement pour la gestion de votre demande.<br>
             Conformément au RGPD, vous disposez d'un droit d'accès et de rectification.
         </p>
-
         </form>
     </section>
 
@@ -328,11 +341,14 @@
             <a href="../cgv/index.html">CGV</a>
         </footer>
         
+<!-- Script de gestion du formulaire (AJAX pour rester sur la page) -->
+<script src="../../js/contact-form.js"></script>
+
 <!-- ══════════════════════════════════════
     WIDGET LÉA — BULLE DE CHAT
     Ouverture automatique sur cette page
 ══════════════════════════════════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script><script
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script
 src="https://limova-web-sltj.onrender.com/scripts/chatbot-loader.js"
 data-connection-id="f43f6b8c-7ca1-4249-8f1b-59e5aa2eded3">
 </script>
