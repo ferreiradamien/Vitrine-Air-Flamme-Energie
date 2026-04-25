@@ -13,6 +13,9 @@
 
     .container { width: 90%; }
 
+    /* Burger — masqué sur tablette et desktop */
+    .burger-btn { display: none; }
+
     /* Header */
     header { margin-top: -50px; }
 

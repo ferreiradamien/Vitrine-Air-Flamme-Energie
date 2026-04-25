@@ -11,6 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 
 .navbar {
@@ -30,6 +31,118 @@ header {
 .nav-menu a {
     text-decoration: none;
     color: white;
+}
+
+
+/* ── BURGER BUTTON ── */
+
+.burger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius);
+    cursor: pointer;
+    z-index: 200;
+    flex-shrink: 0;
+    margin-right: 16px;
+    /* Pas affiché sur desktop — géré dans responsive.css */
+}
+
+.burger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* État ouvert : croix */
+.burger-btn.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger-btn.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.burger-btn.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+/* ── NAV MOBILE (panneau plein écran) ── */
+
+@media (max-width: 767px) {
+
+    /* Masque le burger sur tablette/desktop — affiché uniquement mobile */
+    .burger-btn { display: flex; }
+
+    .nav-menu {
+        /* Panneau qui glisse depuis la droite */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100dvh;
+        width: min(280px, 80vw);
+        background: rgba(20, 20, 20, 0.97);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        display: flex !important;          /* toujours dans le DOM */
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0;
+        padding: 40px 32px;
+        z-index: 150;
+        /* État fermé */
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        white-space: normal;
+    }
+
+    .nav-menu.is-open {
+        transform: translateX(0);
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-menu li:first-child { border-top: 1px solid rgba(255, 255, 255, 0.08); }
+
+    .nav-menu a {
+        display: block;
+        padding: 18px 0;
+        font-size: 17px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 0.3px;
+        transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+        color: var(--primary);
+        padding-left: 6px;
+    }
+
+    /* Overlay sombre derrière le panneau */
+    .nav-menu::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+    }
+
+    .nav-menu.is-open::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
 
 
