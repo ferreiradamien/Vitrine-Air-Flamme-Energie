@@ -1,7 +1,3 @@
-/* ============================================================
-   BURGER.JS — Menu hamburger mobile
-   ============================================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const burger = document.getElementById('burger-btn');
