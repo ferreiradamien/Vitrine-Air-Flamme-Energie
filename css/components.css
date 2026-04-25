@@ -1,13 +1,8 @@
 /* ============================================================
-   COMPONENTS.CSS — Composants réutilisables
-   Mobile-first · Sans doublons · Bugs corrigés
+    COMPONENTS.CSS — Composants réutilisables
    ============================================================ */
 
-
-/* ── BOUTONS — SOCLE COMMUN ──
-   .btn et .btn-phone partageaient ~80 % de code.
-   On factorise les propriétés communes ici,
-   et on ne surcharge que ce qui diffère. */
+/* ── BOUTONS PRINCIPAUX (HERO, SERVICES) ── */
 
 .btn,
 .btn-phone {

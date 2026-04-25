@@ -217,7 +217,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    white-space: nowrap;
+    white-space: normal;   /* était nowrap — causait les titres coupés sur tablette */
 }
 
 .feature img { height: 40px; }
