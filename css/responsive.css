@@ -1,3 +1,18 @@
+@media (max-width: 900px) {
+    .contact-grid       { grid-template-columns: 1fr; }
+    .form-row           { grid-template-columns: 1fr; }
+    .faq-mini-grid      { grid-template-columns: 1fr; }
+    .lea-rdv-section    { padding: 28px 24px; }
+}
+
+@media (max-width: 600px) {
+    .form-card          { padding: 28px 20px; }
+    .hero-contact       { padding: 60px 20px 70px; }
+    .section-wrap       { padding: 56px 16px; }
+    .btn-lea-chat,
+    .btn-lea-whatsapp   { width: 100%; justify-content: center; }
+}
+
 /* TABLET */
 
 @media (min-width:768px){
@@ -293,7 +308,6 @@ h1{
 }
 
 .contact-content {
-background-color: #dd1111;
     max-width: 100%;
     flex-direction: row;
     justify-content:center;
