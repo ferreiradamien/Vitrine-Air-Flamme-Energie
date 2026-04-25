@@ -75,7 +75,7 @@ gtag("config", "G-XXXXXXXXXX");
         <header>
             <a href="index.html" class="logo">
                 <picture>
-                    <source srcset=assets/icons/logo-airflamme-horizontal.webp media="(min-width: 768px)">
+                    <source srcset="assets/icons/logo-airflamme-horizontal.webp" media="(min-width: 768px)">
                     <img src="assets/icons/logo-airflamme-vertical.webp" alt="air flamme energie - expert ramonneur">
                 </picture>
             </a>
@@ -96,7 +96,7 @@ gtag("config", "G-XXXXXXXXXX");
             <!-- HERO -->
 
             <section class="hero">
-                <section class="hero-content">
+                <div class="hero-content">
                     <h1 class="hero-title">
                         Ramonage et Entretien de
                         <span>Poêles à bois & granulés</span>
@@ -110,7 +110,7 @@ gtag("config", "G-XXXXXXXXXX");
                             contactez nous
                         </a>
                     </div>
-                </section>
+                </div>
 
                 <section class="container features">
 
@@ -147,21 +147,21 @@ gtag("config", "G-XXXXXXXXXX");
 
             <section class="services">
             
-                <section class="title-services">
+                <div class="title-services">
                     <div class="title-wrapper">
                         <img src="assets/icons/wrench.svg" alt="icon wrench" class="wrench-icon">
                         <h2 class="services-main-title">Nos Services</h2>
                     </div>
-                </section>
+                </div>
 
-                <section class="cards-wrapper">
+                <div class="cards-wrapper">
 
                     <!-- SERVICE -->
 
                     <a href="pages/nos-services/index.html" class="service-card">
 
                         <div class="service-content">
-                            <img src="assets/images/poele-bois.webp" alt="Ramonnage poêle à bois">
+                            <img src="assets/images/poele-bois.webp" alt="Ramonnage poêle à bois" loading="lazy" width="400" height="300">
                         </div>
 
                         <div class="service-info">
@@ -176,7 +176,7 @@ gtag("config", "G-XXXXXXXXXX");
                     <a href="pages/nos-services/index.html" class="service-card">
 
                         <div class="service-content">
-                            <img src="assets/images/poele-granule.webp" alt="Ramonnage poêle à bois">
+                            <img src="assets/images/poele-granule.webp" alt="Ramonnage poêle à granules" loading="lazy" width="400" height="300">
 
                         </div>
 
@@ -192,7 +192,7 @@ gtag("config", "G-XXXXXXXXXX");
                     <a href="pages/nos-services/index.html" class="service-card">
 
                         <div class="service-content">
-                            <img src="assets/images/technicien-intervention.webp" alt="Ramonage poêle à bois">
+                            <img src="assets/images/technicien-intervention.webp" alt="Technicien en intervention" loading="lazy" width="400" height="300">
                         </div>
 
                         <div class="service-info">
@@ -200,7 +200,7 @@ gtag("config", "G-XXXXXXXXXX");
                             <span class="price">En savoir plus</span>
                         </div>
                     </a>
-                </section>
+                </div>
             </section>
 
 
@@ -224,7 +224,7 @@ gtag("config", "G-XXXXXXXXXX");
                         </div>
 
                         <div class="map-var">
-                            <img src="assets/images/carte-var.webp" alt="map var">
+                            <img src="assets/images/carte-var.webp" alt="Carte zone d'intervention dans le Var" loading="lazy" width="600" height="400">
                         </div>
 
                         <div class="zone-perim">
@@ -239,7 +239,7 @@ gtag("config", "G-XXXXXXXXXX");
                 </section>
 
                 <!-- TESTIMONIALS -->
-
+                <!--
                 <section class="testimonials premium-section">
                     <div class="container">
                         
@@ -255,10 +255,12 @@ gtag("config", "G-XXXXXXXXXX");
                                     <article class="testimonial-card">
                                         <div class="testimonial-header">
                                             <figure class="testimonial-user">
-                                                <img src="img/user1.jpg" alt="Photo de Marie L.">
+                                                <img src="" alt="Photo de Marie L." loading="lazy" width="48" height="48">
                                                 <figcaption class="user-info">
                                                     <strong>Marie L.</strong>
-                                                    <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+                                                    <div class="stars" role="img" aria-label="5 étoiles sur 5">
+                                                        <span aria-hidden="true">★★★★★</span>
+                                                    </div>
                                                 </figcaption>
                                             </figure>
                                             <span class="google-badge" aria-hidden="true">G</span> 
@@ -273,10 +275,12 @@ gtag("config", "G-XXXXXXXXXX");
                                     <article class="testimonial-card">
                                         <div class="testimonial-header">
                                             <figure class="testimonial-user">
-                                                <img src="img/user2.jpg" alt="Photo de Jean P.">
+                                                <img src="" alt="Photo de Jean P." loading="lazy" width="48" height="48">
                                                 <figcaption class="user-info">
                                                     <strong>Jean P.</strong>
-                                                    <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+                                                    <div class="stars" role="img" aria-label="5 étoiles sur 5">
+                                                        <span aria-hidden="true">★★★★★</span>
+                                                    </div>
                                                 </figcaption>
                                             </figure>
                                             <span class="google-badge" aria-hidden="true">G</span>
@@ -291,10 +295,12 @@ gtag("config", "G-XXXXXXXXXX");
                                     <article class="testimonial-card">
                                         <div class="testimonial-header">
                                             <figure class="testimonial-user">
-                                                <img src="img/user3.jpg" alt="Photo de Sophie D.">
+                                                <img src="" alt="Photo de Sophie D." loading="lazy" width="48" height="48">
                                                 <figcaption class="user-info">
                                                     <strong>Sophie D.</strong>
-                                                    <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+                                                    <div class="stars" role="img" aria-label="5 étoiles sur 5">
+                                                        <span aria-hidden="true">★★★★★</span>
+                                                    </div>
                                                 </figcaption>
                                             </figure>
                                             <span class="google-badge" aria-hidden="true">G</span>
@@ -306,14 +312,17 @@ gtag("config", "G-XXXXXXXXXX");
                                 </li>
                             </ul>
 
+
                             <div class="exp-action">
-                                <a class="btn" href="https://www.google.com/search?..." target="_blank" rel="noopener">
+                                <a class="btn" href="https://www.google.com/search?sca_esv=52ef59f19557e67d&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOYk616eAifXXia5OUUxE3U9k6UPntfvb4KqiWyxkUoZ9tZBvYVr56PYVTcsZWQHyB9H8wUVDkLfHjzPNC9e0OVTAKG3RNyVh3RBN9j8A5lQaKUuuLA%3D%3D&q=Air+Flamme+%C3%89nergie+Avis&sa=X&ved=2ahUKEwi28u68ufOTAxU8P_sDHRR_MicQ0bkNegQIOxAH&biw=920&bih=873&dpr=2" target="_blank" rel="noopener">
                                 partagez votre avis sur google
                                 </a>
                             </div>
                         </div>
                     </div>
                 </section>
+                -->
+            </section>
 
                 <!-- CONTACT -->
 
@@ -330,7 +339,7 @@ gtag("config", "G-XXXXXXXXXX");
                             <p>
                                 Panne ou Urgence ? Appelez nous :
                             </p>
-                            
+
                             <a href="tel:+33612201151" class="btn-action btn-phone">
                                 <img src="assets/icons/phone.svg" alt="icon phone" class="icon-inside">
                                 06 12 20 11 51
@@ -339,10 +348,7 @@ gtag("config", "G-XXXXXXXXXX");
 
                         <div class="action-item">
                             <p>
-                                Être rappelé (devis ou question)
-                            </p>
-                            <p>
-                                Réponse rapide garantie :
+                                Être rappelé (devis ou question), Réponse rapide garantie :
                             </p>
                             <a class="btn-premium-outline" href="pages/contact/index.html">
                                 <img src="assets/icons/headset.svg" alt="icon callback" class="icon-inside">
@@ -356,7 +362,6 @@ gtag("config", "G-XXXXXXXXXX");
                         </div>
                     </section>
                 </section>
-            </section>
         </main>
 
         <!-- FOOTER -->
@@ -369,10 +374,12 @@ gtag("config", "G-XXXXXXXXXX");
             <a href="pages/cgv/">CGV</a>
         </footer>
 
+        <!-- WIDGET LÉA — BULLE DISCRÈTE -->
+        <script
+        src="https://limova-web-sltj.onrender.com/scripts/chatbot-loader.js"
+        data-connection-id="f43f6b8c-7ca1-4249-8f1b-59e5aa2eded3">
+        </script>
+
     </body>
-    <!-- WIDGET LÉA — BULLE DISCRÈTE -->
-    <script
-    src="https://limova-web-sltj.onrender.com/scripts/chatbot-loader.js"
-    data-connection-id="f43f6b8c-7ca1-4249-8f1b-59e5aa2eded3">
-    </script>
+
 </html>

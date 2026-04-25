@@ -124,11 +124,9 @@ h1{
     margin-bottom: 50px;
 }
 
-.premium-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.desktop-split-layout{
+    grid-template-columns: repeat(2, 1fr);
 }
-
 
 .zone-card h2, .section-header h2 {
     font-size: 32px;
@@ -243,15 +241,12 @@ h1{
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-.desktop-split-layout{
-    max-width: 1600px;
-    gap:60px;
-}
-
 .zone, .testimonials {
-    width: 50%; /* Chaque section prend la moitié */
+
+    width: 100%; /* Chaque section prend la moitié */
+    max-width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center; /* Centre le contenu verticalement */
 }
 
@@ -276,11 +271,6 @@ h1{
     width: 100%; /* Prend toute la largeur de sa colonne (la moitié de l'écran) */
 }
 
-/* Alternance de couleurs pour un look Premium */
-.zone {
-    border-right: 1px solid #eee; /* Petite séparation subtile */
-}
-
 .contact {
     padding: 80px 0;
 }
@@ -290,7 +280,11 @@ h1{
 }
 
 .contact-content {
-    max-width: 40%;
+background-color: #dd1111;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content:center;
+    gap: 80px;
 }
 
 .contact-lign{

@@ -172,7 +172,7 @@ header{
     grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
     gap: 40px; /* L'espacement est géré uniquement par le gap */
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 0 24px;
 }
 
@@ -404,10 +404,13 @@ header{
     font-weight: 600;
 }
 
+/* CSS : forcer la police et la couleur pour un rendu stable partout */
 .stars {
-    color: #E89152; /* Cuivre clair pour les étoiles */
-    font-size: 14px;
-    letter-spacing: 2px; /* Sépare légèrement les étoiles */
+    color: #F59E0B;        /* jaune doré */
+    font-size: 1rem;
+    font-family: Arial, sans-serif;  /* police fiable pour les symboles Unicode */
+    letter-spacing: 2px;
+    line-height: 1;
 }
 
 /* Le badge Google Premium (Grisé et discret plutôt que multicolore fluo) */
