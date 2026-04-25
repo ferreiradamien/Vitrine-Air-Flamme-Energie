@@ -169,6 +169,17 @@ h1{
     max-width: 100%;
 }
 
+/* Page Services */
+
+.section-wrap { padding: 72px 24px; }
+
+.service-block { grid-template-columns: 1fr 1fr; }
+.service-block.reverse { direction: rtl; }
+.service-block.reverse > * { direction: ltr; }
+
+.bois-header { flex-direction: row; text-align: left; }
+.cta-band    { padding: 48px 40px; }
+
 }
 
 /* DESKTOP */
@@ -290,5 +301,13 @@ background-color: #dd1111;
 .contact-lign{
     margin-bottom: 50px;
 }
+
+/* Page Services */
+
+.section-wrap { padding: 88px 0; }
+
+.process-step:not(:last-child)::after { display: block; }
+
+.cta-band { padding: 56px 48px; }
 
 }
