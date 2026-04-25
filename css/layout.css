@@ -658,24 +658,9 @@ word-break: break-word;
 
 /* Page services */
 
-/* ═══════════════════════════════════════════════════════════════
-   services-specific.css
-   Styles UNIQUEMENT pour la page services.
-   Requiert : style.css → layout.css → components.css → responsive.css
-   ═══════════════════════════════════════════════════════════════
-
-   Dans votre services.html, liez les fichiers dans cet ordre :
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/components.css">
-   <link rel="stylesheet" href="css/responsive.css">
-   <link rel="stylesheet" href="css/services-specific.css">
-   ═══════════════════════════════════════════════════════════════ */
-
-
 /* ──────────────────────────────────────────────────────────────
-   HERO SERVICES
-   Réutilise .hero de layout.css, on surcharge uniquement l'image
+HERO SERVICES
+Réutilise .hero de layout.css, on surcharge uniquement l'image
    ────────────────────────────────────────────────────────────── */
 
 .hero.services-hero {
