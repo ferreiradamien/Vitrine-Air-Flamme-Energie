@@ -279,14 +279,16 @@ h1{
 }
 
 /* Ajustement de la Zone pour qu'elle remplisse mieux son espace */
+/*
 .zone-card {
     width: 90%;
     max-width: 500px;
-    height: 100%; /* Force la carte à prendre la hauteur */
+    height: 100%; /* Force la carte à prendre la hauteur 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+*/
 
 /* On empile les avis verticalement sur la droite 
     car 3 avis côte à côte dans 50% de l'écran seraient trop serrés */
