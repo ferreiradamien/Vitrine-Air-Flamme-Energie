@@ -50,7 +50,7 @@
         align-items: flex-end;
         justify-content: space-between;
         text-align: center;
-        padding-bottom: 6px; /* ← garantit les 6px en bas */
+        padding-bottom: 10px;
     }
 
     .hero-content {
@@ -179,7 +179,7 @@
     .cta-band    { padding: 48px 40px; }
 
     /* Page Infos & Conseils */
-    .hero           { min-height: 500px; padding: 100px 40px; }
+    .hero .infos-hero          { min-height: 500px; padding: 100px 40px; }
     .infos-grid     { grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .regle-grid     { grid-template-columns: repeat(2, 1fr); }
     .faq-grid       { grid-template-columns: repeat(2, 1fr); }
