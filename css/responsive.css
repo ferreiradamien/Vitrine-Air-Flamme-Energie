@@ -1,331 +1,300 @@
-@media (max-width: 900px) {
-    .contact-grid       { grid-template-columns: 1fr; }
-    .form-row           { grid-template-columns: 1fr; }
-    .faq-mini-grid      { grid-template-columns: 1fr; }
-    .lea-rdv-section    { padding: 28px 24px; }
+/* ============================================================
+   RESPONSIVE.CSS — Media queries
+   Mobile-first : les styles de base sont dans les autres fichiers.
+   On ne surcharge ici que ce qui change par breakpoint.
+   ============================================================ */
+
+
+/* ══════════════════════════════════════════
+   TABLET — 768px et plus
+   ══════════════════════════════════════════ */
+
+@media (min-width: 768px) {
+
+    .container { width: 90%; }
+
+    /* Header */
+    header { margin-top: -50px; }
+
+    /* Navigation */
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-menu li { transition: all 0.3s ease; }
+
+    /* CORRIGÉ : "margin-bottom: 2px solid" était invalide */
+    .nav-menu li:hover {
+        transform: translateY(-2px);
+        text-decoration: underline;
+        text-decoration-color: var(--secondary);
+    }
+
+    /* Logo */
+    .logo img {
+        height: 180px;
+        padding-top: 10px;
+    }
+
+    /* Hero */
+    .hero {
+        height: 700px;
+        width: 100%;
+        padding-top: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: 8%;
+        gap: 40px;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 50%;
+    }
+
+    .hero-title { text-align: left; }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .hero-actions .btn,
+    .hero-actions .btn-premium-outline { width: 340px; }
+
+    .hero-content p { max-width: 780px; }
+
+    /* Typographie */
+    h1 { font-size: 32px; }
+
+    /* Features */
+    .feature {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 12px;
+    }
+
+    .feature h3 { font-size: 16px; }
+
+    /* Cards services */
+    .cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Zone */
+    .zone-content { flex-direction: row; }
+
+    .desktop-split-layout { grid-template-columns: repeat(2, 1fr); }
+
+    /* Titres de section */
+    .title-services {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .title-services p {
+        text-align: left;
+        max-width: 1200px;
+        padding-bottom: 20px;
+    }
+
+    .inline-title-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    /* Zone card & section header */
+    .zone-card h2,
+    .section-header h2 { font-size: 32px; }
+
+    /* Témoignages */
+    .testimonial-grid { justify-content: center; }
+
+    .testimonial-card {
+        width: 100%;
+        max-width: 760px;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+    }
+
+    /* Contact */
+    .contact-lign  { margin-bottom: 40px; }
+
+    .contact-text {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 15px;
+    }
+
+    .contact-title h2 { font-size: 40px; }
+
+    .contact-text p,
+    .contact-text a {
+        white-space: normal;
+        word-break: break-word;
+        max-width: 100%;
+    }
+
+    /* Page Services */
+    .section-wrap { padding: 72px 24px; }
+
+    .service-block { grid-template-columns: 1fr 1fr; }
+    .service-block.reverse { direction: rtl; }
+    .service-block.reverse > * { direction: ltr; }
+
+    .bois-header { flex-direction: row; text-align: left; }
+    .cta-band    { padding: 48px 40px; }
+
+    /* Page Infos & Conseils */
+    .hero           { min-height: 500px; padding: 100px 40px; }
+    .infos-grid     { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .regle-grid     { grid-template-columns: repeat(2, 1fr); }
+    .faq-grid       { grid-template-columns: repeat(2, 1fr); }
+    .saisons-grid   { grid-template-columns: repeat(2, 1fr); }
+    .alert-band     { flex-wrap: nowrap; }
+
+    /* Page Contact */
+    .contact-grid   { grid-template-columns: 1fr 1.6fr; }
+    .form-row       { grid-template-columns: 1fr 1fr; }
+    .faq-mini-grid  { grid-template-columns: 1fr 1fr; }
+    .lea-rdv-section { padding: 28px 24px; }
 }
+
+
+/* ══════════════════════════════════════════
+   DESKTOP — 1024px et plus
+   ══════════════════════════════════════════ */
+
+@media (min-width: 1024px) {
+
+    .container { max-width: 1800px; }
+
+    /* Header */
+    header { margin-top: -80px; }
+
+    header .navbar { margin-top: -40px; }
+
+    /* Logo */
+    .logo img { height: 300px; }
+
+    /* Hero */
+    .hero-content {
+        margin-top: 80px;
+        gap: 80px;
+        max-width: 45%;
+    }
+
+    .hero-actions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 42px;
+    }
+
+    /* Typographie */
+    h1 { font-size: 34px; }
+
+    /* Navigation */
+    .navbar     { width: 55%; }
+    .nav-menu a { font-size: 18px; }
+
+    /* Features */
+    .features  { justify-content: center; gap: 120px; }
+    .feature h3 { font-size: 18px; }
+
+    .title-services p { padding-bottom: 40px; }
+
+    /* Cards services */
+    .cards-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1800px;
+    }
+
+    .service-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Zone / Témoignages */
+    .zone,
+    .testimonials {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .testimonial-grid {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .testimonial-card { width: 100%; }
+
+    /* Contact */
+    .contact         { padding: 80px 0; }
+    .contact-grid    { gap: 200px; }
+    .contact-content {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+    }
+    .contact-lign { margin-bottom: 50px; }
+
+    /* Page Services */
+    .section-wrap           { padding: 88px 0; }
+    .process-step:not(:last-child)::after { display: block; }
+    .cta-band               { padding: 56px 48px; }
+
+    /* Page Infos & Conseils */
+    .infos-grid   { grid-template-columns: repeat(4, 1fr); }
+    .regle-grid   { grid-template-columns: repeat(3, 1fr); }
+    .faq-grid     { grid-template-columns: repeat(2, 1fr); }
+    .saisons-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+
+/* ══════════════════════════════════════════
+   MOBILE SPÉCIFIQUE — 600px et moins
+   (surcharges ponctuelles, uniquement si nécessaire)
+   ══════════════════════════════════════════ */
 
 @media (max-width: 600px) {
-    .form-card          { padding: 28px 20px; }
-    .hero-contact       { padding: 60px 20px 70px; }
-    .section-wrap       { padding: 56px 16px; }
+
+    .form-card        { padding: 28px 20px; }
+    .hero-contact     { padding: 60px 20px 70px; }
+    .section-wrap     { padding: 56px 16px; }
+
     .btn-lea-chat,
-    .btn-lea-whatsapp   { width: 100%; justify-content: center; }
-}
+    .btn-lea-whatsapp { width: 100%; justify-content: center; }
 
-/* TABLET */
+    .alert-band       { flex-direction: column; text-align: center; }
 
-@media (min-width:768px){
+    .cta-buttons      { flex-direction: column; align-items: center; }
 
-.container{
-    width: 90%;
-}
-
-header{
-    margin-top: -50px;
-}
-
-
-.nav-menu{
-    display:flex;
-    justify-content: space-around;
-}
-
-
-.nav-menu li{
-    transition: all 0.3s ease;
-}
-
-.nav-menu li:hover{
-    transform: translateY(-2px);
-    text-decoration: underline;
-    margin-bottom: 2px solid var(--secondary);
-}
-
-.logo img{
-    height: 180px;
-    padding-top: 10px;
-}
-
-.hero-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    white-space: nowrap;
-}
-
-h1{
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.hero-actions .btn,
-.hero-actions .btn-premium-outline {
-    width: 340px;
-}
-.hero-content p{
-    max-width: 780px;
-}
-.features{
-    margin-bottom: 12px;
-}
-
-.feature{
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    gap: 12px;
-}
-
-.feature h3{
-    font-size: 16px;
-}
-
-.cards-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px; 
-}
-
-.service-card {
-    margin-bottom: 0px;
-    max-width: 100%;
-}
-
-.hero{
-    height: 700px;
-    width: 100%;
-    padding-top: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-content{
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: 8%;
-    gap: 40px;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 50%;
-}
-
-.hero-title{
-    text-align: left;
-}
-
-.zone-content{
-    flex-direction:row;
-}
-
-.title-services {
-    flex-direction: column; /* Aligne les éléments horizontalement */
-    justify-content: center; /* Centre le groupe image + texte */
-    text-align: center; /* Aligne le texte à gauche pour plus de lisibilité */
-    gap: 20px; /* Ajoute de l'espace entre l'image et le texte */
-}
-
-.title-services p {
-    text-align: left; /* Le texte n'est plus centré sur desktop */
-    max-width: 1200px; /* Évite que les lignes de texte soient trop longues */
-    padding-bottom: 20px;
-}
-
-.inline-title-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.desktop-split-layout{
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.zone-card h2, .section-header h2 {
-    font-size: 32px;
-}
-
-
-/* Passage en ligne sur PC */
-.testimonial-grid {
-    justify-content: center;
-}
-
-.testimonial-card {
-    width: 100%; /* Environ un tiers de la largeur pour 3 avis */
-    max-width: 760px;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-.contact-lign{
-    margin-bottom: 40px;
-}
-
-.contact-text{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 15px;
-}
-.contact-title h2 {
-    font-size: 40px;
-}
-
-.contact-text p,
-.contact-text a {
-    white-space: normal;
-    word-break: break-word;
-    max-width: 100%;
-}
-
-/* Page Services */
-
-.section-wrap { padding: 72px 24px; }
-
-.service-block { grid-template-columns: 1fr 1fr; }
-.service-block.reverse { direction: rtl; }
-.service-block.reverse > * { direction: ltr; }
-
-.bois-header { flex-direction: row; text-align: left; }
-.cta-band    { padding: 48px 40px; }
-
-}
-
-/* DESKTOP */
-
-@media (min-width:1024px){
-
-.container{
-    max-width:1800px;
-}
-
-.logo img{
-    height: 300px;
-}
-
-header{
-    margin-top: -80px;
-}
-
-header .navbar{
-    margin-top: -40px;
-}
-
-.hero-content{
-    margin-top: 80px;
-    gap: 80px;
-    max-width: 45%;
-}
-
-.hero-actions{
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 42px;
-}
-
-h1{
-    font-size: 34px;
-    font-weight: bold;
-}
-
-.navbar{
-    width: 55%;
-}
-.nav-menu a{
-    font-size: 18px;
-}
-
-.features{
-    justify-content: center;
-    margin-bottom: 12px;
-    gap: 120px;
-}
-
-.feature h3{
-    font-size: 18px;
-}
-
-.title-services p {
-    padding-bottom: 40px;
-}
-
-.cards-wrapper {
-    grid-template-columns: repeat(3, 1fr); /* Passe à 3 colonnes */
-    gap: 40px;
-    max-width: 1800px;
-}
-
-.service-card:hover{
-    transform: scale(1.02);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.zone, .testimonials {
-
-    width: 100%; /* Chaque section prend la moitié */
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Centre le contenu verticalement */
-}
-
-/* Ajustement de la Zone pour qu'elle remplisse mieux son espace */
-/*
-.zone-card {
-    width: 90%;
-    max-width: 500px;
-    height: 100%; /* Force la carte à prendre la hauteur 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-*/
-
-/* On empile les avis verticalement sur la droite 
-    car 3 avis côte à côte dans 50% de l'écran seraient trop serrés */
-.testimonial-grid {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.testimonial-card {
-    width: 100%; /* Prend toute la largeur de sa colonne (la moitié de l'écran) */
-}
-
-.contact {
-    padding: 80px 0;
-}
-
-.contact-grid {
-    gap: 200px; /* On aère encore plus si l'écran est grand */
-}
-
-.contact-content {
-    max-width: 100%;
-    flex-direction: row;
-    justify-content:center;
-    gap: 80px;
-}
-
-.contact-lign{
-    margin-bottom: 50px;
-}
-
-/* Page Services */
-
-.section-wrap { padding: 88px 0; }
-
-.process-step:not(:last-child)::after { display: block; }
-
-.cta-band { padding: 56px 48px; }
-
+    .btn-white,
+    .btn-ghost        { width: 100%; justify-content: center; }
 }

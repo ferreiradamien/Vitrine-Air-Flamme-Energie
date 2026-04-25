@@ -1,6 +1,11 @@
-/* HEADER */
+/* ============================================================
+   LAYOUT.CSS — Structure des pages et sections
+   ============================================================ */
 
-header{
+
+/* ── HEADER ── */
+
+header {
     position: absolute;
     width: 100%;
     display: flex;
@@ -8,54 +13,55 @@ header{
     align-items: center;
 }
 
-.navbar{
-    display:flex;
+.navbar {
+    display: flex;
     justify-content: flex-end;
     margin-right: 20px;
     width: 100%;
 }
 
-.nav-menu{
+.nav-menu {
     display: none;
     list-style: none;
     white-space: nowrap;
     width: 100%;
 }
 
-.nav-menu a{
+.nav-menu a {
     text-decoration: none;
     color: white;
 }
 
-/* HERO */
 
-.hero{
+/* ── HERO (accueil) ── */
+
+.hero {
     background-image: linear-gradient(
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.3) 20%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.3) 80%,
-    rgba(0, 0, 0, 0.85) 100%), url("../assets/images/salon-hiver-hero.webp");
-
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.3) 80%,
+        rgba(0, 0, 0, 0.85) 100%
+    ), url("../assets/images/salon-hiver-hero.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
-
-    color:white;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
-    text-align:left;
+    justify-content: space-between;
+    text-align: left;
     gap: 30px;
     padding-bottom: 20px;
     min-height: 550px;
-    box-shadow:0 2px 8px rgba(125, 125, 125, 0.4);
-    box-sizing: border-box; z-index: 1;
+    box-shadow: 0 2px 8px rgba(125, 125, 125, 0.4);
+    box-sizing: border-box;
+    z-index: 1;
     overflow: hidden;
 }
 
-.hero-content{
+.hero-content {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -66,7 +72,7 @@ header{
     gap: 20px;
 }
 
-.hero-content p{
+.hero-content p {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: var(--radius);
     font-size: 15px;
@@ -75,17 +81,17 @@ header{
     padding: 0.5rem;
 }
 
-.hero-title{
+.hero-title {
     text-align: center;
     line-height: 32px;
-    text-shadow: 0 2px 8px rgba(0,0,0,1);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
 }
 
 .hero-title span {
     color: var(--secondary);
-    text-shadow: 0 2px 8px rgba(0,0,0,1);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
-} 
+}
 
 .hero-actions {
     display: flex;
@@ -94,9 +100,111 @@ header{
     align-items: center;
 }
 
-/* FEATURES */
+/* Hero services */
+.hero.services-hero {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.3)  20%,
+            rgba(0, 0, 0, 0)    50%,
+            rgba(0, 0, 0, 0.3)  80%,
+            rgba(0, 0, 0, 0.85) 100%
+        ),
+        url("../assets/images/services-hero.webp");
+}
 
-.features{
+/* Pastille de catégorie hero */
+.hero-tag {
+    display: inline-block;
+    background: rgba(232, 145, 82, 0.18);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(232, 145, 82, 0.3);
+    margin-bottom: 16px;
+}
+
+/* Badges d'accroche */
+.hero-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: var(--radius);
+}
+
+/* Trait coloré sous le hero */
+.accent-bar {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--primary), transparent);
+}
+
+/* Hero contact (fond sombre uni) */
+.hero-contact {
+    background: var(--dark);
+    padding: 80px 20px 90px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-contact::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(232, 145, 82, 0.10) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero-contact-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-contact-inner .hero-tag {
+    background: rgba(232, 145, 82, 0.15);
+    color: var(--primary);
+    border-color: rgba(232, 145, 82, 0.25);
+    margin-bottom: 20px;
+}
+
+.hero-contact-inner h1 {
+    font-size: clamp(28px, 5vw, 50px);
+    font-weight: 800;
+    color: var(--light);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero-contact-inner h1 span { color: var(--secondary); }
+
+.hero-contact-inner p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.60);
+    line-height: 1.7;
+}
+
+
+/* ── FEATURES ── */
+
+.features {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -105,22 +213,18 @@ header{
     gap: 16px;
 }
 
-.feature{
+.feature {
     display: flex;
     flex-direction: column;
-    text-align:center;
+    text-align: center;
     white-space: nowrap;
 }
 
-.feature img{
-    height: 40px;
-}
+.feature img { height: 40px; }
+.feature h3  { font-size: 14px; }
 
-.feature h3{
-    font-size: 14px;
-}
 
-/* SERVICES */
+/* ── SERVICES (accueil) ── */
 
 .services {
     padding: 20px 18px;
@@ -133,13 +237,8 @@ header{
     text-align: center;
 }
 
-.title-services p {
-    text-align: center;
-}
-
-.title-services img {
-    height: 60px;
-}
+.title-services p  { text-align: center; }
+.title-services img { height: 60px; }
 
 .title-wrapper {
     display: flex;
@@ -161,7 +260,7 @@ header{
     font-size: 32px;
     font-weight: 700;
     color: #1A1A1A;
-    margin: 0px;
+    margin: 0;
     line-height: 1;
     letter-spacing: -0.4px;
 }
@@ -170,22 +269,79 @@ header{
     font-size: 15px;
     line-height: 24px;
     color: #666666;
-    margin: 0 auto; /* Centrage automatique */
+    margin: 0 auto;
     max-width: 320px;
 }
 
-/* ZONE */
 
-.desktop-split-layout {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
-    gap: 40px; /* L'espacement est géré uniquement par le gap */
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 0 24px;
+/* ── SECTION WRAP (unifié — était dupliqué 3 fois) ── */
+
+.section-wrap          { padding: 60px 18px; }
+.section-wrap.dark-bg  { background: var(--dark); }
+
+
+/* ── EN-TÊTE DE SECTION ── */
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Le conteneur qui met l'icône et le texte sur la même ligne */
+.section-tag {
+    display: inline-block;
+    background: rgba(225, 84, 34, 0.08);
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(225, 84, 34, 0.15);
+    margin-bottom: 12px;
+}
+
+.section-tag.dark {
+    background: rgba(225, 84, 34, 0.20);
+    border-color: rgba(225, 84, 34, 0.30);
+}
+
+.section-header h2 {
+    font-size: clamp(22px, 3.5vw, 36px);
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.dark-bg .section-header h2 { color: var(--light); }
+.section-header h2 span      { color: var(--secondary); }
+
+.section-header p {
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.dark-bg .section-header p { color: rgba(255, 255, 255, 0.50); }
+
+/* Trait décoratif sous le titre */
+.title-bar {
+    width: 48px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+
+/* ── INLINE TITLE WRAPPER ── */
+
 .inline-title-wrapper {
     display: flex;
     align-items: center;
@@ -195,32 +351,39 @@ header{
     gap: 12px;
 }
 
-/* La nouvelle classe universelle pour tes icônes de titres */
-.premium-icon {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
-    display: block;          /* Évite les bugs d'espacement bizarres des images */
-}
-
-/* On s'assure que les titres à l'intérieur perdent leurs marges par défaut */
 .inline-title-wrapper h2 {
-    margin: 0px;             /* Crucial : le flexbox gère l'espacement maintenant */
-    line-height: 1.2;        /* Évite que le texte soit plus haut que l'icône */
+    margin: 0;
+    line-height: 1.2;
     white-space: nowrap;
     font-size: 32px;
 }
 
-.premium-section {
-
-    border-radius: var(--radius);
-    overflow: hidden;
-    width: 100%; /* S'assure que la carte remplit sa cellule de grille */
+.premium-icon {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
+    display: block;
 }
 
-/* --- SECTION ZONE D'INTERVENTION --- */
+.premium-section {
+    border-radius: var(--radius);
+    overflow: hidden;
+    width: 100%;
+}
 
-.map-var{
+
+/* ── ZONE D'INTERVENTION ── */
+
+.desktop-split-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 24px;
+}
+
+.map-var {
     background-image: url("/assets/images/carte-var.webp");
     background-position: center;
     background-size: cover;
@@ -230,21 +393,18 @@ header{
 .zone-card h2 {
     font-size: 32px;
     color: #1A1A1A;
-    margin: 0px;
+    margin: 0;
 }
 
-.zone-card p{
-    text-align: center;
-}
+.zone-card p { text-align: center; }
 
 .highlight-cities {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #C15422; /* Notre Cuivre Ambré */
+    color: #C15422;
     line-height: 26px;
     margin-bottom: 12px;
-    margin-top: 0px;
 }
 
 .text-muted {
@@ -253,220 +413,121 @@ header{
     color: #666666;
     font-weight: 300;
     line-height: 22px;
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px;
 }
 
-/* Le conteneur global de la section */
+/* Le conteneur contact (accueil) */
 .contact-wrapper {
     background-color: rgb(34, 34, 34);
     color: var(--light);
     display: flex;
     justify-content: space-between;
-    flex-direction: column; /* Force le titre à être AU-DESSUS de la grille */
-    align-items: center;    /* Centre tout le contenu */
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 450px;    /* Largeur max pour ne pas trop s'étirer sur grand écran */
-    margin: 10px auto;         /* Centre le conteneur au milieu de la page */
-    padding: 40px 10px;        /* Ajoute un peu de marge sur les côtés */
+    max-width: 450px;
+    margin: 10px auto;
+    padding: 40px 10px;
     border-radius: var(--radius);
 }
 
-.contact-content{
+.contact-content {
     display: flex;
     flex-direction: column;
 }
 
-.zone-perim{
+.zone-perim {
     display: flex;
     flex-direction: column;
-    padding: 30px 0 10px 0;
+    padding: 30px 0 10px;
     font-weight: bold;
 }
 
-.zone1{
-    color: #fb613b;
-}
+.zone1 { color: #fb613b; }
+.zone2 { color: #3d603c; }
+.zone3 { color: #781d88; }
 
-.zone2{
-    color: #3d603c;
-}
-
-.zone3{
-    color: #781d88;
-}
-
-
-
-/* --- SECTION AVIS CLIENTS --- */
-
-
-
-.section-header {
-    display: flex;
-    flex-direction: column; /* Empile l'icône et le titre verticalement */
-    align-items: center;    /* Centre horizontalement */
-    margin-bottom: 30px;     /* Espace sous le bloc titre complet */
-}
-
-
-
-/*
-
-.section-header .icon-wrapper img {
-    width: 28px;
-    margin-bottom: 12px;
-    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
-}
-
-/*
-
-.section-header .inline-title-wrapper .premium-icon {
-    margin: 0 !important; /* Supprime les marges qui décalent l'icône 
-    width: 26px !important; /* Force une taille visible sur smartphone 
-    height: auto;
-    display: inline-block !important;
-}
-
-*/
-
-/*
-.section-header .premium-icon {
-    margin-bottom: 0 !important; /* Annule l'ancienne marge du bas si elle existe 
-    margin-right: 12px !important; /* Espace précis avec le texte 
-}
-*/
-
-/*
-.section-header .inline-title-wrapper {
-    display: flex !important;   /* Force le mode Flex 
-    flex-direction: row !important; /* Force l'alignement côte à côte 
-    align-items: center !important; /* Aligne l'icône verticalement au milieu du texte 
-    justify-content: center;    /* Centre le groupe (Icône + Titre) 
-    width: auto;                /* Empêche la boîte de prendre toute la largeur 
-    gap: 12px;
-    margin: 0 auto 30px auto;   /* Centre la boîte et met de l'espace en dessous 
-}
-
-*/
-/*
-.section-header .inline-title-wrapper h2 {
-    font-size: 32px;
-    color: #1A1A1A;
-    margin: 0px;
-    padding: 0px;
-    white-space: nowrap; /* Empêche le titre de revenir à la ligne sur petit écran
-}
-
-*/
-
-/* La grille d'avis (1 colonne sur mobile) */
-.testimonial-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 24px; /* Espace entre chaque avis */
-}
-
-.testimonial-grid li{
-    list-style: none;
-}
-
-.testimonial-card {
-    background: #FFFFFF;
-    border: 1px solid #F0F0F0;
-    border-radius: var(--radius);
-    padding: 24px;
-}
-
-/* L'en-tête de la carte (Photo + Nom + Badge Google) */
-.testimonial-header {
-    display: flex;
-    justify-content: space-between; /* Pousse le badge à droite */
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.testimonial-user {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* Les photos de profil */
-.testimonial-user img {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%; /* Rond parfait */
-    object-fit: cover;
-    border: 1px solid #EAEAEA;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.user-info strong {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    color: #1A1A1A;
-    font-weight: 600;
-}
-
-/* CSS : forcer la police et la couleur pour un rendu stable partout */
-.stars {
-    color: #F59E0B;        /* jaune doré */
-    font-size: 1rem;
-    font-family: Arial, sans-serif;  /* police fiable pour les symboles Unicode */
-    letter-spacing: 2px;
-    line-height: 1;
-}
-
-/* Le badge Google Premium (Grisé et discret plutôt que multicolore fluo) */
-.google-badge {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #F9F9F7;
-    border-radius: 50%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #1A1A1A;
-    border: 1px solid #EDEDED;
-}
-
-/* Le texte de l'avis */
-.testimonial-card p {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-style: italic; /* L'italique donne le ton de la citation */
-    color: #555555;
-    line-height: 26px;
-    margin: 0px;
-}
-
-.exp-action{
+.exp-action {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px 0 10px 0;
+    padding: 30px 0 10px;
     font-weight: bold;
     width: 100%;
 }
 
-/* --- LES CARTES DE CONTACT --- */
+
+/* ── CARTES DE CONTACT ── */
+
 .contact-card {
-    background: #FFFFFF;
-    border: 1px solid #F0F0F0;
-    padding: 24px;
+    background: var(--light);
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    padding: 24px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.3s ease;
     margin-bottom: 16px;
-    border-radius: var(--radius);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.02);
 }
 
+.contact-card:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 8px 24px rgba(225, 84, 34, 0.08);
+    transform: translateX(4px);
+}
+
+.contact-card.featured {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.contact-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(225, 84, 34, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.contact-card.featured .contact-card-icon { background: rgba(255, 255, 255, 0.20); }
+
+.contact-card-text h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.contact-card.featured .contact-card-text h4 { color: rgba(255, 255, 255, 0.70); }
+
+.contact-card-text a,
+.contact-card-text p {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.contact-card.featured .contact-card-text a,
+.contact-card.featured .contact-card-text p { color: var(--light); }
+
+.contact-card-text .sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.contact-card.featured .contact-card-text .sub { color: rgba(255, 255, 255, 0.65); }
+
+/* Ancienne structure contact (page accueil) */
 .contact-card-header {
     display: flex;
     align-items: center;
@@ -476,7 +537,7 @@ header{
 
 .contact-card-header img {
     width: 20px;
-    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%); /* Notre Cuivre */
+    filter: brightness(0) saturate(100%) invert(38%) sepia(58%) rotate(347deg) brightness(91%) contrast(89%);
 }
 
 .contact-label {
@@ -484,7 +545,7 @@ header{
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #C15422; /* Cuivre */
+    color: #C15422;
     font-weight: 600;
 }
 
@@ -518,282 +579,381 @@ header{
     text-decoration-color: rgba(193, 84, 34, 0.3);
 }
 
-.contact-desc {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #666666;
-    margin: 0px;
-    font-weight: 300;
+
+/* ── GRILLE CONTACT PAGE ── */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-/* --- LE FORMULAIRE --- */
-.form-container {
-    background: #FFFFFF;
-    padding: 30px 24px;
-    border-radius: 4px;
-    border: 1px solid #EAEAEA;
-}
-
-.contact-form {
+.contact-infos {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #E0E0E0;
-    border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    background-color: #FAFAFA;
-    box-sizing: border-box; /* Crucial pour ne pas déborder */
-    outline: none;
-    transition: border-color 0.3s ease;
+
+/* ── HORAIRES ── */
+
+.horaires-card {
+    background: var(--dark);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px 22px;
 }
 
-.contact-form input:focus, 
-.contact-form textarea:focus {
-    border-color: #C15422; /* Focus cuivre */
-    background-color: #FFFFFF;
-}
-
-/* Le Bouton Envoyer (Style Hero) */
-.btn-form {
-    background: linear-gradient(145deg, #E89152 0%, #C15422 50%, #8C3C1A 100%);
-    color: #FFFFFF;
-    padding: 18px;
-    border: none;
-    border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
+.horaires-card h4 {
+    font-size: 13px;
     font-weight: 700;
+    color: rgba(255, 255, 255, 0.50);
     text-transform: uppercase;
     letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: 0px 8px 20px rgba(140, 60, 26, 0.3);
-    margin-top: 10px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* CGV */
+.horaires-list { list-style: none; }
 
-.cgv{
-    width: 100%;
-    padding: 20px 18px;
-    box-sizing: border-box;
-    text-align: center;
+.horaires-list li {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.cgv ul{
-list-style-position: inside;
-word-break: break-word;
+.horaires-list li:last-child { border-bottom: none; }
+.horaires-list li span { color: var(--primary); font-weight: 600; }
+
+
+/* ── FORMULAIRE DE RDV ── */
+
+.form-card {
+    background: var(--light);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    padding: 40px 36px;
+    box-shadow: var(--shadow-soft);
 }
 
-.cgv h2{
-    text-wrap: wrap;
+.form-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 6px;
 }
 
-/* FAQ */
-
-/* FAQ Accordion Styles */
-.faq {
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    padding: 2rem;
+.form-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
 }
 
-.faq h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #1a1a1a;
-}
-
-.faq section {
-    margin-bottom: 2rem;
-}
-
-.faq details {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 0.5rem 0;
-    padding: 0.5rem 1rem;
-    background: #f9f9f9;
-    transition: all 0.3s ease;
-}
-
-.faq details[open] {
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.faq summary {
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    position: relative;
-    list-style: none;
-}
-
-.faq summary::marker {
-    content: "";
-}
-
-.faq summary::after {
-    content: "▼";
-    font-size: 0.8rem;
-    position: absolute;
-    right: 0;
-    transition: transform 0.3s ease;
-}
-
-.faq details[open] summary::after {
-    transform: rotate(180deg);
-}
-
-.faq p,
-.faq ul {
-    margin: 0.5rem 0 0 0;
-    padding-left: 1rem;
-}
-
-.faq ul li {
-    margin-bottom: 0.3rem;
-}
-
-
-/* Page services */
-
-/* ──────────────────────────────────────────────────────────────
-HERO SERVICES
-Réutilise .hero de layout.css, on surcharge uniquement l'image
-   ────────────────────────────────────────────────────────────── */
-
-.hero.services-hero {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.85) 0%,
-            rgba(0, 0, 0, 0.3)  20%,
-            rgba(0, 0, 0, 0)    50%,
-            rgba(0, 0, 0, 0.3)  80%,
-            rgba(0, 0, 0, 0.85) 100%
-        ),
-        url("../assets/images/services-hero.webp"); /* ← adaptez le nom de votre image */
-}
-
-/* Pastille de catégorie au-dessus du h1 */
-.hero-tag {
-    display: inline-block;
-    background: rgba(232, 145, 82, 0.18);
-    color: var(--primary);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 6px 16px;
-    border-radius: var(--radius);
-    border: 1px solid rgba(232, 145, 82, 0.3);
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
     margin-bottom: 16px;
 }
 
-/* Badges d'accroche sous le sous-titre */
-.hero-badges {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 8px;
-}
+.form-group { margin-bottom: 16px; }
 
-.hero-badge {
-    background: rgba(255, 255, 255, 0.09);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.85);
+.form-group label {
+    display: block;
     font-size: 12px;
-    font-weight: 600;
-    padding: 7px 14px;
-    border-radius: var(--radius);
-}
-
-/* Barre de séparation colorée sous le hero */
-.accent-bar {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary), var(--primary), transparent);
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-STRUCTURE DES SECTIONS
-   ────────────────────────────────────────────────────────────── */
-
-.section-wrap {
-    padding: 60px 18px;
-}
-
-.section-wrap.dark-bg  { background: var(--dark); }
-
-/* En-tête de section centré (icône + titre + sous-titre) */
-.section-header {
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.section-tag {
-    display: inline-block;
-    background: rgba(225, 84, 34, 0.08);
-    color: var(--secondary);
-    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 2px;
+    color: var(--text-main);
     text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: var(--radius);
-    border: 1px solid rgba(225, 84, 34, 0.15);
-    margin-bottom: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
 }
 
-.section-header h2 {
-    font-size: clamp(22px, 3.5vw, 34px);
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 16px;
+    background: var(--grey);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 14px;
+    color: var(--text-main);
+    font-family: inherit;
+    transition: all 0.2s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary);
+    background: var(--light);
+    box-shadow: 0 0 0 3px rgba(225, 84, 34, 0.08);
+}
+
+.form-group textarea  { resize: vertical; min-height: 120px; }
+.form-group select    { appearance: none; cursor: pointer; }
+
+.form-required { color: var(--secondary); }
+
+.form-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+
+/* ── ZONES D'INTERVENTION (page contact) ── */
+
+.zones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.zone-card {
+    background: var(--light);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.zone-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+}
+
+.zone-card.z1::before { background: var(--secondary); }
+.zone-card.z2::before { background: var(--primary); }
+.zone-card.z3::before { background: var(--gold); }
+
+.zone-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--light);
+    margin-bottom: 14px;
+}
+
+.zone-card.z1 .zone-number { background: var(--secondary); }
+.zone-card.z2 .zone-number { background: var(--primary); }
+.zone-card.z3 .zone-number { background: var(--gold); }
+
+.zone-card h3 {
+    font-size: 17px;
     font-weight: 800;
     color: var(--text-main);
-    line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
-.dark-bg .section-header h2 { color: var(--light); }
+.zone-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
 
-.section-header h2 span { color: var(--secondary); }
+.zone-card.z1 .zone-badge { background: rgba(225, 84, 34, 0.10); color: var(--secondary); }
+.zone-card.z2 .zone-badge { background: rgba(232, 145, 82, 0.10); color: var(--primary); }
+.zone-card.z3 .zone-badge { background: rgba(255, 184, 0, 0.10);  color: var(--gold); }
 
-.section-header p {
-    font-size: 15px;
+.zone-communes {
+    font-size: 12.5px;
     color: var(--text-muted);
-    max-width: 520px;
-    margin: 0 auto;
+    line-height: 1.8;
+}
+
+
+/* ── FAQ RAPIDE ── */
+
+.faq-mini-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.faq-mini {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 18px;
+}
+
+.faq-mini h4 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 6px;
+}
+
+.faq-mini p {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+}
+
+
+/* ── WIDGET LÉA ── */
+
+.lea-rdv-section {
+    background: var(--dark);
+    border-radius: 24px;
+    padding: 40px 36px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(232, 145, 82, 0.20);
+}
+
+.lea-rdv-section::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(232, 145, 82, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.lea-rdv-inner { position: relative; z-index: 1; }
+
+.lea-rdv-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.lea-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(232, 145, 82, 0.20);
+}
+
+.lea-rdv-header h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--light);
+    margin-bottom: 2px;
+}
+
+.lea-rdv-header p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.lea-online {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--green);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.lea-online::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: lea-pulse 2s infinite;
+}
+
+@keyframes lea-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.40; }
+}
+
+.lea-rdv-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.60);
     line-height: 1.7;
+    margin-bottom: 24px;
 }
 
-.dark-bg .section-header p { color: rgba(255, 255, 255, 0.5); }
+.lea-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 
-/* Trait décoratif sous le titre */
-.title-bar {
-    width: 48px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary), var(--primary));
-    margin: 14px auto 0;
-    border-radius: 99px;
+.lea-features {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.lea-feature {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.lea-feature::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
 }
 
 
-/* ──────────────────────────────────────────────────────────────
-   BLOCS SERVICE (image à gauche/droite + contenu)
-   ────────────────────────────────────────────────────────────── */
+/* ── SÉPARATEUR ── */
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+
+/* ── BLOCS SERVICE (page services) ── */
 
 .service-block {
     display: grid;
-    grid-template-columns: 1fr;   /* Mobile : 1 colonne */
+    grid-template-columns: 1fr;
     background: var(--card-bg);
     border-radius: var(--radius);
     border: 1px solid #f0f0f0;
@@ -803,11 +963,8 @@ STRUCTURE DES SECTIONS
     transition: box-shadow 0.3s ease;
 }
 
-.service-block:hover {
-    box-shadow: var(--shadow-hover);
-}
+.service-block:hover { box-shadow: var(--shadow-hover); }
 
-/* Côté visuel / icône */
 .service-block-visual {
     background: var(--dark);
     padding: 40px 32px;
@@ -841,14 +998,14 @@ STRUCTURE DES SECTIONS
     gap: 6px;
 }
 
-.price-big  { font-size: 44px; font-weight: 800; color: var(--light); }
+.price-big    { font-size: 44px; font-weight: 800; color: var(--light); }
 .price-suffix { font-size: 13px; color: rgba(255, 255, 255, 0.55); }
 
 .price-tag {
     display: inline-block;
     margin-top: 10px;
     background: rgba(0, 200, 150, 0.18);
-    color: #00C896;
+    color: var(--green);
     font-size: 11px;
     font-weight: 700;
     padding: 4px 12px;
@@ -858,7 +1015,7 @@ STRUCTURE DES SECTIONS
 
 .price-tag.gold {
     background: rgba(251, 188, 5, 0.15);
-    color: #FBBC05;
+    color: var(--google-yellow);
     border-color: rgba(251, 188, 5, 0.3);
 }
 
@@ -875,10 +1032,7 @@ STRUCTURE DES SECTIONS
 
 .duration-badge span { color: var(--light); font-weight: 600; }
 
-/* Côté contenu texte */
-.service-block-content {
-    padding: 36px 32px;
-}
+.service-block-content { padding: 36px 32px; }
 
 .service-block-content h3 {
     font-size: 22px;
@@ -903,7 +1057,6 @@ STRUCTURE DES SECTIONS
     margin-bottom: 20px;
 }
 
-/* Liste de fonctionnalités dans un bloc service */
 .features-list {
     list-style: none;
     margin-bottom: 24px;
@@ -935,7 +1088,6 @@ STRUCTURE DES SECTIONS
     color: var(--secondary);
 }
 
-/* Grille d'infos (durée, zone, etc.) */
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -964,56 +1116,8 @@ STRUCTURE DES SECTIONS
     font-weight: 700;
 }
 
-/* Boutons dans les blocs service */
-.btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
-    color: var(--light);
-    font-size: 14px;
-    font-weight: 700;
-    padding: 14px 26px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: all 0.25s ease;
-    box-shadow: 0 8px 18px rgba(140, 60, 26, 0.28);
-    -webkit-tap-highlight-color: transparent;
-}
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 24px rgba(140, 60, 26, 0.38);
-    filter: brightness(1.08);
-}
-
-.btn-primary:active { transform: translateY(1px); }
-
-.btn-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    color: var(--secondary);
-    font-size: 14px;
-    font-weight: 700;
-    padding: 14px 26px;
-    border-radius: var(--radius);
-    border: 2px solid var(--secondary);
-    text-decoration: none;
-    transition: all 0.2s ease;
-    margin-left: 10px;
-}
-
-.btn-outline:hover {
-    background: var(--secondary);
-    color: var(--light);
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   CONTRATS / FORFAITS
-   ────────────────────────────────────────────────────────────── */
+/* ── CONTRATS ── */
 
 .contrats-grid {
     display: grid;
@@ -1077,31 +1181,11 @@ STRUCTURE DES SECTIONS
     gap: 8px;
 }
 
-.contrat-features li::before { content: '✓'; color: #00C896; font-weight: 700; }
+.contrat-features li::before { content: '✓'; color: var(--green); font-weight: 700; }
 .contrat-card.featured .contrat-features li::before { color: var(--light); }
 
-.btn-contrat {
-    display: block;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.10);
-    color: var(--light);
-    font-size: 13px;
-    font-weight: 700;
-    padding: 12px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.20);
-    transition: all 0.2s ease;
-}
 
-.btn-contrat:hover { background: rgba(255, 255, 255, 0.20); }
-.contrat-card.featured .btn-contrat { background: var(--light); color: var(--secondary); border-color: var(--light); }
-.contrat-card.featured .btn-contrat:hover { background: rgba(255, 255, 255, 0.9); }
-
-
-/* ──────────────────────────────────────────────────────────────
-   PRODUITS SÉCURITÉ
-   ────────────────────────────────────────────────────────────── */
+/* ── PRODUITS SÉCURITÉ ── */
 
 .produits-grid {
     display: grid;
@@ -1168,7 +1252,7 @@ STRUCTURE DES SECTIONS
 .produit-badge {
     display: inline-block;
     background: rgba(0, 200, 150, 0.10);
-    color: #00C896;
+    color: var(--green);
     font-size: 11px;
     font-weight: 700;
     padding: 4px 12px;
@@ -1177,9 +1261,7 @@ STRUCTURE DES SECTIONS
 }
 
 
-/* ──────────────────────────────────────────────────────────────
-   SECTION BOIS DE CHAUFFAGE
-   ────────────────────────────────────────────────────────────── */
+/* ── BOIS DE CHAUFFAGE ── */
 
 .bois-section {
     background: var(--card-bg);
@@ -1243,9 +1325,7 @@ STRUCTURE DES SECTIONS
 .binfo-text p  { font-size: 12px; color: var(--text-muted); }
 
 
-/* ──────────────────────────────────────────────────────────────
-   ÉTAPES DU PROCESSUS
-   ────────────────────────────────────────────────────────────── */
+/* ── PROCESSUS ── */
 
 .process-steps {
     display: grid;
@@ -1269,7 +1349,7 @@ STRUCTURE DES SECTIONS
     color: var(--secondary);
     font-size: 18px;
     font-weight: 700;
-    display: none; /* affiché en desktop via media query */
+    display: none; /* activé en desktop dans responsive.css */
 }
 
 .step-number {
@@ -1291,26 +1371,25 @@ STRUCTURE DES SECTIONS
 .process-step p  { font-size: 12.5px; color: rgba(255, 255, 255, 0.50); line-height: 1.6; }
 
 
-/* ──────────────────────────────────────────────────────────────
-   BANDEAU CTA FINAL
-   ────────────────────────────────────────────────────────────── */
+/* ── BANDEAU CTA ── */
 
 .cta-band {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
     border-radius: var(--radius);
-    padding: 48px 36px;
+    padding: 40px 24px;
     text-align: center;
+    box-shadow: 0 10px 20px rgba(140, 60, 26, 0.3);
 }
 
 .cta-band h2 {
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(20px, 3.5vw, 30px);
     font-weight: 800;
     color: var(--light);
     margin-bottom: 10px;
 }
 
 .cta-band p {
-    font-size: 15px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.75);
     margin-bottom: 28px;
 }
@@ -1322,739 +1401,351 @@ STRUCTURE DES SECTIONS
     flex-wrap: wrap;
 }
 
-.btn-white {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--light);
-    color: var(--secondary);
-    font-size: 15px;
-    font-weight: 800;
-    padding: 15px 28px;
+
+/* ── PAGE INFOS & CONSEILS ── */
+
+.alert-band {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
     border-radius: var(--radius);
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-white:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.btn-ghost {
-    display: inline-flex;
+    padding: 20px 24px;
+    display: flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--light);
-    font-size: 15px;
-    font-weight: 700;
-    padding: 15px 28px;
-    border-radius: var(--radius);
-    border: 2px solid rgba(255, 255, 255, 0.30);
-    text-decoration: none;
-    transition: all 0.2s ease;
+    gap: 18px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    box-shadow: 0 8px 20px rgba(140, 60, 26, 0.28);
 }
 
-.btn-ghost:hover { background: rgba(255, 255, 255, 0.25); }
+.alert-icon { font-size: 32px; flex-shrink: 0; }
 
-/* page contact */
-
-/* ──────────────────────────────────────────────────────────────
-   VARIABLES LOCALES (uniquement ce qui n'existe pas dans style.css)
-   ────────────────────────────────────────────────────────────── */
-
-.contact-page {
-    --green:  #00C896;
-    --gold:   #FFB800;
-    --border: #E8E8F0;
-}
-
-/* On applique .contact-page sur le <body> ou sur un wrapper racine */
-
-
-/* ──────────────────────────────────────────────────────────────
-   BARRE D'ACCENTUATION (réutilise .accent-bar de services-specific si présent,
-   sinon déclaré ici)
-   ────────────────────────────────────────────────────────────── */
-
-.accent-bar {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary), var(--primary), transparent);
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   HERO CONTACT
-   Structure différente de l'accueil : fond sombre uni + centré
-   (pas de photo de fond, donc on ne surcharge pas .hero de layout.css)
-   ────────────────────────────────────────────────────────────── */
-
-.hero-contact {
-    background: var(--dark);
-    padding: 80px 20px 90px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-contact::before {
-    content: '';
-    position: absolute;
-    top: -100px; right: -100px;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(232, 145, 82, 0.10) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
-.hero-contact-inner {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.hero-contact-inner .hero-tag {
-    background: rgba(232, 145, 82, 0.15);
-    color: var(--primary);
-    border-color: rgba(232, 145, 82, 0.25);
-    margin-bottom: 20px;
-}
-
-.hero-contact-inner h1 {
-    font-size: clamp(28px, 5vw, 50px);
-    font-weight: 800;
-    color: var(--light);
-    line-height: 1.15;
-    margin-bottom: 18px;
-}
-
-.hero-contact-inner h1 span { color: var(--secondary); }
-
-.hero-contact-inner p {
+.alert-text h3 {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.60);
-    line-height: 1.7;
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   SECTION WRAPPERS (surcharge légère pour cette page)
-   ────────────────────────────────────────────────────────────── */
-
-.section-wrap {
-    padding: 80px 20px;
-}
-
-.section-wrap.dark-bg  { background: var(--dark); }
-
-
-/* ──────────────────────────────────────────────────────────────
-   EN-TÊTES DE SECTION
-   ────────────────────────────────────────────────────────────── */
-
-.section-header {
-    text-align: center;
-    margin-bottom: 56px;
-}
-
-.section-tag {
-    display: inline-block;
-    background: rgba(225, 84, 34, 0.08);
-    color: var(--secondary);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(225, 84, 34, 0.15);
-    margin-bottom: 14px;
-}
-
-.section-tag.dark {
-    background: rgba(225, 84, 34, 0.20);
-    border-color: rgba(225, 84, 34, 0.30);
-}
-
-.section-header h2 {
-    font-size: clamp(22px, 3.5vw, 36px);
     font-weight: 800;
-    color: var(--text-main);
-    margin-bottom: 12px;
-}
-
-.dark-bg .section-header h2 { color: var(--light); }
-.section-header h2 span { color: var(--secondary); }
-
-.section-header p {
-    font-size: 15px;
-    color: var(--text-muted);
-    max-width: 540px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
-
-.dark-bg .section-header p { color: rgba(255, 255, 255, 0.50); }
-
-.title-bar {
-    width: 50px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary), var(--primary));
-    border-radius: 2px;
-    margin: 16px auto 0;
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   GRILLE PRINCIPALE CONTACT (infos + formulaire)
-   ────────────────────────────────────────────────────────────── */
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    gap: 40px;
-    align-items: start;
-}
-
-.contact-infos {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   CARTES DE CONTACT (téléphone, email, adresse…)
-   ────────────────────────────────────────────────────────────── */
-
-.contact-card {
-    background: var(--light);
-    border-radius: 18px;
-    border: 1px solid var(--border, #E8E8F0);
-    padding: 24px 22px;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    transition: all 0.3s ease;
-}
-
-.contact-card:hover {
-    border-color: var(--secondary);
-    box-shadow: 0 8px 24px rgba(225, 84, 34, 0.08);
-    transform: translateX(4px);
-}
-
-.contact-card.featured {
-    background: var(--secondary);
-    border-color: var(--secondary);
-}
-
-.contact-card-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    background: rgba(225, 84, 34, 0.10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-}
-
-.contact-card.featured .contact-card-icon {
-    background: rgba(255, 255, 255, 0.20);
-}
-
-.contact-card-text h4 {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--light);
     margin-bottom: 4px;
 }
 
-.contact-card.featured .contact-card-text h4 { color: rgba(255, 255, 255, 0.70); }
-
-.contact-card-text a,
-.contact-card-text p {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text-main);
-    text-decoration: none;
-}
-
-.contact-card.featured .contact-card-text a,
-.contact-card.featured .contact-card-text p { color: var(--light); }
-
-.contact-card-text .sub {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin-top: 2px;
-}
-
-.contact-card.featured .contact-card-text .sub { color: rgba(255, 255, 255, 0.65); }
-
-
-/* ──────────────────────────────────────────────────────────────
-   HORAIRES
-   ────────────────────────────────────────────────────────────── */
-
-.horaires-card {
-    background: var(--dark);
-    border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 24px 22px;
-}
-
-.horaires-card h4 {
+.alert-text p {
     font-size: 13px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.50);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.horaires-list { list-style: none; }
-
-.horaires-list li {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.75);
-    padding: 7px 0;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.horaires-list li:last-child { border-bottom: none; }
-.horaires-list li span { color: var(--primary); font-weight: 600; }
-
-
-/* ──────────────────────────────────────────────────────────────
-   FORMULAIRE DE RDV
-   ────────────────────────────────────────────────────────────── */
-
-.form-card {
-    background: var(--light);
-    border-radius: 24px;
-    border: 1px solid var(--border, #E8E8F0);
-    padding: 40px 36px;
-    box-shadow: var(--shadow-soft);
-}
-
-.form-title {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--text-main);
-    margin-bottom: 6px;
-}
-
-.form-subtitle {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 28px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-}
-
-.form-group { margin-bottom: 16px; }
-
-.form-group label {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-main);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 13px 16px;
-    background: var(--grey);
-    border: 1.5px solid var(--border, #E8E8F0);
-    border-radius: var(--radius);
-    font-size: 14px;
-    color: var(--text-main);
-    font-family: inherit;
-    transition: all 0.2s ease;
-    outline: none;
-    box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: var(--secondary);
-    background: var(--light);
-    box-shadow: 0 0 0 3px rgba(225, 84, 34, 0.08);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-group select {
-    appearance: none;
-    cursor: pointer;
-}
-
-.form-required { color: var(--secondary); }
-
-.btn-submit {
-    width: 100%;
-    padding: 16px;
-    background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
-    color: var(--light);
-    font-size: 15px;
-    font-weight: 800;
-    border: none;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    box-shadow: 0 8px 20px rgba(140, 60, 26, 0.28);
-}
-
-.btn-submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(140, 60, 26, 0.38);
-    filter: brightness(1.08);
-}
-
-.btn-submit:active { transform: translateY(1px); }
-
-.form-note {
-    font-size: 11px;
-    color: var(--text-muted);
-    text-align: center;
-    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
 }
 
-
-/* ──────────────────────────────────────────────────────────────
-ZONES D'INTERVENTION
-   ────────────────────────────────────────────────────────────── */
-
-.zones-grid {
+.infos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 24px;
+    margin-bottom: 40px;
 }
 
-.zone-card {
-    background: var(--light);
+.info-card {
+    background: var(--card-bg);
     border-radius: var(--radius);
-    border: 1px solid var(--border, #E8E8F0);
+    border: 1px solid #F0F0F0;
     padding: 28px 24px;
-    position: relative;
-    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.info-card.accent-card {
+    background: var(--dark-solid);
+    border-color: var(--secondary);
+}
+
+.card-icon { font-size: 36px; margin-bottom: 12px; }
+
+.info-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--dark-solid);
+    margin-bottom: 8px;
+}
+
+.info-card.accent-card h3 { color: var(--light); }
+
+.info-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.info-card.accent-card p { color: rgba(255, 255, 255, 0.62); }
+
+.card-list { list-style: none; margin-top: 12px; }
+
+.card-list li {
+    font-size: 13px;
+    color: var(--text-main);
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.info-card.accent-card .card-list li {
+    color: rgba(255, 255, 255, 0.78);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.card-list li:last-child { border-bottom: none; }
+
+.card-list li::before {
+    content: '▸';
+    color: var(--secondary);
+    font-size: 10px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.regle-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.regle-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--secondary);
+    padding: 20px 18px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.regle-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.regle-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-solid);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.regle-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+.regle-badge {
+    display: inline-block;
+    margin-top: 10px;
+    background: rgba(225, 84, 34, 0.08);
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(225, 84, 34, 0.15);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    border: 1px solid #F0F0F0;
+    padding: 20px 18px;
+    box-shadow: var(--shadow-soft);
     transition: all 0.3s ease;
 }
 
-/* Barre de couleur en haut de chaque carte */
-.zone-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
+.faq-item:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 8px 20px rgba(225, 84, 34, 0.10);
+    transform: translateY(-2px);
 }
 
-.zone-card.z1::before { background: var(--secondary); }
-.zone-card.z2::before { background: var(--primary); }
-.zone-card.z3::before { background: var(--gold, #FFB800); }
-
-.zone-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+.faq-q {
     font-size: 14px;
-    font-weight: 800;
-    color: var(--light);
-    margin-bottom: 14px;
-}
-
-.zone-card.z1 .zone-number { background: var(--secondary); }
-.zone-card.z2 .zone-number { background: var(--primary); }
-.zone-card.z3 .zone-number { background: var(--gold, #FFB800); }
-
-.zone-card h3 {
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--text-main);
-    margin-bottom: 6px;
-}
-
-.zone-badge {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 14px;
-}
-
-.zone-card.z1 .zone-badge { background: rgba(225, 84, 34, 0.10); color: var(--secondary); }
-.zone-card.z2 .zone-badge { background: rgba(232, 145, 82, 0.10); color: var(--primary); }
-.zone-card.z3 .zone-badge { background: rgba(255, 184, 0, 0.10); color: var(--gold, #FFB800); }
-
-.zone-communes {
-    font-size: 12.5px;
-    color: var(--text-muted);
-    line-height: 1.8;
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   FAQ RAPIDE (mini-cartes dans le fond sombre)
-   ────────────────────────────────────────────────────────────── */
-
-.faq-mini-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.faq-mini {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 20px 18px;
-}
-
-.faq-mini h4 {
-    font-size: 13.5px;
     font-weight: 700;
-    color: var(--light);
-    margin-bottom: 6px;
-}
-
-.faq-mini p {
-    font-size: 12.5px;
-    color: rgba(255, 255, 255, 0.55);
-    line-height: 1.6;
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   WIDGET LÉA — BLOC DE PRISE DE RDV
-   ────────────────────────────────────────────────────────────── */
-
-.lea-rdv-section {
-    background: var(--dark);
-    border-radius: 24px;
-    padding: 40px 36px;
-    margin-bottom: 32px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(232, 145, 82, 0.20);
-}
-
-.lea-rdv-section::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(232, 145, 82, 0.12) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
-.lea-rdv-inner { position: relative; z-index: 1; }
-
-.lea-rdv-header {
+    color: var(--dark-solid);
+    margin-bottom: 8px;
     display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 10px;
+    align-items: flex-start;
 }
 
-.lea-avatar {
-    width: 52px;
-    height: 52px;
+.faq-q::before {
+    content: 'Q';
+    background: linear-gradient(145deg, var(--primary), var(--secondary));
+    color: var(--light);
+    font-size: 10px;
+    font-weight: 800;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
     flex-shrink: 0;
-    box-shadow: 0 0 0 3px rgba(232, 145, 82, 0.20);
+    margin-top: 1px;
 }
 
-.lea-rdv-header h3 {
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--light);
-    margin-bottom: 2px;
-}
-
-.lea-rdv-header p {
+.faq-a {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.55);
-    font-weight: 400;
-}
-
-/* Indicateur "En ligne" avec animation */
-.lea-online {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--green, #00C896);
-    font-weight: 600;
-    margin-top: 4px;
-}
-
-.lea-online::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: var(--green, #00C896);
-    border-radius: 50%;
-    animation: lea-pulse 2s infinite;
-}
-
-@keyframes lea-pulse {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.40; }
-}
-
-.lea-rdv-desc {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.60);
-    line-height: 1.7;
-    margin-bottom: 24px;
-}
-
-.lea-buttons {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-/* Bouton "Prendre RDV avec Léa" */
-.btn-lea-chat {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 100%);
-    color: var(--light);
-    font-size: 15px;
-    font-weight: 800;
-    padding: 16px 28px;
-    border-radius: var(--radius);
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.2s ease;
-    box-shadow: 0 8px 20px rgba(140, 60, 26, 0.28);
-    -webkit-tap-highlight-color: transparent;
-}
-
-.btn-lea-chat:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(140, 60, 26, 0.38);
-    filter: brightness(1.08);
-}
-
-.btn-lea-chat:active { transform: translateY(1px); }
-
-/* Bouton WhatsApp */
-.btn-lea-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #25D366;
-    color: var(--light);
-    font-size: 15px;
-    font-weight: 800;
-    padding: 16px 28px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.btn-lea-whatsapp:hover {
-    background: #1ebe5d;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
-}
-
-/* Badges de fonctionnalités Léa */
-.lea-features {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.lea-feature {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.50);
-}
-
-.lea-feature::before {
-    content: '✓';
-    color: var(--green, #00C896);
-    font-weight: 700;
-}
-
-
-/* ──────────────────────────────────────────────────────────────
-   SÉPARATEUR "ou contactez-nous directement"
-   ────────────────────────────────────────────────────────────── */
-
-.or-divider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 32px 0;
     color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 600;
+    line-height: 1.7;
+    padding-left: 30px;
 }
 
-.or-divider::before,
-.or-divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border, #E8E8F0);
+.saisons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
-/* FOOTER */
+.saison-card {
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    border: 1px solid #E0E0E0;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-footer{
+.saison-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.saison-card.ete       { background: linear-gradient(135deg, #FFF8E7 0%, #FFF3D0 100%); border-color: #FFD166; }
+.saison-card.automne   { background: linear-gradient(135deg, #FFF0E8 0%, #FFE4D0 100%); border-color: var(--primary); }
+.saison-card.hiver     { background: linear-gradient(135deg, #E8F4FF 0%, #D0E8FF 100%); border-color: #66B2FF; }
+.saison-card.printemps { background: linear-gradient(135deg, #E8FFF0 0%, #D0FFE4 100%); border-color: var(--green); }
+
+.saison-icon { font-size: 32px; margin-bottom: 10px; }
+
+.saison-card h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--dark-solid);
+    margin-bottom: 10px;
+}
+
+.saison-list { list-style: none; }
+
+.saison-list li {
+    font-size: 12.5px;
+    color: var(--text-main);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.saison-list li::before {
+    content: '✓';
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 11px;
+    margin-top: 1px;
+}
+
+
+/* ── FAQ ACCORDION ── */
+
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+.faq h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.faq section { margin-bottom: 2rem; }
+
+.faq details {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.faq details[open] {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+}
+
+.faq summary::marker { content: ""; }
+
+.faq summary::after {
+    content: "▼";
+    font-size: 0.8rem;
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq details[open] summary::after { transform: rotate(180deg); }
+
+.faq p,
+.faq ul { margin: 0.5rem 0 0; padding-left: 1rem; }
+
+.faq ul li { margin-bottom: 0.3rem; }
+
+
+/* ── CGV ── */
+
+.cgv {
+    width: 100%;
+    padding: 20px 18px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cgv ul {
+    list-style-position: inside;
+    word-break: break-word;
+}
+
+.cgv h2 { text-wrap: wrap; }
+
+
+/* ── VARIABLES LOCALES PAGE CONTACT ── */
+
+.contact-page {
+    --border: #E8E8F0;
+}
+
+
+/* ── FOOTER ── */
+
+footer {
     color: var(--dark);
-    text-align:center;
+    text-align: center;
     padding: 20px;
-    font-size:16px;
+    font-size: 16px;
 }
-

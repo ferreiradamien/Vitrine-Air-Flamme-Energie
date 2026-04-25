@@ -1,33 +1,59 @@
-/* BUTTON */
+/* ============================================================
+   COMPONENTS.CSS — Composants réutilisables
+   Mobile-first · Sans doublons · Bugs corrigés
+   ============================================================ */
 
-.btn{
-    display:inline-block;
-    margin: 20px 0px 20px 0px;
+
+/* ── BOUTONS — SOCLE COMMUN ──
+   .btn et .btn-phone partageaient ~80 % de code.
+   On factorise les propriétés communes ici,
+   et on ne surcharge que ce qui diffère. */
+
+.btn,
+.btn-phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
     padding: 18px 8px;
     background: linear-gradient(145deg, #e89152 0%, #c15422 50%, #8c3c1a 100%);
-    color:#fff;
-    border-radius:var(--radius);
+    color: #fff;
+    border-radius: var(--radius);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-weight:600;
+    font-weight: 700;
     font-size: 12px;
-    text-align:center;
+    text-align: center;
     cursor: pointer;
+    white-space: nowrap;
     transition: all 0.3s ease;
     box-shadow: 0 10px 20px rgba(140, 60, 26, 0.3);
     -webkit-tap-highlight-color: transparent;
 }
 
-.btn:hover{
+.btn:hover,
+.btn-phone:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 25px rgba(140, 60, 26, 0.4);
     filter: brightness(1.1);
 }
 
-.btn:active{
+.btn:active,
+.btn-phone:active {
     transform: translateY(1px);
     box-shadow: 0 5px 10px rgba(140, 60, 26, 0.2);
 }
+
+/* Variante téléphone : taille différente */
+.btn-phone {
+    padding: 18px;
+    font-size: 24px;
+    letter-spacing: 1.2px; /* corrigé : "1.2 px" était invalide */
+}
+
+
+/* ── BOUTON OUTLINE PREMIUM ── */
 
 .btn-premium-outline {
     display: flex;
@@ -37,7 +63,7 @@
     color: var(--light);
     border: 1px solid var(--light);
     padding: 18px 8px;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0;
     border-radius: var(--radius);
     font-family: 'Inter', sans-serif;
     font-size: 12px;
@@ -54,27 +80,284 @@
     transform: translateY(-2px);
 }
 
-.btn-premium-outline:active{
+.btn-premium-outline:active {
     transform: translateY(1px);
 }
 
-.btn-premium-outline .icon-inside{
+.btn-premium-outline .icon-inside {
     filter: none;
 }
 
+/* Largeur fixe des boutons hero */
 .hero-actions .btn,
 .hero-actions .btn-premium-outline {
     width: 260px;
-    text-wrap: nowrap;
 }
 
 
-/* SERVICE CARD */
+/* ── BOUTON D'ACTION GÉNÉRIQUE ── */
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 24px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+
+/* ── BOUTON FORMULAIRE (fond noir) ── */
+
+.btn-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 18px;
+    background: #1A1A1A;
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-form:hover {
+    transform: translateY(-2px);
+}
+
+.icon-send {
+    width: 16px;
+    filter: brightness(0) invert(1);
+}
+
+
+/* ── BOUTONS CTA BANDE (blanc / fantôme) ── */
+
+.btn-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--light);
+    color: var(--secondary);
+    font-size: 15px;
+    font-weight: 800;
+    padding: 15px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.04);
+}
+
+.btn-white:active { transform: translateY(1px); }
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--light);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px 28px;
+    border-radius: var(--radius);
+    border: 2px solid rgba(255, 255, 255, 0.30);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-ghost:active { transform: translateY(1px); }
+
+
+/* ── BOUTONS PRIMAIRE / OUTLINE (page services) ── */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
+    color: var(--light);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 18px rgba(140, 60, 26, 0.28);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px rgba(140, 60, 26, 0.38);
+    filter: brightness(1.08);
+}
+
+.btn-primary:active { transform: translateY(1px); }
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: var(--radius);
+    border: 2px solid var(--secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background: var(--secondary);
+    color: var(--light);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
+    color: var(--light);
+    font-size: 15px;
+    font-weight: 800;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(140, 60, 26, 0.28);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(140, 60, 26, 0.38);
+    filter: brightness(1.08);
+}
+
+.btn-submit:active { transform: translateY(1px); }
+
+/* Boutons Léa */
+.btn-lea-chat {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--light);
+    font-size: 15px;
+    font-weight: 800;
+    padding: 16px 28px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 20px rgba(140, 60, 26, 0.28);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-lea-chat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(140, 60, 26, 0.38);
+    filter: brightness(1.08);
+}
+
+.btn-lea-chat:active { transform: translateY(1px); }
+
+.btn-lea-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: var(--light);
+    font-size: 15px;
+    font-weight: 800;
+    padding: 16px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-lea-whatsapp:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+
+.btn-contrat {
+    display: block;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.10);
+    color: var(--light);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 12px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    transition: all 0.2s ease;
+}
+
+.btn-contrat:hover { background: rgba(255, 255, 255, 0.20); }
+
+.contrat-card.featured .btn-contrat {
+    background: var(--light);
+    color: var(--secondary);
+    border-color: var(--light);
+}
+
+.contrat-card.featured .btn-contrat:hover { background: rgba(255, 255, 255, 0.9); }
+
+
+/* ── ICÔNE INTERNE ── */
+
+.icon-inside {
+    width: 24px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+
+/* ── SERVICE CARD ── */
 
 .cards-wrapper {
     display: grid;
-    grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
-    gap: 40px; /* L'espacement est géré uniquement par le gap */
+    grid-template-columns: 1fr;
+    gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
@@ -84,16 +367,16 @@
     background: white;
     border-radius: var(--radius);
     overflow: hidden;
-    /* ⚠️ ATTENTION : Plus de marges ici ! Le "gap" de la grille s'occupe de l'espacement. */
     border: 1px solid #F0F0F0;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* S'assure que la carte remplit sa cellule de grille */
+    width: 100%;
 }
 
+/* CORRIGÉ : scale(0.97) rétrécissait la carte au hover */
 .service-card:hover {
-    transform: scale(0.97);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .service-content {
@@ -109,9 +392,10 @@
     object-fit: cover;
 }
 
+/* CORRIGÉ : position: absolute manquait */
 .price {
-    bottom: 20px;
-    right: 20px;
+    display: inline-block;
+    margin-top: 10px;
     background-color: rgba(26, 26, 26, 0.9);
     color: #E89152;
     padding: 8px 16px;
@@ -120,6 +404,7 @@
     font-weight: 700;
     letter-spacing: 1px;
     border: 1px solid rgba(232, 145, 82, 0.4);
+    border-radius: 4px;
 }
 
 .service-info {
@@ -141,16 +426,101 @@
 
 .service-text {
     font-size: 15px;
-    line-height: 26px; /* Grand interlignage pour la respiration = Luxe */
+    line-height: 26px;
     color: #555555;
-    font-weight: 300; 
+    font-weight: 300;
 }
 
-/* TESTIMONIAL */
+
+/* ── TÉMOIGNAGES ── */
+
+.testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.testimonial-grid li {
+    list-style: none;
+}
+
+.testimonial-card {
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-user img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #EAEAEA;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-info strong {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #1A1A1A;
+    font-weight: 600;
+}
+
+.stars {
+    color: #F59E0B;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.google-badge {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F9F9F7;
+    border-radius: 50%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1A1A1A;
+    border: 1px solid #EDEDED;
+}
+
+.testimonial-card p {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #555555;
+    line-height: 26px;
+    margin: 0;
+}
 
 
-/* PHONE CTA */
-/* --- BOUTONS D'ACTION CONTACT --- */
+/* ── FORMULAIRE CONTACT ── */
+
 .contact-actions {
     display: flex;
     flex-direction: column;
@@ -163,110 +533,6 @@
     flex-direction: column;
 }
 
-/* Style de base des boutons */
-.btn-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 18px 24px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-/* Bouton Téléphone (Plein / Cuivre) */
-.btn-phone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px 18px;
-    margin: 20px 0px 20px 0px;
-    background: linear-gradient(145deg, #e89152 0%, #c15422 50%, #8c3c1a 100%);
-    color:#fff;
-    border-radius: var(--radius);
-    text-transform: uppercase;
-    letter-spacing: 1.2 px;
-    font-weight:700;
-    font-size: 24px;
-    text-align:center;
-    text-wrap:nowrap;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(140, 60, 26, 0.3);
-    -webkit-tap-highlight-color: transparent;
-}
-
-.btn-phone:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 15px 25px rgba(140, 60, 26, 0.4);
-    filter: brightness(1.1);
-}
-
-.btn-phone:active{
-    transform: translateY(1px);
-    box-shadow: 0 5px 10px rgba(140, 60, 26, 0.2);
-}
-
-/* --- Texte d'explication --- */
-.callback-notice {
-    margin-top: 16px;
-    padding: 16px;
-    border-left: 2px solid #C15422; /* Ligne de rappel cuivre */
-    background: rgba(193, 84, 34, 0.03); /* Fond très léger */
-}
-
-.callback-notice p {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 22px;
-    color: #B0B0B0; /* Gris clair pour ton fond sombre */
-    margin: 0 0 8px 0;
-}
-
-.callback-highlight {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    color: #FFFFFF !important; /* On fait ressortir l'engagement de rappel */
-}
-
-.callback-highlight strong {
-    color: #E89152;
-}
-
-/* Icônes à l'intérieur des boutons */
-.icon-inside {
-    width: 24px;
-    height: auto;
-    /* Pour le bouton plein (blanc) */
-    filter: brightness(0) invert(1); 
-}
-
-/* Description sous les boutons */
-.action-desc {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #666666;
-    margin: 20px 0;
-    font-weight: 300;
-}
-
-.action-desc, .contact-desc {
-    color: #B0B0B0;
-}
-
-.action-desc strong {
-    color: #FFFFFF;
-    font-weight: 600;
-}
-
-/* --- FORMULAIRE & BOUTON SEND --- */
 .form-container {
     background: #FFFFFF;
     padding: 30px 24px;
@@ -274,56 +540,87 @@
     border: 1px solid #EDEDED;
 }
 
-.btn-form {
+.contact-form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: #1A1A1A; /* Noir pour contraster avec le bouton appel */
-    color: #FFFFFF;
-    padding: 18px;
-    border: none;
-    border-radius: var(--radius);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.3s ease;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.icon-send {
-    width: 16px;
-    filter: brightness(0) invert(1); /* Blanc */
-}
-
-.btn-form:hover{
-    transform: translateY(-2px);
-}
-
-/* Inputs du formulaire */
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 16px;
-    margin-bottom: 16px;
     border: 1px solid #E0E0E0;
-    border-radius: 4px;
+    border-radius: var(--radius);
     background: #FAFAFA;
     font-family: 'Inter', sans-serif;
+    font-size: 15px;
     box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #C15422;
+    background: #FFFFFF;
+}
+
+.callback-notice {
+    margin-top: 16px;
+    padding: 16px;
+    border-left: 2px solid #C15422;
+    background: rgba(193, 84, 34, 0.03);
+}
+
+.callback-notice p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #B0B0B0;
+    margin: 0 0 8px 0;
+}
+
+.callback-highlight {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #FFFFFF !important;
+}
+
+.callback-highlight strong { color: #E89152; }
+
+.action-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #B0B0B0;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.action-desc strong {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.contact-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #B0B0B0;
+    font-weight: 300;
+}
+
+
+/* ── LOGO ── */
 
 .logo {
     display: flex;
     align-items: center;
 }
 
-
-.logo img{
+.logo img {
     height: 100px;
     width: auto;
     display: block;
 }
-

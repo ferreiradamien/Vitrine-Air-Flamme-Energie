@@ -1,21 +1,29 @@
-/* RESET */
+/* ============================================================
+   STYLE.CSS — Base globale (variables, reset, typographie)
+   Mobile-first · Sans doublons
+   ============================================================ */
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-body{
+/* ── RESET ── */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
     font-family: "Segoe UI", Arial, sans-serif;
     background-image: url(../assets/images/background-light.webp);
     background-repeat: repeat;
     background-size: 1260px auto;
     background-color: var(--light);
-    color:#333;
-    line-height:1.6;
-    overflow-x: hidden;
-}
-
-/* Empêche tout scroll horizontal parasite */
-html, body {
-    overflow-x: hidden;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Corrige le chatbot (iframe injectée) */
@@ -23,80 +31,64 @@ iframe[src*="embeddedChatbot"] {
     position: fixed !important;
     right: 8px !important;
     left: auto !important;
-
-/* Responsive = ne dépasse jamais l’écran */
     width: min(90vw, 444px) !important;
     max-width: calc(100% - 16px) !important;
-
-/* Supprime la cause principale du débordement */
     clip-path: none !important;
-
-/* Sécurité anti-débordement */
     transform: translateX(0) !important;
 }
 
-/* VARIABLES */
 
-:root{
+/* ── VARIABLES ── */
 
-    --primary: #e89152;
-    --secondary: #e15422;
-    --tertiary: #8c3c1a;
-    --dark: rgba(26, 26, 26, 0.9);
-    --light:#ffffff;
-    --grey:#f1f1f1;
-    --text-main: #2d3436;
-    --text-muted: #636e72;
-    --bg-color: #fcfcfc;
-    --card-bg: #ffffff;
-    --radius: 8px;
-    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+:root {
+    --primary:      #e89152;
+    --secondary:    #e15422;
+    --tertiary:     #8c3c1a;
+    --dark:         rgba(26, 26, 26, 0.9);
+    --dark-solid:   #1a1a1a;
+    --light:        #ffffff;
+    --grey:         #f1f1f1;
+    --text-main:    #2d3436;
+    --text-muted:   #636e72;
+    --bg-color:     #fcfcfc;
+    --card-bg:      #ffffff;
+    --radius:       8px;
+    --shadow-soft:  0 8px 24px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
+    --green:        #00C896;
+    --gold:         #FFB800;
+    --border:       #E8E8F0;
     --google-yellow: #FBBC05;
 }
 
-/* CONTAINER */
 
-.container{
+/* ── CONTAINER ── */
+
+.container {
     width: 92%;
-    margin:auto;
+    margin: auto;
 }
 
-/* BODY */
+
+/* ── TYPOGRAPHIE ── */
+
+h1 { font-size: 28px; font-weight: bold; }
+h2 { font-size: 20px; margin: 0; }
+h3 { font-size: 18px; white-space: wrap; }
+p  { font-size: 15px; }
 
 
-/* TITRES */
+/* ── LIENS ── */
 
-h1{
-    font-size: 28px;
-    font-weight: bold;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-h2{
-    font-size:20px;
-    margin: 0; 
+
+/* ── IMAGES ── */
+
+img {
+    width: 100%;
+    display: block;
 }
-
-h3{
-    font-size:18px;
-    white-space: wrap;
-}
-
-p{
-    font-size:15px;
-}
-
-/* LIENS */
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-/* IMAGES */
-
-img{
-    width:100%;
-    display:block;
-}
-
