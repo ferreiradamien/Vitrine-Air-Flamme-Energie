@@ -212,6 +212,11 @@
     .faq-mini-grid  { grid-template-columns: 1fr 1fr; }
     .lea-rdv-section { padding: 40px 36px; }
     .form-card       { padding: 40px 36px; }
+
+    .btn-lea-chat,
+    .btn-lea-whatsapp {
+        width: auto;          /* ← taille naturelle sur tablette+ */
+}
 }
 
 
@@ -323,9 +328,6 @@
     .form-card       { padding: 40px 36px; }
     .hero-contact     { padding: 60px 20px 70px; }
     .section-wrap     { padding: 56px 16px; }
-
-    .btn-lea-chat,
-    .btn-lea-whatsapp { width: 100%; justify-content: center; }
 
     .alert-band       { flex-direction: column; text-align: center; }
 

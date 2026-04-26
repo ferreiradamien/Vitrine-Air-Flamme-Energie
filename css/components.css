@@ -313,6 +313,12 @@
     box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
 }
 
+.btn-lea-chat,
+.btn-lea-whatsapp {
+    width: 100%;          /* ← pleine largeur en mobile */
+    justify-content: center;
+}
+
 .btn-contrat {
     display: block;
     text-align: center;
