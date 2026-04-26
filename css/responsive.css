@@ -64,6 +64,25 @@
         max-width: 50%;
     }
 
+.legal-hero {
+    padding: 120px 8% 6px;
+    align-items: flex-end;           /* bascule à droite en tablette */
+    text-align: left;
+}
+
+.legal-hero h1 {
+    width: 55%;          /* occupe la moitié droite */
+    align-self: flex-end;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.legal-hero p {
+    text-align: center;              /* p reste centré */
+    align-self: center;              /* p reste centré même quand parent est flex-end */
+    max-width: 60%;
+}
+
     .hero-title { text-align: left; }
 
     .hero-actions {
@@ -78,6 +97,7 @@
     .hero-actions .btn-premium-outline { width: 340px; }
 
     .hero-content p { max-width: 780px; }
+
 
     /* Typographie */
     h1 { font-size: 32px; }
