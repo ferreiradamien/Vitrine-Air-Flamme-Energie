@@ -211,6 +211,7 @@
     .form-row       { grid-template-columns: 1fr 1fr; }
     .faq-mini-grid  { grid-template-columns: 1fr 1fr; }
     .lea-rdv-section { padding: 40px 36px; }
+    .form-card       { padding: 40px 36px; }
 }
 
 
