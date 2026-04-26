@@ -43,4 +43,39 @@
     <priority>0.2</priority>
 </url>
 
+<url>
+    <loc>https://www.airflammeenergie.fr/pages/informations-et-conseils/articles/ramonage-brignoles</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
+<url>
+    <loc>https://www.airflammeenergie.fr/pages/informations-et-conseils/articles/ramonage-saint-maximin</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
+<url>
+    <loc>https://www.airflammeenergie.fr/pages/informations-et-conseils/articles/ramonage-rians</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
+<url>
+    <loc>https://www.airflammeenergie.fr/pages/informations-et-conseils/articles/ramonage-aix-en-provence</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
+<url>
+    <loc>https://www.airflammeenergie.fr/pages/informations-et-conseils/articles/entretien-poele-granules-var</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
 </urlset>
