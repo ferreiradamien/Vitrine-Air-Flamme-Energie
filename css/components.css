@@ -21,7 +21,8 @@
     font-size: 12px;
     text-align: center;
     cursor: pointer;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
     transition: all 0.3s ease;
     box-shadow: 0 10px 20px rgba(140, 60, 26, 0.3);
     -webkit-tap-highlight-color: transparent;
