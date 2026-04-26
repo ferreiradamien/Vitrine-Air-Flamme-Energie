@@ -941,7 +941,7 @@ header {
 .lea-rdv-section {
     background: var(--dark);
     border-radius: 24px;
-    padding: 40px 36px;
+    padding: 24px 16px;
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;

@@ -210,7 +210,7 @@
     .contact-grid   { grid-template-columns: 1fr 1.6fr; }
     .form-row       { grid-template-columns: 1fr 1fr; }
     .faq-mini-grid  { grid-template-columns: 1fr 1fr; }
-    .lea-rdv-section { padding: 28px 24px; }
+    .lea-rdv-section { padding: 40px 36px; }
 }
 
 
