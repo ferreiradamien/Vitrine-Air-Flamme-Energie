@@ -323,7 +323,7 @@
    (surcharges ponctuelles, uniquement si nécessaire)
    ══════════════════════════════════════════ */
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
 
     .form-card       { padding: 24px 16px; }
     .hero-contact     { padding: 60px 20px 70px; }

@@ -388,7 +388,7 @@ header {
 
 /* ── SECTION WRAP (unifié — était dupliqué 3 fois) ── */
 
-.section-wrap          { padding: 60px 18px; }
+.section-wrap          { padding: 60px 20px; }
 .section-wrap.dark-bg  { background: var(--dark); }
 
 
