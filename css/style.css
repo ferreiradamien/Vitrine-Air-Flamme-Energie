@@ -6,10 +6,6 @@
 
 /* ── RESET ── */
 
-* {
-    max-width: 100%;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
