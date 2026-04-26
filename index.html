@@ -47,50 +47,94 @@
 <!-- JSON-LD — LocalBusiness (Schema.org) -->
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Air Flamme Énergie",
-    "description": "Ramonage et entretien de poêles à bois et granulés dans le Var. Technicien certifié TEMCV RNCP Niveau 4.",
-    "url": "https://www.airflammeenergie.fr",
-    "telephone": "+33612201151",
-    "email": "contact@airflamme.fr",
-    "image": "https://www.airflammeenergie.fr/assets/images/og-image.webp",
-    "logo": "https://www.airflammeenergie.fr/assets/icons/logo-airflamme-horizontal.webp",
-    "address": {
+"@context": "https://schema.org",
+"@type": "LocalBusiness",
+"name": "Air Flamme Énergie",
+"description": "Ramonage et entretien de poêles à bois et granulés dans le Var. Technicien certifié TEMCV RNCP Niveau 4. Certificat de ramonage conforme remis après chaque intervention.",
+"url": "https://www.airflammeenergie.fr",
+"telephone": "+33612201151",
+"email": "contact@airflamme.fr",
+"image": "https://www.airflammeenergie.fr/assets/images/og-image.webp",
+"logo": "https://www.airflammeenergie.fr/assets/icons/logo-airflamme-horizontal.webp",
+"address": {
     "@type": "PostalAddress",
     "streetAddress": "330 route de Pourrières",
     "addressLocality": "Rians",
     "postalCode": "83560",
     "addressCountry": "FR"
-    },
-    "geo": {
+},
+"geo": {
     "@type": "GeoCoordinates",
     "latitude": 43.6089,
     "longitude": 5.9167
-    },
-    "areaServed": [
-    "Saint-Maximin-la-Sainte-Baume",
-    "Rians",
-    "Brignoles",
-    "Pertuis",
-    "Aix-en-Provence",
-    "Var"
-    ],
-    "priceRange": "€€",
-    "openingHoursSpecification": [{
+},
+"areaServed": [
+    {"@type": "City", "name": "Rians"},
+    {"@type": "City", "name": "Saint-Maximin-la-Sainte-Baume"},
+    {"@type": "City", "name": "Brignoles"},
+    {"@type": "City", "name": "Pertuis"},
+    {"@type": "City", "name": "Aix-en-Provence"},
+    {"@type": "AdministrativeArea", "name": "Var"}
+],
+"priceRange": "€€",
+"knowsAbout": [
+    "Ramonage de conduits de fumée",
+    "Entretien poêle à bois",
+    "Entretien poêle à granulés",
+    "Dépannage appareils à combustion",
+    "Certification TEMCV RNCP Niveau 4"
+],
+"openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
     "opens": "08:00",
     "closes": "18:00"
-    }],
-    "hasCredential": "Technicien certifié TEMCV — Titre RNCP Niveau 4",
-    "sameAs": [
-    "https://www.google.com/maps?q=Air+Flamme+Énergie"
+}],
+"hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de ramonage et entretien",
+    "itemListElement": [
+    {
+        "@type": "Offer",
+        "itemOffered": {
+        "@type": "Service",
+        "name": "Entretien Poêle à Bois",
+        "description": "Ramonage et entretien complet poêle à bois, insert, foyer fermé, cuisinière. Certificat de ramonage conforme remis."
+        },
+        "price": "95",
+        "priceCurrency": "EUR"
+    },
+    {
+        "@type": "Offer",
+        "itemOffered": {
+        "@type": "Service",
+        "name": "Entretien Poêle à Granulés",
+        "description": "Entretien complet poêle à pellets toutes marques, ramonage inclus, certificat remis."
+        },
+        "price": "210",
+        "priceCurrency": "EUR"
+    },
+    {
+        "@type": "Offer",
+        "itemOffered": {
+        "@type": "Service",
+        "name": "Dépannage & Diagnostic",
+        "description": "Diagnostic et réparation de pannes sur poêles à bois et granulés, toutes marques."
+        },
+        "priceSpecification": {
+        "@type": "PriceSpecification",
+        "description": "Devis gratuit, déplacement et diagnostic facturés"
+        }
+    }
     ]
+},
+"sameAs": [
+    "https://www.google.com/maps?q=Air+Flamme+Énergie"
+]
 }
 </script>
 
-<!-- ✅ COOKIES -->
+<!-- COOKIES -->
 <script src="js/cookies.js" defer></script>
 
 </head>
