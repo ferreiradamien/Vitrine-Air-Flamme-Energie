@@ -2065,6 +2065,16 @@ header {
     margin-top: auto;
 }
 
+.breadcrumb-bar {
+    background: var(--light-bg, #f5f5f5);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border, #e0e0e0);
+}
+
+.breadcrumb-bar .article-breadcrumb {
+    justify-content: flex-start;
+    margin: 0;
+}
 
 /* ── FOOTER ── */
 
