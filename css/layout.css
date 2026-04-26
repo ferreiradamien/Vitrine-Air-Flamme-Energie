@@ -210,7 +210,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .hero-actions p {
@@ -1902,6 +1901,11 @@ header {
     overflow: hidden;
     color: white;
     gap: 0;                          /* space-between gère l'espace */
+}
+
+/* Bouton hero aligné à droite — page Services uniquement */
+.legal-hero .hero-actions {
+    align-self: flex-end;
 }
 
 .legal-hero h1 {

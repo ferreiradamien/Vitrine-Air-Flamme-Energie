@@ -83,6 +83,12 @@
     max-width: 60%;
 }
 
+.legal-hero .hero-actions {
+    align-self: flex-end;   /* suit le titre à droite */
+    width: 55%;             /* même largeur que le h1 pour s'aligner sur son bord gauche */
+    margin-top: 16px;
+}
+
     .hero-title { text-align: left; }
 
     .hero-actions {
