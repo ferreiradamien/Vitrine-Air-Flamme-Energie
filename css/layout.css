@@ -491,6 +491,9 @@ header {
     width: 100%;
 }
 
+.zone.premium-section {
+    padding: 60px 20px;
+}
 
 /* ── ZONE D'INTERVENTION ── */
 
