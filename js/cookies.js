@@ -1,187 +1,173 @@
-/* =====================================================
-   BANNIÈRE COOKIES — Air Flamme Énergie
-   Conforme CNIL / ePrivacy
-   À placer dans /js/cookies.js
-   ===================================================== */
+/**
+ * cookies.js — Air Flamme Énergie
+ * Gestion du consentement cookies conforme CNIL / ePrivacy
+ * - Bloque Google Analytics jusqu'au consentement
+ * - Injecte le bandeau + le style automatiquement sur toutes les pages
+ * - Expose resetCookieConsent() pour le bouton footer "Gérer mes cookies"
+ * ---------------------------------------------------------------
+ * À inclure sur TOUTES les pages via :
+ * <script src="/js/cookies.js" defer></script>
+ * (chemin absolu recommandé pour les sous-pages)
+ * ---------------------------------------------------------------
+ */
 
 (function () {
-  const COOKIE_KEY = "afe_cookie_consent";
-  const GA_ID = ""; // Remplacer par le vrai ID GA quand disponible
 
-  /* ---------- Lecture / Écriture cookie ---------- */
-  function getCookie(name) {
-    const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-    return match ? match[2] : null;
-  }
+  /* ── Configuration ── */
+  var GA_ID = 'G-XXXXXXXXXX'; // ← Remplace par ton vrai ID Google Analytics
+  var COOKIE_NAME = 'afe_cookie_consent';
+  var COOKIE_DURATION_DAYS = 180;
 
+  /* ── Helpers ── */
   function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
-    document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/;SameSite=Lax";
+    var expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
   }
 
-  /* ---------- Chargement Google Analytics ---------- */
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : null;
+  }
+
+  function deleteCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  }
+
+  /* ── Chargement Google Analytics (uniquement après consentement) ── */
   function loadGA() {
-    if (!GA_ID) return; // Sécurité : ne charge rien si l'ID est vide
-    if (window._gaLoaded) return;
-    window._gaLoaded = true;
-    const s = document.createElement("script");
+    if (GA_ID === 'G-XXXXXXXXXX') return; // pas encore configuré
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
     s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
     document.head.appendChild(s);
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     window.gtag = gtag;
-    gtag("js", new Date());
-    gtag("config", GA_ID, { anonymize_ip: true });
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
   }
 
-  /* ---------- Injection du bandeau ---------- */
-  function showBanner() {
-    // Évite d'afficher deux bandeaux si déjà présent
-    if (document.getElementById("cookie-banner")) return;
+  /* ── Injection du CSS du bandeau ── */
+  function injectStyle() {
+    if (document.getElementById('afe-cookie-style')) return;
+    var style = document.createElement('style');
+    style.id = 'afe-cookie-style';
+    style.textContent = [
+      '#afe-cookie-banner {',
+      '  position: fixed;',
+      '  bottom: 0; left: 0; right: 0;',
+      '  background: #1a1a1a;',
+      '  color: #f0f0f0;',
+      '  font-family: inherit;',
+      '  font-size: 14px;',
+      '  line-height: 1.5;',
+      '  z-index: 99999;',
+      '  padding: 16px 24px;',
+      '  display: flex;',
+      '  flex-wrap: wrap;',
+      '  align-items: center;',
+      '  gap: 12px;',
+      '  box-shadow: 0 -2px 12px rgba(0,0,0,0.3);',
+      '}',
+      '#afe-cookie-banner p {',
+      '  margin: 0;',
+      '  flex: 1 1 280px;',
+      '}',
+      '#afe-cookie-banner a {',
+      '  color: #f0a500;',
+      '  text-decoration: underline;',
+      '}',
+      '#afe-cookie-banner .afe-cookie-btns {',
+      '  display: flex;',
+      '  gap: 10px;',
+      '  flex-wrap: wrap;',
+      '  flex-shrink: 0;',
+      '}',
+      '#afe-cookie-banner button {',
+      '  padding: 9px 20px;',
+      '  border: none;',
+      '  border-radius: 6px;',
+      '  font-size: 14px;',
+      '  font-family: inherit;',
+      '  cursor: pointer;',
+      '  font-weight: 500;',
+      '  transition: opacity 0.15s;',
+      '}',
+      '#afe-cookie-banner button:hover { opacity: 0.85; }',
+      '#afe-btn-accept {',
+      '  background: #f0a500;',
+      '  color: #1a1a1a;',
+      '}',
+      '#afe-btn-refuse {',
+      '  background: #3a3a3a;',
+      '  color: #f0f0f0;',
+      '  border: 1px solid #555 !important;',
+      '}'
+    ].join('\n');
+    document.head.appendChild(style);
+  }
 
-    const banner = document.createElement("div");
-    banner.id = "cookie-banner";
-    banner.setAttribute("role", "dialog");
-    banner.setAttribute("aria-label", "Gestion des cookies");
-    banner.innerHTML = `
-      <div class="cookie-inner">
-        <div class="cookie-text">
-          <strong>Cookies & confidentialité</strong>
-          <p>Nous utilisons Google Analytics pour mesurer l'audience de notre site. Ces données sont anonymisées et ne permettent pas de vous identifier personnellement. Vous pouvez accepter ou refuser ces cookies.</p>
-        </div>
-        <div class="cookie-actions">
-          <button id="cookie-accept" class="cookie-btn cookie-btn--accept">Accepter</button>
-          <button id="cookie-refuse" class="cookie-btn cookie-btn--refuse">Refuser</button>
-        </div>
-      </div>
-    `;
-
-    /* Styles inline pour éviter une dépendance CSS externe */
-    if (!document.getElementById("cookie-banner-style")) {
-      const style = document.createElement("style");
-      style.id = "cookie-banner-style";
-      style.textContent = `
-        #cookie-banner {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: #1a1a1a;
-          color: #f5f5f5;
-          z-index: 9999;
-          padding: 0;
-          box-shadow: 0 -2px 12px rgba(0,0,0,0.25);
-          font-family: inherit;
-          animation: slideUp 0.3s ease;
-        }
-        @keyframes slideUp {
-          from { transform: translateY(100%); }
-          to { transform: translateY(0); }
-        }
-        .cookie-inner {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 16px 20px;
-          display: flex;
-          align-items: center;
-          gap: 24px;
-          flex-wrap: wrap;
-        }
-        .cookie-text {
-          flex: 1;
-          min-width: 220px;
-        }
-        .cookie-text strong {
-          display: block;
-          font-size: 14px;
-          margin-bottom: 4px;
-          color: #ffffff;
-        }
-        .cookie-text p {
-          font-size: 12px;
-          line-height: 1.5;
-          color: #cccccc;
-          margin: 0;
-        }
-        .cookie-actions {
-          display: flex;
-          gap: 10px;
-          flex-shrink: 0;
-        }
-        .cookie-btn {
-          padding: 9px 20px;
-          border-radius: 6px;
-          border: none;
-          font-size: 13px;
-          font-weight: 500;
-          cursor: pointer;
-          transition: opacity 0.15s;
-        }
-        .cookie-btn:hover { opacity: 0.85; }
-        .cookie-btn--accept {
-          background: #e85d26;
-          color: #fff;
-        }
-        .cookie-btn--refuse {
-          background: transparent;
-          color: #cccccc;
-          border: 1px solid #555;
-        }
-        @media (max-width: 480px) {
-          .cookie-inner { flex-direction: column; gap: 12px; }
-          .cookie-actions { width: 100%; }
-          .cookie-btn { flex: 1; text-align: center; }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-
+  /* ── Injection du bandeau dans le DOM ── */
+  function injectBanner() {
+    if (document.getElementById('afe-cookie-banner')) return;
+    var banner = document.createElement('div');
+    banner.id = 'afe-cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Gestion des cookies');
+    banner.innerHTML =
+      '<p>' +
+        'Ce site utilise des cookies analytiques (Google Analytics) pour mesurer l\'audience. ' +
+        'Aucun cookie publicitaire. ' +
+        '<a href="/pages/mentions-legales/" target="_blank">En savoir plus</a>.' +
+      '</p>' +
+      '<div class="afe-cookie-btns">' +
+        '<button id="afe-btn-refuse" type="button">Refuser</button>' +
+        '<button id="afe-btn-accept" type="button">Accepter</button>' +
+      '</div>';
     document.body.appendChild(banner);
 
-    document.getElementById("cookie-accept").addEventListener("click", function () {
-      setCookie(COOKIE_KEY, "accepted", 395); // ~13 mois max CNIL
+    document.getElementById('afe-btn-accept').addEventListener('click', function () {
+      setCookie(COOKIE_NAME, 'accepted', COOKIE_DURATION_DAYS);
+      hideBanner();
       loadGA();
-      removeBanner();
     });
 
-    document.getElementById("cookie-refuse").addEventListener("click", function () {
-      setCookie(COOKIE_KEY, "refused", 395);
-      removeBanner();
+    document.getElementById('afe-btn-refuse').addEventListener('click', function () {
+      setCookie(COOKIE_NAME, 'refused', COOKIE_DURATION_DAYS);
+      hideBanner();
     });
   }
 
-  function removeBanner() {
-    const b = document.getElementById("cookie-banner");
-    if (b) {
-      b.style.transition = "transform 0.2s ease";
-      b.style.transform = "translateY(100%)";
-      setTimeout(() => b.remove(), 250);
-    }
+  function hideBanner() {
+    var b = document.getElementById('afe-cookie-banner');
+    if (b) b.remove();
   }
 
-  /* ---------- Initialisation ---------- */
-  function init() {
-    const consent = getCookie(COOKIE_KEY);
-    if (consent === "accepted") {
-      loadGA();
-    } else if (!consent) {
-      // Pas encore de choix → afficher le bandeau
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", showBanner);
-      } else {
-        showBanner();
-      }
-    }
-    // Si "refused" → on ne charge pas GA, pas de bandeau
-  }
-
-  /* ---------- Réinitialisation (bouton footer "Gérer mes cookies") ---------- */
+  /* ── Réinitialisation (bouton footer "Gérer mes cookies") ── */
   window.resetCookieConsent = function () {
-    document.cookie = COOKIE_KEY + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;SameSite=Lax";
-    showBanner();
+    deleteCookie(COOKIE_NAME);
+    injectStyle();
+    injectBanner();
   };
 
-  init();
+  /* ── Initialisation au chargement de la page ── */
+  function init() {
+    var consent = getCookie(COOKIE_NAME);
+    if (consent === 'accepted') {
+      loadGA(); // déjà accepté → on charge GA directement, sans bandeau
+    } else if (consent === 'refused') {
+      // refus déjà enregistré → rien à faire
+    } else {
+      // pas encore de choix → on affiche le bandeau
+      injectStyle();
+      injectBanner();
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
 })();
