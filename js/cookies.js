@@ -47,6 +47,16 @@
     gtag('config', GA_ID, { anonymize_ip: true });
   }
 
+  function getBasePath() {
+    var path = window.location.pathname;
+    var parts = path.split('/').filter(Boolean);
+
+    if (window.location.hostname.includes('github.io')) {
+      return '/' + (parts[0] || '');
+    }
+
+    return '';
+  }
   /* ── Injection du CSS du bandeau ── */
   function injectStyle() {
     if (document.getElementById('afe-cookie-style')) return;
@@ -110,6 +120,7 @@
   /* ── Injection du bandeau dans le DOM ── */
   function injectBanner() {
     if (document.getElementById('afe-cookie-banner')) return;
+    var legalLink = window.location.origin + getBasePath() + '/pages/mentions-legales/index.html';
     var banner = document.createElement('div');
     banner.id = 'afe-cookie-banner';
     banner.setAttribute('role', 'dialog');
@@ -118,7 +129,7 @@
       '<p>' +
         'Ce site utilise des cookies analytiques (Google Analytics) pour mesurer l\'audience. ' +
         'Aucun cookie publicitaire. ' +
-        '<a href="/pages/mentions-legales/index.html" target="_blank">En savoir plus</a>.' +
+        '<a href="' + legalLink + '">En savoir plus</a>' +
       '</p>' +
       '<div class="afe-cookie-btns">' +
         '<button id="afe-btn-refuse" type="button">Refuser</button>' +
