@@ -502,9 +502,9 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-    width: 100%;
+    width: 92%;
     margin: 20px auto;
-    padding: 24px 24px;
+    padding: 0;
 }
 
 .map-var {
