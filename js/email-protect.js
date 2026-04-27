@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-// Reconstruction de l'adresse depuis des fragments séparés
-const u = 'contact';
-const d = 'airflamme';
-const t = 'fr';
-const email = u + '\u0040' + d + '.' + t; // \u0040 = @
+  const parts = ['cont', 'act', '\u0040', 'airfl', 'amme', '.fr'];
+  const email = parts.join('');
 
-// Remplace tous les éléments marqués data-email-protect
-document.querySelectorAll('[data-email-protect]').forEach(function (el) {
+  document.querySelectorAll('[data-email-protect]').forEach(function (el) {
     el.textContent = email;
     if (el.tagName === 'A') {
-    el.href = 'mailto:' + email;
+      el.setAttribute('href', 'mail' + 'to:' + email);
     }
-});
+  });
 });
