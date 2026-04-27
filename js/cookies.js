@@ -118,7 +118,7 @@
       '<p>' +
         'Ce site utilise des cookies analytiques (Google Analytics) pour mesurer l\'audience. ' +
         'Aucun cookie publicitaire. ' +
-        '<a href="../../pages/mentions-legales/index.html" target="_blank">En savoir plus</a>.' +
+        '<a href="../pages/mentions-legales/index.html" target="_blank">En savoir plus</a>.' +
       '</p>' +
       '<div class="afe-cookie-btns">' +
         '<button id="afe-btn-refuse" type="button">Refuser</button>' +
