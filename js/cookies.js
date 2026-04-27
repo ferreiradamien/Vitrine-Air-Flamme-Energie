@@ -21,7 +21,7 @@
   /* ── Helpers ── */
   function setCookie(name, value, days) {
     var expires = new Date(Date.now() + days * 864e5).toUTCString();
-    document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+    document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax; Secure';
   }
 
   function getCookie(name) {
