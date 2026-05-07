@@ -124,6 +124,10 @@
         white-space: normal;   /* les titres peuvent passer à la ligne */
     }
 
+    .pres-section {
+        padding: 60px 24px;
+    }
+
     /* Cards services */
     .cards-wrapper {
         grid-template-columns: repeat(2, 1fr);
@@ -262,6 +266,8 @@
     /* Navigation */
     .navbar     { width: 55%; }
     .nav-menu a { font-size: 18px; }
+
+    .pres-section { padding: 60px 80px;}
 
     /* Features */
     .features  { justify-content: center; gap: 120px; margin-bottom: 6px;}
