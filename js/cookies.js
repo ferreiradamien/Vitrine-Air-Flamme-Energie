@@ -120,7 +120,7 @@
   /* ── Injection du bandeau dans le DOM ── */
   function injectBanner() {
     if (document.getElementById('afe-cookie-banner')) return;
-    var legalLink = window.location.origin + getBasePath() + '../pages/mentions-legales/index.html/#cookies';
+    var legalLink = window.location.origin + getBasePath() + '/pages/mentions-legales/index.html#cookies';
     var banner = document.createElement('div');
     banner.id = 'afe-cookie-banner';
     banner.setAttribute('role', 'dialog');
