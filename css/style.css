@@ -52,7 +52,7 @@ iframe[src*="embeddedChatbot"] {
     --text-muted:   #636e72;
     --bg-color:     #fcfcfc;
     --card-bg:      #ffffff;
-    --radius:       8px;
+    --radius:       12px;
     --shadow-soft:  0 8px 24px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
     --green:        #00C896;

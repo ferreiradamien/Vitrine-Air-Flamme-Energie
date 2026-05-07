@@ -328,7 +328,7 @@ header {
 
 .pres-card {
     background: var(--card-bg);
-    border-radius: 16px;
+    border-radius: var(--radius);
     border: 1px solid var(--border);
     box-shadow: var(--shadow-soft);
     width: 100%;
@@ -479,7 +479,7 @@ header {
 
 /* ── RESPONSIVE DESKTOP (≥ 768px) ── */
 @media (min-width: 768px) {
-    .pres-card   { border-radius: 20px; }
+
     .pres-block  { padding: 28px 32px; gap: 20px; }
     .pres-intro  { margin: 28px 32px 0; }
     .pres-diff-title { padding: 24px 32px 10px; }
