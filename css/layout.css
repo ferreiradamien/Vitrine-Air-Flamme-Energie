@@ -767,6 +767,97 @@ header {
     width: 100%;
 }
 
+/* ── RÉSEAUX SOCIAUX ── */
+
+.social-divider {
+    width: 48px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    border-radius: 2px;
+    margin: 32px auto 28px;
+}
+
+.social-inner {
+    width: 100%;
+    text-align: center;
+}
+
+.social-eyebrow {
+    display: inline-block;
+    background: rgba(225, 84, 34, 0.08);
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(225, 84, 34, 0.15);
+    margin-bottom: 10px;
+}
+
+.social-sub {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.social-cards {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1.25rem 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    min-width: 130px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--secondary);
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(225, 84, 34, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.social-card-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.social-card-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+}
 
 /* ── CARTES DE CONTACT ── */
 
