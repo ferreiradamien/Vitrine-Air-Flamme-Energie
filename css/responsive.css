@@ -205,7 +205,6 @@
     .service-block.reverse { direction: rtl; }
     .service-block.reverse > * { direction: ltr; }
 
-    .bois-header { flex-direction: row; text-align: left; }
     .cta-band    { padding: 48px 40px; }
 
     /* Page Infos & Conseils */
