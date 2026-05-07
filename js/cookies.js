@@ -14,7 +14,7 @@
 (function () {
 
   /* ── Configuration ── */
-  var GA_ID = 'G-XXXXXXXXXX'; // ← Remplace par ton vrai ID Google Analytics
+  var GA_ID = 'G-4NF7G9W23N'; // ← Remplace par ton vrai ID Google Analytics
   var COOKIE_NAME = 'afe_cookie_consent';
   var COOKIE_DURATION_DAYS = 180;
 
@@ -35,7 +35,7 @@
 
   /* ── Chargement Google Analytics (uniquement après consentement) ── */
   function loadGA() {
-    if (GA_ID === 'G-XXXXXXXXXX') return; // pas encore configuré
+    if (GA_ID === 'G-4NF7G9W23N') return; // pas encore configuré
     var s = document.createElement('script');
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
     s.async = true;
@@ -120,7 +120,7 @@
   /* ── Injection du bandeau dans le DOM ── */
   function injectBanner() {
     if (document.getElementById('afe-cookie-banner')) return;
-    var legalLink = window.location.origin + getBasePath() + '/pages/mentions-legales/index.html';
+    var legalLink = window.location.origin + getBasePath() + '/pages/mentions-legales/index.html/#cookies';
     var banner = document.createElement('div');
     banner.id = 'afe-cookie-banner';
     banner.setAttribute('role', 'dialog');
