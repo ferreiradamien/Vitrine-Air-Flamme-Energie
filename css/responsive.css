@@ -216,8 +216,6 @@
     .alert-band     { flex-wrap: nowrap; }
 
     /* Page Contact */
-    .contact-grid   { grid-template-columns: 1fr 1.6fr; }
-    .form-row       { grid-template-columns: 1fr 1fr; }
     .faq-mini-grid  { grid-template-columns: 1fr 1fr; }
     .lea-rdv-section { padding: 40px 36px; }
     .form-card       { padding: 40px 36px; }
@@ -306,7 +304,7 @@
 
     /* Contact */
     .contact         { padding: 80px 0; }
-    .contact-grid    { gap: 200px; }
+    .contact-grid   { grid-template-columns: 1fr 1.6fr; }
     .contact-content {
         max-width: 100%;
         flex-direction: row;
