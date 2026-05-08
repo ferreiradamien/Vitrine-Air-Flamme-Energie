@@ -222,8 +222,7 @@
     .lea-rdv-section { padding: 40px 36px; }
     .form-card       { padding: 40px 36px; }
 
-    .btn-lea-chat,
-    .btn-lea-whatsapp {
+    .btn-lea-chat{
         width: auto;          /* ← taille naturelle sur tablette+ */
     }
 }
