@@ -46,3 +46,11 @@ Créer un site professionnel permettant de :
 ## Lien du site
 
 https://airflammeenergie.fr/
+
+## Performance
+
+Audit Lighthouse :
+- Performance : 95+
+- Accessibilité : 90+
+- Bonnes pratiques : 95+
+- SEO : 100
